@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard Monitoring Admin KAWIRA untuk activity tracking, manajemen status user, dan ringkasan database master." />
+    <title>Dashboard Monitoring Admin | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-admin-v2" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="admin-dashboard.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil Admin"><img src="assets/Nadya.png" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+
+    <div class="dashboard-layout">
+      <!-- Sidebar Admin -->
+      <aside class="dashboard-sidebar" aria-label="Navigasi admin monitoring">
+        <a class="dashboard-brand" href="admin-dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="Kawira Logo" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Pusat Kontrol Super Admin</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu navigasi admin">
+          <a class="dashboard-nav-link is-active" href="admin-dashboard.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Overview &amp; Monitoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="#section-audit-logs" onclick="scrollToSection('section-audit-logs')">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+            <span>Audit Activity Tracker</span>
+          </a>
+          <a class="dashboard-nav-link" href="#section-users-table" onclick="scrollToSection('section-users-table')">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Manajemen Pengguna</span>
+          </a>
+          <a class="dashboard-nav-link" href="pembukuan.html">
+            <img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" />
+            <span>Database Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link" href="mentoring.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            <span>Monitoring Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <img class="sidebar-nav-icon" src="assets/SettingsIcon.svg" alt="" style="width:18px; height:18px;" />
+            <span>Profil Pengelola</span>
+          </a>
+          <a class="dashboard-signout" href="login-staff.html" onclick="logoutKawira()">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/Nadya.png" alt="Admin Nadya Sabrina" />
+          <span class="dashboard-user-copy"><strong>Nadya Sabrina</strong><small>Super Administrator (Tim MBG)</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <!-- Main Admin Content -->
+      <main class="dashboard-main">
+        <header class="dashboard-topbar">
+          <div>
+            <h1>Dashboard Monitoring Admin <span aria-hidden="true">🛡️</span></h1>
+            <p style="margin:4px 0 0; font-size:0.85rem; color:#6d6780;">Pemantauan aktivitas real-time seluruh mentor &amp; mentee, manajemen user, dan agregat master data.</p>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <button class="btn-sm-ghost" type="button" onclick="refreshAdminData()">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              <span>Refresh Data</span>
+            </button>
+            <button class="btn-sm-action" type="button" onclick="exportLogsToCSV()">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Ekspor Log Audit</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <!-- ================= B. WIDGET STATISTIK KESELURUHAN (MASTER DATA OVERVIEW) ================= -->
+          <section id="section-stats-overview" style="margin-bottom:24px;">
+            <div class="stats-grid-row">
+              <div class="stat-card-item">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Total Mentee Terdaftar</span>
+                  <span class="stat-card-icon purple">🎓</span>
+                </div>
+                <div class="stat-card-val" id="stat-total-mentees">1.428</div>
+                <div class="stat-card-change">↑ 18% peningkatan pendaftaran</div>
+              </div>
+
+              <div class="stat-card-item">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Total Mentor Aktif</span>
+                  <span class="stat-card-icon green">💼</span>
+                </div>
+                <div class="stat-card-val" id="stat-total-mentors">48</div>
+                <div class="stat-card-change">Tersertifikasi di 12 kategori UMKM</div>
+              </div>
+
+              <div class="stat-card-item">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Total Pesan Chat Terkirim</span>
+                  <span class="stat-card-icon blue">💬</span>
+                </div>
+                <div class="stat-card-val" id="stat-total-chats">8.924</div>
+                <div class="stat-card-change">Sesi live mentoring real-time</div>
+              </div>
+
+              <div class="stat-card-item">
+                <div class="stat-card-header">
+                  <span class="stat-card-title">Total Transaksi Pembukuan</span>
+                  <span class="stat-card-icon amber">💰</span>
+                </div>
+                <div class="stat-card-val" id="stat-total-transactions">Rp 24.850.000</div>
+                <div class="stat-card-change">Volume kas UMKM mahasiswa</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= A. MONITORING AKTIVITAS REAL-TIME (ACTIVITY TRACKER) ================= -->
+          <section id="section-audit-logs" class="card-panel">
+            <div class="card-panel-header">
+              <div>
+                <h2 class="card-panel-title">
+                  <span>Activity Tracker Real-Time</span>
+                  <span class="mentor-availability-pill" style="font-size:0.7rem; padding:3px 9px;"><span class="dot"></span> Live Stream Aktif</span>
+                </h2>
+                <p style="margin:4px 0 0; font-size:0.8rem; color:#79728b;">Audit log aktivitas login, chat, pembukuan, dan interaksi modul oleh mentor dan mentee.</p>
+              </div>
+
+              <!-- Filter Controls -->
+              <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+                <select id="log-filter-role" style="padding:7px 10px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.82rem;" onchange="filterAuditLogs()">
+                  <option value="all">Semua Role</option>
+                  <option value="Mentee">Mentee</option>
+                  <option value="Mentor">Mentor</option>
+                  <option value="Admin">Admin</option>
+                </select>
+
+                <input type="text" id="log-filter-action" placeholder="Filter jenis aktivitas..." style="padding:7px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.82rem; width:190px;" oninput="filterAuditLogs()" />
+
+                <button type="button" class="btn-sm-ghost" onclick="filterAuditLogs()">Terapkan</button>
+              </div>
+            </div>
+
+            <!-- Tabel Audit Log -->
+            <div class="custom-table-wrap">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Waktu / Timestamp</th>
+                    <th>User &amp; Peran</th>
+                    <th>Aktivitas yang Dilakukan</th>
+                    <th>IP / Perangkat</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="audit-logs-tbody">
+                  <!-- Di-render oleh admin-dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- ================= B. TABEL MANAJEMEN USER (BLOCK / UNBLOCK) ================= -->
+          <section id="section-users-table" class="card-panel">
+            <div class="card-panel-header">
+              <div>
+                <h2 class="card-panel-title">
+                  <span>Manajemen Pengguna (User Management)</span>
+                  <span id="user-count-badge" class="badge-tag purple">9 Akun</span>
+                </h2>
+                <p style="margin:4px 0 0; font-size:0.8rem; color:#79728b;">Kontrol otorisasi akun pengguna. Aktifkan atau blokir akses akun bermasalah secara langsung.</p>
+              </div>
+
+              <div style="display:flex; gap:8px;">
+                <input type="text" id="user-search-input" placeholder="Cari nama, email, atau kampus..." style="padding:7px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.82rem; width:240px;" oninput="filterUsersTable()" />
+              </div>
+            </div>
+
+            <div class="custom-table-wrap">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nama Pengguna</th>
+                    <th>Email Terdaftar</th>
+                    <th>Peran (Role)</th>
+                    <th>Institusi / Kampus</th>
+                    <th>Status Akun</th>
+                    <th>Aksi Otorisasi</th>
+                  </tr>
+                </thead>
+                <tbody id="users-tbody">
+                  <!-- Di-render oleh admin-dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- ================= RINGKASAN DATABASE PEMBUKUAN & MENTORING ================= -->
+          <section class="card-panel">
+            <div class="card-panel-header">
+              <h2 class="card-panel-title">
+                <span>Ringkasan Master Data Ekosistem Kawira</span>
+              </h2>
+              <a href="pembukuan.html" class="btn-sm-ghost">Buka Detail Pembukuan →</a>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
+              <div style="background:#fdfcfe; border:1px solid #eeeaf6; border-radius:12px; padding:16px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                  <strong style="font-size:0.9rem; color:var(--ink);">Data Pembukuan UMKM</strong>
+                  <span class="badge-tag green">384 Entri</span>
+                </div>
+                <p style="font-size:0.78rem; color:#79728b; margin:0 0 10px;">Total pencatatan kas masuk dan kas keluar oleh mentee mahasiswa.</p>
+                <div style="display:flex; justify-content:space-between; font-size:0.82rem; margin-bottom:4px;">
+                  <span>Kas Masuk Tercatat:</span>
+                  <strong style="color:#16a34a;">Rp 38.450.000</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.82rem;">
+                  <span>Kas Keluar Tercatat:</span>
+                  <strong style="color:#e11d48;">Rp 13.600.000</strong>
+                </div>
+              </div>
+
+              <div style="background:#fdfcfe; border:1px solid #eeeaf6; border-radius:12px; padding:16px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                  <strong style="font-size:0.9rem; color:var(--ink);">Database Mentoring &amp; Evaluasi</strong>
+                  <span class="badge-tag purple">52 Sesi Terjadwal</span>
+                </div>
+                <p style="font-size:0.78rem; color:#79728b; margin:0 0 10px;">Rekap sesi bimbingan antara mentor sebaya dan mentee.</p>
+                <div style="display:flex; justify-content:space-between; font-size:0.82rem; margin-bottom:4px;">
+                  <span>Sesi Selesai Dievaluasi:</span>
+                  <strong style="color:var(--purple-dark);">42 Sesi</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.82rem;">
+                  <span>Tingkat Kepuasan Mentee:</span>
+                  <strong style="color:#f59e0b;">⭐ 4.92 / 5.0</strong>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="dashboard-toast" data-dashboard-toast role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

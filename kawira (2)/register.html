@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Buat akun KAWIRA dan mulai kembangkan bisnismu bersama mentor sebaya." />
+    <title>Daftar ke KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-auth-v3" />
+    <script src="auth.js" defer></script>
+  </head>
+  <body class="auth-body">
+    <main class="auth-page">
+      <aside class="auth-showcase" aria-label="Tentang KAWIRA">
+        <a class="auth-brand" href="index.html" aria-label="KAWIRA, kembali ke beranda">
+          <span class="brand-mark"><img src="assets/logoLogin.svg" alt="" /></span>
+          <span class="auth-brand-copy"><strong>Kawira</strong><small>Kawan Berwirausaha</small></span>
+        </a>
+
+        <div class="auth-showcase-content">
+          <span class="auth-eyebrow"><span></span> Platform Wirausaha Muda Indonesia</span>
+          <h1>Mulai Bangun Bisnis Impianmu Bersama <em>Mentor Sebaya</em></h1>
+          <p class="auth-intro">
+            Temukan mentor, kembangkan ide, dan bertumbuh bersama komunitas
+            wirausahawan muda dari berbagai kampus di Indonesia.
+          </p>
+
+          <div class="auth-stats" aria-label="Statistik KAWIRA">
+            <div><strong>12K+</strong><span>Anggota Aktif</span></div>
+            <div><strong>340+</strong><span>Mentor Tersertifikasi</span></div>
+            <div><strong>85%</strong><span>Tingkat Keberhasilan</span></div>
+          </div>
+
+          <figure class="auth-testimonial">
+            <figcaption class="testimonial-heading">
+              <span class="testimonial-avatar">RA</span>
+              <span class="testimonial-person"><strong>Rizky Aditya</strong><small>Founder, TemuKarya.id</small></span>
+              <span class="testimonial-tag">Alumni P2MW</span>
+            </figcaption>
+            <div class="testimonial-rating"><span aria-label="5 dari 5 bintang">★★★★★</span><small>5.0</small></div>
+            <blockquote>
+              “Kawira mengubah cara saya membangun bisnis. Mentor sebaya yang
+              berpengalaman membimbing langsung — dalam 6 bulan omzet saya naik 3x lipat!”
+            </blockquote>
+          </figure>
+
+          <div class="auth-community-proof">
+            <div class="proof-avatars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <span>+2.400 wirausahawan bergabung bulan ini</span>
+            <span class="live-pill"><i></i>Live mentoring aktif</span>
+          </div>
+        </div>
+        <span class="auth-showcase-footnote">Tumbuh bersama, mulai dari langkah pertamamu.</span>
+      </aside>
+
+      <section class="auth-main" aria-labelledby="auth-title">
+        <a class="auth-back" href="index.html"><span aria-hidden="true">←</span> Kembali ke Beranda</a>
+
+        <div class="auth-form-shell auth-register-shell">
+          <header class="auth-form-heading">
+            <span class="auth-mobile-brand"><span class="brand-mark"><img src="assets/logoLogin.svg" alt="" /></span> Kawira</span>
+            <h2 id="auth-title">Buat Akun KAWIRA</h2>
+            <p>Mulai langkah kecil untuk bisnis yang lebih besar.</p>
+          </header>
+
+          <div class="auth-demo-notice" role="status">Mode Demo: Fitur pendaftaran akun baru dinonaktifkan untuk demonstrasi.</div>
+
+          <button class="auth-google" type="button" data-google-signin disabled>
+            <span class="google-mark" aria-hidden="true">G</span>
+            Daftar dengan Google
+          </button>
+
+          <div class="auth-divider"><span>atau daftar dengan email</span></div>
+
+          <form class="auth-form" data-auth-form data-auth-mode="register">
+            <label class="auth-field">
+              <span>Nama Lengkap</span>
+              <input class="auth-input" name="name" type="text" autocomplete="name" placeholder="Nama lengkapmu" minlength="2" disabled required />
+            </label>
+
+            <label class="auth-field">
+              <span>Alamat Email</span>
+              <input class="auth-input" name="email" type="email" autocomplete="email" placeholder="nama@email.com" disabled required />
+            </label>
+
+            <label class="auth-field">
+              <span>Kata Sandi</span>
+              <span class="auth-input-wrap">
+                <input class="auth-input" id="register-password" name="password" type="password" autocomplete="new-password" placeholder="Minimal 8 karakter" minlength="8" disabled required />
+                <button class="password-toggle" type="button" data-password-toggle aria-controls="register-password" aria-label="Tampilkan kata sandi" disabled>Tampilkan</button>
+              </span>
+            </label>
+
+            <label class="auth-field">
+              <span>Konfirmasi Kata Sandi</span>
+              <span class="auth-input-wrap">
+                <input class="auth-input" id="register-password-confirm" name="password-confirm" type="password" autocomplete="new-password" placeholder="Ulangi kata sandi" minlength="8" disabled required />
+                <button class="password-toggle" type="button" data-password-toggle aria-controls="register-password-confirm" aria-label="Tampilkan kata sandi" disabled>Tampilkan</button>
+              </span>
+            </label>
+
+            <label class="remember-option terms-option">
+              <input name="terms" type="checkbox" disabled required />
+              <span>Saya menyetujui <a href="index.html">Syarat &amp; Ketentuan</a> dan Kebijakan Privasi.</span>
+            </label>
+
+            <button class="auth-submit" type="submit" disabled>Buat Akun <span aria-hidden="true">→</span></button>
+            <p class="auth-notice" data-auth-notice role="status" aria-live="polite" hidden></p>
+          </form>
+
+          <p class="auth-switch">Sudah punya akun Kawira? <a href="login.html">Masuk di sini</a></p>
+          <p class="auth-legal">Dengan mendaftar, kamu menjadi bagian dari komunitas wirausaha KAWIRA.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

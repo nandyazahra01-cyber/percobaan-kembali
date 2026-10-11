@@ -1,0 +1,6 @@
+{
+  "name": "Kawira",
+  "description": "Platform Wirausaha Mahasiswa Indonesia - Belajar bisnis, mentoring bersama ahli, bergabung dengan komunitas, dan catat pembukuan praktis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

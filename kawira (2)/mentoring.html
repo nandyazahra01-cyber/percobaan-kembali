@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Temukan mentor dan sesi mentoring untuk mengembangkan usaha bersama KAWIRA." />
+    <title>Pusat Mentoring | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-chat-page" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body mentoring-page">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout mentoring-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Platform Kawan Wirausaha</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="dashboard-nav-link is-active" href="mentoring.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="pembukuan.html">
+            <img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" />
+            <span>Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link" href="modul.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
+            <span>Modul &amp; Template</span>
+          </a>
+          <a class="dashboard-nav-link" href="komunitas.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main mentoring-main">
+        <header class="dashboard-topbar mentoring-topbar">
+          <div class="mentoring-heading">
+            <h1>Pusat Mentoring</h1>
+            <p>Terhubung dengan mentor terbaik untuk kembangkan bisnismu</p>
+          </div>
+          <div class="mentoring-header-actions">
+            <label class="mentor-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+              <input type="search" placeholder="Cari nama mentor atau keahlian..." aria-label="Cari nama mentor atau keahlian" data-mentor-search />
+            </label>
+            <div class="mentoring-notification-wrap" data-notification-wrap>
+              <button class="notification-button mentoring-notification" type="button" aria-label="Notifikasi, 1 baru" aria-expanded="false" aria-controls="mentoring-notification-panel" data-notification-toggle>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+                <span data-notification-dot></span>
+              </button>
+              <section class="notification-panel" id="mentoring-notification-panel" aria-labelledby="notification-panel-title" data-notification-panel hidden>
+                <header class="notification-panel-header">
+                  <h2 id="notification-panel-title">Notifikasi</h2>
+                  <button type="button" data-mark-notifications-read>Tandai sudah dibaca</button>
+                </header>
+                <div class="notification-list" data-notification-list></div>
+              </section>
+            </div>
+          </div>
+        </header>
+
+        <div class="mentoring-content">
+          <div class="mentoring-tabs" role="tablist" aria-label="Bagian mentoring">
+            <button class="mentoring-tab is-active" id="tab-explore" type="button" role="tab" aria-selected="true" aria-controls="panel-explore" tabindex="0" data-mentoring-tab="explore">Eksplor Mentor</button>
+            <button class="mentoring-tab" id="tab-sessions" type="button" role="tab" aria-selected="false" aria-controls="panel-sessions" tabindex="-1" data-mentoring-tab="sessions">Jadwal &amp; Riwayat Sesi <span class="mentoring-tab-badge">1 Aktif</span></button>
+          </div>
+
+          <section class="mentoring-tab-panel" id="panel-explore" role="tabpanel" aria-labelledby="tab-explore" data-mentoring-panel="explore">
+            <div class="upcoming-session-slot" data-upcoming-slot="explore"></div>
+            <section class="upcoming-session" aria-labelledby="upcoming-session-title">
+            <div class="upcoming-session-copy">
+              <span class="upcoming-session-badge" id="upcoming-session-title">Sesi Mendatang</span>
+              <div class="upcoming-mentor">
+                <img src="assets/Image%20(Speaker).png" alt="" />
+                <div>
+                  <h2>Rizka Amalia Putri</h2>
+                  <p>Strategi Penetrasi Pasar F&amp;B</p>
+                  <div class="upcoming-session-schedule">
+                    <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M7.5 3v4M16.5 3v4M3.5 10h17"/></svg><span data-upcoming-date-label>Minggu, 4 Oktober 2026</span></span>
+                    <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-upcoming-time-label>14:00 - 15:00 WIB</span></span>
+                  </div>
+                  <span class="upcoming-package-badge" data-upcoming-package>🏷️ Paket: Chat Mentoring (Hemat 50%)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="session-countdown" aria-label="Waktu menuju sesi mentoring">
+              <span>Dimulai dalam</span>
+              <time datetime="PT16H" data-countdown aria-live="off">16:00:00</time>
+              <small>jam : menit : detik</small>
+            </div>
+
+            <div class="upcoming-session-actions">
+              <button class="meeting-link-button" type="button" data-open-meet disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
+                Akses Link Google Meet
+              </button>
+              <a class="session-chat-button" href="chat-mentor.html" data-open-chat>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12H9l-5 3V5Z"/><path d="M8 9h8M8 13h5"/></svg>
+                Buka Ruang Chat
+              </a>
+            </div>
+            </section>
+
+            <section class="mentor-directory" aria-labelledby="mentor-directory-title">
+            <div class="mentor-directory-heading">
+              <h2 id="mentor-directory-title">Mentor Tersedia</h2>
+            </div>
+
+            <div class="mentor-filters" role="group" aria-label="Filter kategori mentor">
+              <button class="mentor-filter is-selected" type="button" data-filter="all" aria-pressed="true">Semua</button>
+              <button class="mentor-filter" type="button" data-filter="p2mw" aria-pressed="false">Mahasiswa P2MW</button>
+              <button class="mentor-filter" type="button" data-filter="praktisi" aria-pressed="false">Praktisi UMKM</button>
+              <button class="mentor-filter" type="button" data-filter="kuliner" aria-pressed="false">Kuliner</button>
+              <button class="mentor-filter" type="button" data-filter="digital" aria-pressed="false">Digital Marketing</button>
+            </div>
+
+            <div class="mentor-grid" data-mentor-grid>
+              <article class="mentor-card mentor-directory-card" data-categories="p2mw kuliner" data-search="aditya ramadhan f&b strategi pasar kuliner p2mw umkm">
+                <div class="mentor-card-profile">
+                  <img src="assets/Image%20(Aditya%20Ramadhan).png" alt="" />
+                  <div class="mentor-identity">
+                    <h3>Aditya Ramadhan</h3>
+                    <p>F&amp;B &amp; Strategi Pasar</p>
+                    <span class="mentor-status-tag alumni-tag">Alumni P2MW 2023</span>
+                  </div>
+                </div>
+                <p class="mentor-description">Founder BumbuNusa, mengembangkan bisnis kuliner dari ide hingga lebih dari 12 outlet.</p>
+                <div class="mentor-rating"><span aria-label="5 dari 5 bintang">★★★★★</span><strong>5.0</strong><small>(48)</small></div>
+                <div class="mentor-card-footer"><p><strong>Rp 75.000</strong><span>/ 60 menit</span></p><button type="button" class="book-mentor-button" data-book-mentor="Aditya Ramadhan">Pesan Sesi</button></div>
+              </article>
+
+              <article class="mentor-card mentor-directory-card" data-categories="praktisi digital" data-search="Intan Pratiwi digital marketing branding praktisi umkm">
+                <div class="mentor-card-profile">
+                  <img src="assets/Image%20(Budi%20Santoso).png" alt="" />
+                  <div class="mentor-identity">
+                    <h3>Intan Pratiwi</h3>
+                    <p>Digital Marketing &amp; Branding</p>
+                    <span class="mentor-status-tag active-mentor-tag">Mentor Aktif</span>
+                  </div>
+                </div>
+                <p class="mentor-description">Lebih dari 10 tahun membantu UMKM tumbuh secara digital, dari SEO hingga iklan berbayar.</p>
+                <div class="mentor-rating"><span aria-label="4,9 dari 5 bintang">★★★★★</span><strong>4.9</strong><small>(112)</small></div>
+                <div class="mentor-card-footer"><p><strong>Rp 60.000</strong><span>/ 60 menit</span></p><button type="button" class="book-mentor-button" data-book-mentor="Intan Pratiwi">Pesan Sesi</button></div>
+              </article>
+
+              <article class="mentor-card mentor-directory-card" data-categories="p2mw kuliner" data-search="sari dewi lestari fashion ekspor asean kuliner p2mw">
+                <div class="mentor-card-profile">
+                  <img src="assets/Image%20(Sari%20Indah%20Pertiwi).png" alt="" />
+                  <div class="mentor-identity">
+                    <h3>Sari Dewi Lestari</h3>
+                    <p>Fashion &amp; Ekspor ASEAN</p>
+                    <span class="mentor-status-tag alumni-tag">Alumni P2MW 2022</span>
+                  </div>
+                </div>
+                <p class="mentor-description">Co-founder JENAMA Studio, membangun label fashion lokal untuk pasar ekspor Asia Tenggara.</p>
+                <div class="mentor-rating"><span aria-label="4,8 dari 5 bintang">★★★★★</span><strong>4.8</strong><small>(67)</small></div>
+                <div class="mentor-card-footer"><p><strong>Rp 80.000</strong><span>/ 60 menit</span></p><button type="button" class="book-mentor-button" data-book-mentor="Sari Dewi Lestari">Pesan Sesi</button></div>
+              </article>
+
+              <article class="mentor-card mentor-directory-card" data-categories="praktisi digital" data-search="Ayu Dwi Puspita growth akuisisi pelanggan praktisi umkm">
+                <div class="mentor-card-profile">
+                  <img src="assets/Image%20(Budi%20Santoso).png" alt="" />
+                  <div class="mentor-identity">
+                    <h3>Ayu Dwi Puspita</h3>
+                    <p>Growth &amp; Akuisisi Pelanggan</p>
+                    <span class="mentor-status-tag active-mentor-tag">Praktisi UMKM</span>
+                  </div>
+                </div>
+                <p class="mentor-description">Founder agensi growth, membantu bisnis merancang funnel akuisisi dan monetisasi kreatif.</p>
+                <div class="mentor-rating"><span aria-label="4,7 dari 5 bintang">★★★★★</span><strong>4.7</strong><small>(39)</small></div>
+                <div class="mentor-card-footer"><p><strong>Rp 65.000</strong><span>/ 60 menit</span></p><button type="button" class="book-mentor-button" data-book-mentor="Ayu Dwi Puspita">Pesan Sesi</button></div>
+              </article>
+
+              <article class="mentor-card mentor-directory-card" data-categories="praktisi kuliner" data-search="nadia kusuma wati kuliner manajemen operasi kopi kenangan praktisi umkm">
+                <div class="mentor-card-profile">
+                  <img src="assets/Image%20(Kawira%20Anindya).png" alt="" />
+                  <div class="mentor-identity">
+                    <h3>Nadia Kusuma Wati</h3>
+                    <p>Kuliner &amp; Manajemen Operasi</p>
+                    <span class="mentor-status-tag active-mentor-tag">Mentor Aktif</span>
+                  </div>
+                </div>
+                <p class="mentor-description">Mantan Head of Operations bisnis kopi, ahli sistem operasional dan franchise F&amp;B.</p>
+                <div class="mentor-rating"><span aria-label="4,9 dari 5 bintang">★★★★★</span><strong>4.9</strong><small>(88)</small></div>
+                <div class="mentor-card-footer"><p><strong>Rp 90.000</strong><span>/ 60 menit</span></p><button type="button" class="book-mentor-button" data-book-mentor="Nadia Kusuma Wati">Pesan Sesi</button></div>
+              </article>
+
+              <article class="mentor-card mentor-directory-card" data-categories="p2mw digital" data-search="fajar eko santoso teknologi saaS startup p2mw digital marketing">
+                <div class="mentor-card-profile">
+                  <img src="assets/Image%20(Aditya%20Ramadhan).png" alt="" />
+                  <div class="mentor-identity">
+                    <h3>Fajar Eko Santoso</h3>
+                    <p>Teknologi &amp; SaaS Startup</p>
+                    <span class="mentor-status-tag alumni-tag">Alumni P2MW 2024</span>
+                  </div>
+                </div>
+                <p class="mentor-description">Founder startup edtech, berpengalaman merancang produk dan menyiapkan pendanaan tahap awal.</p>
+                <div class="mentor-rating"><span aria-label="4,6 dari 5 bintang">★★★★★</span><strong>4.6</strong><small>(24)</small></div>
+                <div class="mentor-card-footer"><p><strong>Rp 70.000</strong><span>/ 60 menit</span></p><button type="button" class="book-mentor-button" data-book-mentor="Fajar Eko Santoso">Pesan Sesi</button></div>
+              </article>
+            </div>
+            <p class="mentor-empty-state" data-empty-state hidden>Tidak ada mentor yang sesuai. Coba kategori atau kata kunci lain.</p>
+            </section>
+          </section>
+
+          <section class="mentoring-tab-panel session-management-panel" id="panel-sessions" role="tabpanel" aria-labelledby="tab-sessions" data-mentoring-panel="sessions" hidden>
+            <div class="upcoming-session-slot" data-upcoming-slot="sessions"></div>
+            <section class="paid-bookings-section" aria-labelledby="paid-bookings-title" data-paid-bookings-section hidden>
+              <div class="paid-bookings-heading">
+                <div class="completed-sessions-heading">
+                  <h2 id="paid-bookings-title">Sesi Terjadwal</h2>
+                  <p>Konfirmasi pembayaran dan jadwal mentoring kamu</p>
+                </div>
+                <a class="paid-bookings-history-link" href="riwayat-invoice.html">Lihat Semua Riwayat Pembayaran <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="paid-bookings-list" data-paid-bookings-list></div>
+            </section>
+            <section class="completed-sessions" aria-labelledby="completed-sessions-title">
+              <div class="completed-sessions-heading">
+                <h2 id="completed-sessions-title">Riwayat Sesi Selesai</h2>
+                <p>Catatan dan tindak lanjut dari sesi mentoring sebelumnya</p>
+              </div>
+              <div class="completed-session-list">
+                <article class="completed-session-card">
+                  <img src="assets/Image%20(Aditya%20Ramadhan).png" alt="" />
+                  <div class="completed-session-copy">
+                    <div class="completed-session-meta"><span class="completed-status">Selesai</span><time datetime="2026-09-18">18 September 2026</time></div>
+                    <h3>Aditya Ramadhan</h3>
+                    <p>Validasi Ide &amp; Pitch Deck P2MW</p>
+                  </div>
+                  <div class="completed-session-actions">
+                    <button class="session-note-button" type="button" data-session-note="Catatan sesi Aditya Ramadhan: validasi masalah, target pengguna, dan alur pitch deck.">Lihat Catatan Sesi</button>
+                    <button class="session-rating-button" type="button" data-session-rating="Aditya Ramadhan">Beri Rating <span aria-hidden="true">★</span></button>
+                  </div>
+                </article>
+                <article class="completed-session-card">
+                  <img src="assets/Image%20(Budi%20Santoso).png" alt="" />
+                  <div class="completed-session-copy">
+                    <div class="completed-session-meta"><span class="completed-status">Selesai</span><time datetime="2026-09-02">2 September 2026</time></div>
+                    <h3>Intan Pratiwi</h3>
+                    <p>Audit Instagram Ads UMKM</p>
+                  </div>
+                  <div class="completed-session-actions">
+                    <button class="session-note-button" type="button" data-session-note="Catatan sesi Intan Pratiwi: audit performa iklan, pembagian audiens, dan evaluasi materi kreatif.">Lihat Catatan Sesi</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="meet-dialog" data-meet-dialog aria-labelledby="meet-dialog-title">
+      <div class="meet-dialog-panel">
+        <button class="meet-dialog-close" type="button" aria-label="Tutup dialog" data-close-meet>×</button>
+        <span class="meet-dialog-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
+        </span>
+        <h2 id="meet-dialog-title">Link Google Meet Mentoring</h2>
+        <p>Gunakan tautan ini untuk bergabung ke sesi Rizka Amalia Putri.</p>
+        <div class="meet-link-row">
+          <input type="url" value="https://meet.google.com/kaw-ira-meet" readonly aria-label="Link Google Meet mentoring" data-meet-link />
+          <button type="button" class="copy-meet-link" data-copy-meet>Salin Link</button>
+        </div>
+        <div class="meet-dialog-actions">
+          <a href="https://meet.google.com/kaw-ira-meet" target="_blank" rel="noopener noreferrer" class="open-meet-link">Buka di Tab Baru</a>
+          <button type="button" class="close-meet-button" data-close-meet>Tutup</button>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="package-dialog" data-package-dialog aria-labelledby="package-dialog-title">
+      <div class="package-dialog-panel">
+        <button class="meet-dialog-close" type="button" aria-label="Tutup pilihan paket" data-close-package>×</button>
+        <ol class="booking-progress" aria-label="Langkah pemesanan">
+          <li class="is-current" data-progress-step="schedule"><span>1</span>Pilih Paket &amp; Jadwal</li>
+          <li data-progress-step="payment"><span>2</span>Pembayaran QRIS</li>
+        </ol>
+
+        <section class="booking-step" data-booking-step="schedule" aria-labelledby="package-dialog-title">
+          <span class="package-dialog-kicker">JADWAL KONSULTASI</span>
+          <h2 id="package-dialog-title">Pesan Sesi</h2>
+          <p class="package-dialog-intro">Jadwalkan konsultasimu sekarang.</p>
+
+          <article class="booking-mentor-card">
+            <img src="assets/Image%20(Aditya%20Ramadhan).png" alt="" data-booking-mentor-avatar />
+            <div class="booking-mentor-details">
+              <div class="booking-mentor-heading">
+                <h3 data-package-mentor-name>Aditya Ramadhan</h3>
+                <span class="booking-mentor-badge" data-booking-mentor-badge>Alumni P2MW 2023</span>
+              </div>
+              <p data-booking-mentor-description>Founder BumbuNusa, skala UMKM ke 12 outlet.</p>
+              <span class="booking-mentor-rating"><span aria-hidden="true">★</span><strong data-booking-mentor-rating>5.0</strong></span>
+            </div>
+          </article>
+
+          <h3 class="booking-section-title">JENIS KONSULTASI</h3>
+          <div class="package-options" role="radiogroup" aria-label="Jenis konsultasi">
+            <label class="package-option" data-package-option>
+              <input type="radio" name="mentoring-package" value="chat" />
+              <span class="package-option-radio" aria-hidden="true"></span>
+              <span class="package-option-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H9l-5 3V5Z"/><path d="M8 9h8M8 13h5"/></svg></span>
+              <span class="package-option-copy">
+                <strong>Sesi Chat Real-time</strong>
+                <small>In-app chat terjadwal, teks &amp; lampiran file</small>
+                <span class="package-discount-badge">Diskon 50%</span>
+                <span class="package-price">Rp 37.500 <small>/ 60 mnt</small><del>Rp 75.000</del></span>
+              </span>
+            </label>
+
+            <label class="package-option is-selected" data-package-option>
+              <input type="radio" name="mentoring-package" value="video" checked />
+              <span class="package-option-radio" aria-hidden="true"></span>
+              <span class="package-option-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg></span>
+              <span class="package-option-copy">
+                <strong>Sesi Call (Google Meet)</strong>
+                <small>Tautan meeting otomatis dikirim ke email &amp; pop-up aplikasi</small>
+                <span class="package-price">Rp 75.000 <small>/ 60 mnt</small></span>
+              </span>
+            </label>
+          </div>
+
+          <section class="booking-calendar-section" aria-labelledby="booking-calendar-title">
+            <div class="booking-calendar-heading">
+              <h3 id="booking-calendar-title">Pilih tanggal konsultasi</h3>
+              <div class="booking-calendar-nav" aria-label="Navigasi bulan">
+                <button type="button" aria-label="Bulan sebelumnya" data-calendar-prev>‹</button>
+                <strong data-calendar-month>Oktober 2026</strong>
+                <button type="button" aria-label="Bulan berikutnya" data-calendar-next>›</button>
+              </div>
+            </div>
+            <div class="booking-calendar-grid" data-calendar-grid role="grid" aria-label="Tanggal ketersediaan mentor"></div>
+            <div class="booking-calendar-legend"><span></span>Tanggal tersedia</div>
+          </section>
+
+          <section class="booking-time-section" aria-labelledby="booking-time-title">
+            <h3 id="booking-time-title">Pilih slot waktu</h3>
+            <div class="booking-time-slots" role="group" aria-label="Slot waktu tersedia">
+              <button type="button" data-time-slot="10:00 - 11:00">10:00 - 11:00</button>
+              <button type="button" class="is-selected" data-time-slot="14:00 - 15:00" aria-pressed="true">14:00 - 15:00</button>
+              <button type="button" data-time-slot="19:30 - 20:30">19:30 - 20:30</button>
+            </div>
+          </section>
+          <button class="package-confirm-button" type="button" data-continue-payment>Lanjut ke Pembayaran QRIS</button>
+        </section>
+
+        <section class="booking-step" data-booking-step="payment" aria-labelledby="qris-title" hidden>
+          <span class="package-dialog-kicker">PEMBAYARAN AMAN</span>
+          <h2 id="qris-title">Pembayaran QRIS KAWIRA</h2>
+          <p class="package-dialog-intro">Scan QRIS untuk pembayaran instan via m-Banking atau E-Wallet.</p>
+
+          <section class="qris-order-summary" aria-label="Ringkasan transaksi">
+            <h3>Ringkasan Transaksi</h3>
+            <dl>
+              <div><dt>Mentor</dt><dd data-summary-mentor></dd></div>
+              <div><dt>Konsultasi</dt><dd data-summary-package></dd></div>
+              <div><dt>Jadwal</dt><dd data-summary-schedule></dd></div>
+            </dl>
+            <div class="qris-total"><span>Total Tagihan</span><strong data-summary-total></strong></div>
+          </section>
+
+          <section class="qris-payment-card" aria-label="QRIS dummy KAWIRA">
+            <div class="qris-wordmark"><strong>QRIS</strong><span>by KAWIRA</span></div>
+            <div class="qris-code" data-qris-code role="img" aria-label="QR code dummy untuk demo pembayaran"></div>
+            <p class="qris-merchant">NMID: PT KAWAN WIRAUSAHA INDONESIA</p>
+          </section>
+          <p class="qris-supported-apps">Mendukung Livin' by Mandiri, BCA, GoPay, OVO, Dana, dan seluruh aplikasi m-Banking/E-Wallet berstandar QRIS.</p>
+          <div class="qris-payment-actions">
+            <button class="qris-back-button" type="button" data-back-to-schedule>Kembali / Ganti Jadwal</button>
+            <button class="package-confirm-button qris-check-button" type="button" data-check-payment>Cek Status Pembayaran</button>
+          </div>
+        </section>
+      </div>
+    </dialog>
+    <dialog class="payment-success-dialog" data-payment-success-dialog aria-labelledby="payment-success-title">
+      <section class="payment-success-panel">
+        <button class="meet-dialog-close" type="button" aria-label="Tutup konfirmasi pembayaran" data-close-payment-success>×</button>
+        <span class="payment-success-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m8 16.5 5.2 5.2L24.5 10"/></svg></span>
+        <h2 id="payment-success-title">Pembayaran Berhasil!</h2>
+        <p class="payment-success-copy">Jadwal mentoring kamu telah berhasil dikonfirmasi dan otomatis masuk ke daftar sesi mendatang.</p>
+        <div class="payment-success-summary">
+          <div><span>Nama Mentor</span><strong data-success-mentor></strong></div>
+          <div><span>Paket &amp; Jadwal</span><strong data-success-schedule></strong></div>
+          <div><span>Metode</span><strong>QRIS (Lunas)</strong></div>
+        </div>
+        <button class="payment-success-action" type="button" data-view-upcoming-sessions>Lihat Sesi Mendatang</button>
+      </section>
+    </dialog>
+    <dialog class="invoice-dialog" data-invoice-dialog aria-labelledby="invoice-title">
+      <article class="invoice-document">
+        <button class="meet-dialog-close invoice-close-button" type="button" aria-label="Tutup invoice" data-close-invoice>×</button>
+        <header class="invoice-document-header">
+          <img src="assets/logoLandingPage.svg" alt="KAWIRA" />
+          <div>
+            <span class="invoice-kicker">KAWIRA · PLATFORM KAWAN WIRAUSAHA</span>
+            <h2 id="invoice-title">E-Invoice Pembayaran</h2>
+            <p data-invoice-number>#INV/KW-20261004/0089</p>
+          </div>
+        </header>
+        <div class="invoice-paid-badge"><span></span>LUNAS (QRIS)</div>
+        <dl class="invoice-details">
+          <div><dt>Nama Pemesan</dt><dd>Kawira Anindya</dd></div>
+          <div><dt>Mentor</dt><dd data-invoice-mentor>Aditya Ramadhan</dd></div>
+          <div><dt>Layanan</dt><dd data-invoice-service>Sesi Konsultasi Google Meet (60 Menit)</dd></div>
+          <div><dt>Jadwal</dt><dd data-invoice-schedule>Minggu, 4 Oktober 2026 · 14:00 - 15:00 WIB</dd></div>
+          <div class="invoice-total-row"><dt>Total</dt><dd data-invoice-total>Rp 75.000</dd></div>
+        </dl>
+        <aside class="invoice-email-callout">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          <p>Bukti pembayaran dan link konsultasi telah berhasil dikirimkan ke email: <strong>anindya@dapurnusantara.id</strong>.</p>
+        </aside>
+        <footer class="invoice-actions">
+          <button class="invoice-print-button" type="button" data-print-invoice>Cetak / Unduh PDF</button>
+          <button class="invoice-dismiss-button" type="button" data-close-invoice>Tutup</button>
+        </footer>
+      </article>
+    </dialog>
+    <dialog class="session-note-dialog" data-session-note-dialog aria-labelledby="session-note-title">
+      <article class="session-note-panel">
+        <button class="meet-dialog-close" type="button" aria-label="Tutup catatan mentoring" data-close-session-note>×</button>
+        <header class="session-dialog-header">
+          <span class="session-dialog-kicker">CATATAN SESI</span>
+          <h2 id="session-note-title">Rangkuman Catatan Mentoring</h2>
+          <p data-session-note-mentor>Mentor: Aditya Ramadhan · Validasi Ide &amp; Pitch Deck P2MW</p>
+        </header>
+        <section class="session-note-section">
+          <h3>Poin Evaluasi Mentor</h3>
+          <ul class="session-note-list">
+            <li>Format pitch deck sudah terstruktur, namun bagian TAM/SAM/SOM perlu diperjelas sumber datanya.</li>
+            <li>Proyeksi COGS dan margin keuntungan produk Dapur Nusantara perlu dinaikkan minimal 35% untuk mengantisipasi biaya pemasaran.</li>
+          </ul>
+        </section>
+        <section class="session-note-section session-action-section">
+          <h3>Action Items <span>Rekomendasi Langkah Selanjutnya</span></h3>
+          <ul class="session-note-list">
+            <li>Selesaikan revisi slide keuangan sebelum submit proposal.</li>
+            <li>Uji coba kemasan vakum untuk memperpanjang daya tahan produk.</li>
+          </ul>
+        </section>
+        <section class="session-note-attachment" aria-label="Lampiran rekomendasi">
+          <span class="session-attachment-icon" aria-hidden="true">📄</span>
+          <span><strong>Template_PitchDeck_P2MW_Revisi.pdf</strong><small>Dokumen rekomendasi · 1.8 MB</small></span>
+          <button type="button" data-download-template aria-label="Unduh template pitch deck">Unduh</button>
+        </section>
+        <footer class="session-dialog-actions">
+          <button class="session-dialog-outline" type="button" data-close-session-note>Tutup Catatan</button>
+          <button class="session-dialog-primary" type="button" data-download-session-notes>Unduh Catatan (PDF)</button>
+        </footer>
+      </article>
+    </dialog>
+    <dialog class="mentor-review-dialog" data-mentor-review-dialog aria-labelledby="mentor-review-title">
+      <form class="mentor-review-panel" data-mentor-review-form>
+        <button class="meet-dialog-close" type="button" aria-label="Tutup ulasan mentor" data-close-mentor-review>×</button>
+        <header class="session-dialog-header">
+          <span class="session-dialog-kicker">ULASAN SESI</span>
+          <h2 id="mentor-review-title">Beri Ulasan Mentor</h2>
+          <p data-mentor-review-description>Bagikan pengalaman mentoring kamu untuk membantu wirausaha lainnya.</p>
+        </header>
+        <div class="mentor-review-profile">
+          <img src="assets/Image%20(Aditya%20Ramadhan).png" alt="" data-review-mentor-avatar />
+          <strong data-review-mentor-name>Aditya Ramadhan</strong>
+        </div>
+        <fieldset class="mentor-rating-fieldset">
+          <legend>Seberapa bermanfaat sesi ini?</legend>
+          <div class="mentor-rating-stars" role="group" aria-label="Pilih rating dari satu sampai lima bintang">
+            <button type="button" data-rating-star="1" aria-label="1 bintang" aria-pressed="false">★</button>
+            <button type="button" data-rating-star="2" aria-label="2 bintang" aria-pressed="false">★</button>
+            <button type="button" data-rating-star="3" aria-label="3 bintang" aria-pressed="false">★</button>
+            <button type="button" data-rating-star="4" aria-label="4 bintang" aria-pressed="false">★</button>
+            <button type="button" data-rating-star="5" aria-label="5 bintang" aria-pressed="false">★</button>
+          </div>
+          <p data-rating-caption>Pilih jumlah bintang</p>
+        </fieldset>
+        <label class="mentor-review-label" for="mentor-review-text">Ulasan kamu</label>
+        <textarea id="mentor-review-text" data-review-text placeholder="Tulis masukan atau kesan selama sesi bimbingan..." rows="4"></textarea>
+        <div class="mentor-review-tags" aria-label="Kesan cepat">
+          <button type="button" data-review-tag="Penjelasan Detail">Penjelasan Detail</button>
+          <button type="button" data-review-tag="Solutif">Solutif</button>
+          <button type="button" data-review-tag="Materi Praktikal">Materi Praktikal</button>
+          <button type="button" data-review-tag="Ramah &amp; Terbuka">Ramah &amp; Terbuka</button>
+        </div>
+        <footer class="session-dialog-actions">
+          <button class="session-dialog-outline" type="button" data-close-mentor-review>Batal</button>
+          <button class="session-dialog-primary" type="submit" data-submit-review disabled>Kirim Ulasan</button>
+        </footer>
+      </form>
+    </dialog>
+    <div class="dashboard-toast mentoring-toast" data-mentoring-toast role="status" aria-live="polite" hidden></div>
+
+    <script>
+      const countdown = document.querySelector('[data-countdown]');
+      let remainingSeconds = 16 * 60 * 60;
+      const updateCountdown = () => {
+        const hours = Math.floor(remainingSeconds / 3600);
+        const minutes = Math.floor((remainingSeconds % 3600) / 60);
+        const seconds = remainingSeconds % 60;
+        countdown.textContent = [hours, minutes, seconds].map((value) => String(value).padStart(2, '0')).join(':');
+        if (remainingSeconds > 0) remainingSeconds -= 1;
+      };
+      updateCountdown();
+      window.setInterval(updateCountdown, 1000);
+
+      const mentoringTabs = [...document.querySelectorAll('[data-mentoring-tab]')];
+      const mentoringPanels = [...document.querySelectorAll('[data-mentoring-panel]')];
+      const upcomingSession = document.querySelector('.upcoming-session');
+      const upcomingSlots = [...document.querySelectorAll('[data-upcoming-slot]')];
+      const activateMentoringTab = (tabName, shouldFocus = false) => {
+        mentoringTabs.forEach((tab) => {
+          const isActive = tab.dataset.mentoringTab === tabName;
+          tab.classList.toggle('is-active', isActive);
+          tab.setAttribute('aria-selected', String(isActive));
+          tab.tabIndex = isActive ? 0 : -1;
+          if (isActive && shouldFocus) tab.focus();
+        });
+        mentoringPanels.forEach((panel) => {
+          panel.hidden = panel.dataset.mentoringPanel !== tabName;
+        });
+        document.querySelector(`[data-upcoming-slot="${tabName}"]`).append(upcomingSession);
+      };
+      mentoringTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => activateMentoringTab(tab.dataset.mentoringTab));
+        tab.addEventListener('keydown', (event) => {
+          if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+          event.preventDefault();
+          const nextIndex = event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? mentoringTabs.length - 1
+              : (index + (event.key === 'ArrowRight' ? 1 : -1) + mentoringTabs.length) % mentoringTabs.length;
+          activateMentoringTab(mentoringTabs[nextIndex].dataset.mentoringTab, true);
+        });
+      });
+      activateMentoringTab(new URLSearchParams(window.location.search).get('tab') === 'jadwal' ? 'sessions' : 'explore');
+
+      const mentorSearch = document.querySelector('[data-mentor-search]');
+      const mentorCards = [...document.querySelectorAll('.mentor-directory-card')];
+      const filterButtons = [...document.querySelectorAll('[data-filter]')];
+      const emptyState = document.querySelector('[data-empty-state]');
+      let selectedFilter = 'all';
+
+      const filterMentors = () => {
+        const searchTerm = mentorSearch.value.trim().toLocaleLowerCase('id');
+        let visibleMentors = 0;
+        mentorCards.forEach((card) => {
+          const matchesCategory = selectedFilter === 'all' || card.dataset.categories.split(' ').includes(selectedFilter);
+          const matchesSearch = `${card.dataset.search} ${card.textContent}`.toLocaleLowerCase('id').includes(searchTerm);
+          const isVisible = matchesCategory && matchesSearch;
+          card.hidden = !isVisible;
+          if (isVisible) visibleMentors += 1;
+        });
+        emptyState.hidden = visibleMentors > 0;
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          selectedFilter = button.dataset.filter;
+          filterButtons.forEach((filterButton) => {
+            const isSelected = filterButton === button;
+            filterButton.classList.toggle('is-selected', isSelected);
+            filterButton.setAttribute('aria-pressed', String(isSelected));
+          });
+          filterMentors();
+        });
+      });
+      mentorSearch.addEventListener('input', filterMentors);
+
+      const meetDialog = document.querySelector('[data-meet-dialog]');
+      const openMeetButton = document.querySelector('[data-open-meet]');
+      const copyMeetButton = document.querySelector('[data-copy-meet]');
+      const meetLinkInput = document.querySelector('[data-meet-link]');
+      openMeetButton.addEventListener('click', () => meetDialog.showModal());
+      document.querySelectorAll('[data-close-meet]').forEach((button) => {
+        button.addEventListener('click', () => meetDialog.close());
+      });
+      meetDialog.addEventListener('click', (event) => {
+        if (event.target === meetDialog) meetDialog.close();
+      });
+
+      const copyWithFallback = () => {
+        meetLinkInput.select();
+        return document.execCommand('copy');
+      };
+      copyMeetButton.addEventListener('click', async () => {
+        try {
+          if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(meetLinkInput.value);
+          else if (!copyWithFallback()) throw new Error('Clipboard unavailable');
+        } catch {
+          try {
+            if (!copyWithFallback()) throw new Error('Clipboard unavailable');
+          } catch {
+            meetLinkInput.focus();
+            meetLinkInput.select();
+          }
+        }
+        copyMeetButton.textContent = '✓ Tersalin!';
+        window.setTimeout(() => { copyMeetButton.textContent = 'Salin Link'; }, 2200);
+      });
+
+      const mentoringToast = document.querySelector('[data-mentoring-toast]');
+      let mentoringToastTimeout;
+      const showMentoringToast = (message) => {
+        mentoringToast.textContent = message;
+        mentoringToast.hidden = false;
+        window.clearTimeout(mentoringToastTimeout);
+        mentoringToastTimeout = window.setTimeout(() => { mentoringToast.hidden = true; }, 3200);
+      };
+
+      const notificationStorageKey = 'kawira-mentoring-notifications';
+      const notificationWrap = document.querySelector('[data-notification-wrap]');
+      const notificationToggle = document.querySelector('[data-notification-toggle]');
+      const notificationPanel = document.querySelector('[data-notification-panel]');
+      const notificationList = document.querySelector('[data-notification-list]');
+      const notificationDot = document.querySelector('[data-notification-dot]');
+      const markNotificationsReadButton = document.querySelector('[data-mark-notifications-read]');
+      const defaultNotifications = [
+        { id: 'payment-rizka-demo', type: 'success', message: 'Pembayaran Berhasil! Sesi mentoring bersama Rizka Amalia Putri berhasil dijadwalkan untuk 4 Okt 2026.', time: 'Baru saja', read: false },
+        { id: 'invoice-aditya-demo', type: 'invoice', message: 'Invoice #INV-0089 sesi bersama Aditya Ramadhan telah dikirim ke email kamu.', time: 'Baru saja', read: false },
+        { id: 'session-reminder-demo', type: 'calendar', message: 'Pengingat Sesi: Sesi mentoring F&B dimulai dalam 16 jam.', time: '2 jam yang lalu', read: true },
+        { id: 'community-session-demo', type: 'community', message: 'Sharing Session P2MW malam ini pukul 19:30 WIB.', time: '1 hari yang lalu', read: true }
+      ];
+      let notifications = defaultNotifications;
+      try {
+        const savedNotifications = JSON.parse(localStorage.getItem(notificationStorageKey) || '[]');
+        if (Array.isArray(savedNotifications) && savedNotifications.length && savedNotifications.every((notification) => notification
+          && typeof notification.id === 'string'
+          && typeof notification.type === 'string'
+          && typeof notification.message === 'string'
+          && typeof notification.time === 'string'
+          && typeof notification.read === 'boolean')) notifications = savedNotifications;
+      } catch {}
+      if (!notifications.some((notification) => notification.id === 'invoice-aditya-demo')) {
+        notifications.push(defaultNotifications.find((notification) => notification.id === 'invoice-aditya-demo'));
+      }
+
+      const updateNotificationBadge = () => {
+        const unreadCount = notifications.filter((notification) => !notification.read).length;
+        notificationDot.hidden = unreadCount === 0;
+        notificationToggle.setAttribute('aria-label', unreadCount ? `Notifikasi, ${unreadCount} baru` : 'Notifikasi, semua sudah dibaca');
+      };
+
+      const renderNotifications = () => {
+        notificationList.replaceChildren();
+        notifications.forEach((notification) => {
+          const item = document.createElement('article');
+          item.className = `notification-item${notification.read ? '' : ' is-unread'}`;
+          const icon = document.createElement('span');
+          icon.className = `notification-item-icon is-${notification.type}`;
+          icon.setAttribute('aria-hidden', 'true');
+          const iconMarkup = {
+            success: '<svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>',
+            invoice: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>',
+            calendar: '<svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M7.5 3v4M16.5 3v4M3.5 10h17"/></svg>',
+            community: '<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>'
+          }[notification.type] || '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg>';
+          icon.innerHTML = iconMarkup;
+          const copy = document.createElement('div');
+          copy.className = 'notification-item-copy';
+          const message = document.createElement('p');
+          message.textContent = notification.message;
+          const time = document.createElement('time');
+          time.textContent = notification.time;
+          copy.append(message, time);
+          item.append(icon, copy);
+          notificationList.append(item);
+        });
+        updateNotificationBadge();
+      };
+
+      const saveNotifications = () => {
+        try { localStorage.setItem(notificationStorageKey, JSON.stringify(notifications)); } catch {}
+      };
+
+      const closeNotificationPanel = () => {
+        notificationPanel.hidden = true;
+        notificationToggle.setAttribute('aria-expanded', 'false');
+      };
+
+      notificationToggle.addEventListener('click', () => {
+        const willOpen = notificationPanel.hidden;
+        notificationPanel.hidden = !willOpen;
+        notificationToggle.setAttribute('aria-expanded', String(willOpen));
+      });
+      markNotificationsReadButton.addEventListener('click', () => {
+        notifications = notifications.map((notification) => ({ ...notification, read: true }));
+        saveNotifications();
+        renderNotifications();
+      });
+      document.addEventListener('click', (event) => {
+        if (!notificationPanel.hidden && !notificationWrap.contains(event.target)) closeNotificationPanel();
+      });
+      saveNotifications();
+      renderNotifications();
+
+      const packageStorageKey = 'kawira-mentor-packages';
+      const rizkaMentorName = 'Rizka Amalia Putri';
+      const packageDialog = document.querySelector('[data-package-dialog]');
+      const packageMentorName = document.querySelector('[data-package-mentor-name]');
+      const packageChoices = [...packageDialog.querySelectorAll('input[name="mentoring-package"]')];
+      const upcomingPackageBadge = document.querySelector('[data-upcoming-package]');
+      const openChatLink = document.querySelector('[data-open-chat]');
+      const bookingMentorAvatar = document.querySelector('[data-booking-mentor-avatar]');
+      const bookingMentorBadge = document.querySelector('[data-booking-mentor-badge]');
+      const bookingMentorDescription = document.querySelector('[data-booking-mentor-description]');
+      const bookingMentorRating = document.querySelector('[data-booking-mentor-rating]');
+      const bookingSteps = [...packageDialog.querySelectorAll('[data-booking-step]')];
+      const progressSteps = [...packageDialog.querySelectorAll('[data-progress-step]')];
+      const calendarGrid = packageDialog.querySelector('[data-calendar-grid]');
+      const calendarMonthLabel = packageDialog.querySelector('[data-calendar-month]');
+      const calendarPrev = packageDialog.querySelector('[data-calendar-prev]');
+      const calendarNext = packageDialog.querySelector('[data-calendar-next]');
+      const continuePaymentButton = packageDialog.querySelector('[data-continue-payment]');
+      const checkPaymentButton = packageDialog.querySelector('[data-check-payment]');
+      const upcomingDateLabel = document.querySelector('[data-upcoming-date-label]');
+      const upcomingTimeLabel = document.querySelector('[data-upcoming-time-label]');
+      const bookingStorageKey = 'kawira-mentor-bookings';
+      const paidBookingsList = document.querySelector('[data-paid-bookings-list]');
+      const paidBookingsSection = document.querySelector('[data-paid-bookings-section]');
+      const paymentSuccessDialog = document.querySelector('[data-payment-success-dialog]');
+      const invoiceDialog = document.querySelector('[data-invoice-dialog]');
+      const availableDates = {
+        '2026-09': [5, 9, 12, 18, 23, 29],
+        '2026-10': [4, 9, 12, 16, 21, 27, 31]
+      };
+      const availableSlots = ['10:00 - 11:00', '14:00 - 15:00', '19:30 - 20:30'];
+      const packageDetails = {
+        chat: { label: 'Sesi Chat Real-time', price: 37500 },
+        video: { label: 'Sesi Call (Google Meet)', price: 75000 }
+      };
+      const defaultAdityaBooking = {
+        mentor: 'Aditya Ramadhan',
+        topic: 'Validasi Ide & Pitch Deck P2MW',
+        package: 'video',
+        consultation: 'Sesi Call (Google Meet)',
+        price: 75000,
+        date: '2026-10-04',
+        time: '14:00 - 15:00',
+        invoiceNo: '#INV/KW-20261004/0089',
+        avatar: 'assets/Image%20(Aditya%20Ramadhan).png'
+      };
+      let mentorPackages = {};
+      let selectedBookingMentor = '';
+      let currentCalendarMonth = '2026-10';
+      let selectedBookingDate = '2026-10-04';
+      let selectedBookingTime = '14:00 - 15:00';
+      let pendingPayment = false;
+      let mentorBookings = [defaultAdityaBooking];
+
+      try {
+        const savedPackages = JSON.parse(localStorage.getItem(packageStorageKey) || '{}');
+        if (savedPackages && typeof savedPackages === 'object' && !Array.isArray(savedPackages)) mentorPackages = savedPackages;
+      } catch {}
+      if (!['video', 'chat'].includes(mentorPackages[rizkaMentorName])) mentorPackages[rizkaMentorName] = 'chat';
+      try {
+        const savedBookings = JSON.parse(localStorage.getItem(bookingStorageKey) || '[]');
+        if (Array.isArray(savedBookings) && savedBookings.every((booking) => booking
+          && typeof booking.mentor === 'string'
+          && typeof booking.date === 'string'
+          && typeof booking.time === 'string'
+          && Number.isFinite(Number(booking.price)))) mentorBookings = savedBookings;
+      } catch {}
+      const matchingAdityaBooking = mentorBookings.findIndex((booking) => booking.mentor === defaultAdityaBooking.mentor && booking.date === defaultAdityaBooking.date && booking.time === defaultAdityaBooking.time);
+      if (matchingAdityaBooking < 0) mentorBookings.unshift(defaultAdityaBooking);
+      else mentorBookings[matchingAdityaBooking] = {
+        ...defaultAdityaBooking,
+        ...mentorBookings[matchingAdityaBooking],
+        topic: mentorBookings[matchingAdityaBooking].topic || defaultAdityaBooking.topic,
+        invoiceNo: mentorBookings[matchingAdityaBooking].invoiceNo || defaultAdityaBooking.invoiceNo
+      };
+      const bookingTimestamp = (booking) => Date.parse(booking.bookedAt || `${booking.date}T${booking.time.split(' - ')[0]}:00`) || 0;
+      mentorBookings.sort((firstBooking, secondBooking) => {
+        return bookingTimestamp(secondBooking) - bookingTimestamp(firstBooking);
+      });
+
+      const updateUpcomingPackage = () => {
+        const isChatPackage = mentorPackages[rizkaMentorName] === 'chat';
+        upcomingPackageBadge.textContent = isChatPackage
+          ? '🏷️ Paket: Chat Mentoring (Hemat 50%)'
+          : '🏷️ Paket: Sesi Video Call (Google Meet)';
+        upcomingPackageBadge.classList.toggle('is-video', !isChatPackage);
+        openMeetButton.disabled = isChatPackage;
+        openMeetButton.classList.toggle('is-disabled', isChatPackage);
+        openMeetButton.hidden = false;
+        openChatLink.hidden = !isChatPackage;
+      };
+
+      const formatBookingDate = (dateKey, options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) => {
+        const [year, month, day] = dateKey.split('-').map(Number);
+        return new Intl.DateTimeFormat('id-ID', options).format(new Date(year, month - 1, day));
+      };
+      const updateUpcomingBooking = () => {
+        const latestBooking = [...mentorBookings].reverse().find((booking) => booking.mentor === rizkaMentorName);
+        if (!latestBooking) return;
+        upcomingDateLabel.textContent = formatBookingDate(latestBooking.date);
+        upcomingTimeLabel.textContent = `${latestBooking.time} WIB`;
+      };
+
+      const getInvoiceNumber = (booking) => {
+        if (booking.invoiceNo) return booking.invoiceNo;
+        const bookingIndex = mentorBookings.indexOf(booking);
+        return `#INV/KW-${booking.date.replaceAll('-', '')}/${String(89 + Math.max(0, bookingIndex)).padStart(4, '0')}`;
+      };
+
+      const openInvoice = (booking) => {
+        const serviceName = booking.package === 'chat' ? 'Sesi Konsultasi Chat Real-time (60 Menit)' : 'Sesi Konsultasi Google Meet (60 Menit)';
+        invoiceDialog.querySelector('[data-invoice-number]').textContent = getInvoiceNumber(booking);
+        invoiceDialog.querySelector('[data-invoice-mentor]').textContent = booking.mentor;
+        invoiceDialog.querySelector('[data-invoice-service]').textContent = serviceName;
+        invoiceDialog.querySelector('[data-invoice-schedule]').textContent = `${formatBookingDate(booking.date)} · ${booking.time} WIB`;
+        invoiceDialog.querySelector('[data-invoice-total]').textContent = `Rp ${booking.price.toLocaleString('id-ID')}`;
+        invoiceDialog.showModal();
+      };
+
+      const renderPaidBookings = () => {
+        paidBookingsList.replaceChildren();
+        const bookingsToShow = mentorBookings.slice(0, 1);
+        paidBookingsSection.hidden = bookingsToShow.length === 0;
+        bookingsToShow.forEach((booking) => {
+          const card = document.createElement('article');
+          card.className = 'paid-booking-card';
+          const mentorCard = mentorCards.find((candidate) => candidate.querySelector('.mentor-identity h3').textContent.trim() === booking.mentor);
+          const avatar = document.createElement('img');
+          avatar.className = 'paid-booking-avatar';
+          avatar.src = booking.avatar || mentorCard?.querySelector('.mentor-card-profile > img').getAttribute('src') || 'assets/fotoProfil.jpg';
+          avatar.alt = '';
+          const details = document.createElement('div');
+          details.className = 'paid-booking-copy';
+          const title = document.createElement('h3');
+          title.textContent = booking.mentor;
+          const topic = document.createElement('p');
+          topic.className = 'paid-booking-topic';
+          topic.textContent = booking.topic || mentorCard?.querySelector('.mentor-identity p').textContent || 'Sesi konsultasi mentoring';
+          const schedule = document.createElement('p');
+          schedule.className = 'paid-booking-schedule';
+          schedule.textContent = `${formatBookingDate(booking.date)} · ${booking.time}`;
+          const packageName = document.createElement('span');
+          packageName.className = `paid-booking-package${booking.package === 'chat' ? ' is-chat' : ''}`;
+          packageName.textContent = booking.package === 'chat' ? 'Paket Chat Mentoring' : 'Paket Google Meet';
+          details.append(title, topic, packageName, schedule);
+          const invoiceButton = document.createElement('button');
+          invoiceButton.className = 'paid-booking-invoice-button';
+          invoiceButton.type = 'button';
+          invoiceButton.innerHTML = '<span aria-hidden="true">🧾</span> Lihat Invoice';
+          invoiceButton.addEventListener('click', () => openInvoice(booking));
+          card.append(avatar, details, invoiceButton);
+          paidBookingsList.append(card);
+        });
+      };
+
+      const addPaymentNotification = (booking) => {
+        const shortDate = formatBookingDate(booking.date, { day: 'numeric', month: 'short', year: 'numeric' });
+        const invoiceSuffix = getInvoiceNumber(booking).split('/').at(-1);
+        notifications.unshift({
+          id: `payment-${Date.now()}`,
+          type: 'success',
+          message: `Pembayaran Berhasil! Sesi mentoring bersama ${booking.mentor} berhasil dijadwalkan untuk ${shortDate}.`,
+          time: 'Baru saja',
+          read: false
+        });
+        notifications.unshift({
+          id: `invoice-${Date.now()}`,
+          type: 'invoice',
+          message: `Invoice #INV-${invoiceSuffix} sesi bersama ${booking.mentor} telah dikirim ke email kamu.`,
+          time: 'Baru saja',
+          read: false
+        });
+        notifications = notifications.slice(0, 20);
+        saveNotifications();
+        renderNotifications();
+      };
+
+      const showPaymentSuccess = (booking) => {
+        paymentSuccessDialog.querySelector('[data-success-mentor]').textContent = booking.mentor;
+        const packageLabel = booking.package === 'chat' ? 'Paket Chat' : 'Paket GMeet';
+        paymentSuccessDialog.querySelector('[data-success-schedule]').textContent = `${packageLabel} · ${formatBookingDate(booking.date)} · ${booking.time}`;
+        paymentSuccessDialog.showModal();
+      };
+
+      document.querySelector('[data-close-payment-success]').addEventListener('click', () => paymentSuccessDialog.close());
+      document.querySelectorAll('[data-close-invoice]').forEach((button) => button.addEventListener('click', () => invoiceDialog.close()));
+      invoiceDialog.addEventListener('click', (event) => {
+        if (event.target === invoiceDialog) invoiceDialog.close();
+      });
+      document.querySelector('[data-print-invoice]').addEventListener('click', () => window.print());
+      document.querySelector('[data-view-upcoming-sessions]').addEventListener('click', () => {
+        paymentSuccessDialog.close();
+        activateMentoringTab('sessions', true);
+        document.querySelector('#panel-sessions').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      const updatePackageSelectionStyle = () => {
+        packageChoices.forEach((choice) => choice.closest('[data-package-option]').classList.toggle('is-selected', choice.checked));
+      };
+      const setBookingStep = (stepName) => {
+        bookingSteps.forEach((step) => { step.hidden = step.dataset.bookingStep !== stepName; });
+        progressSteps.forEach((step) => {
+          const isCurrent = step.dataset.progressStep === stepName;
+          step.classList.toggle('is-current', isCurrent);
+          step.classList.toggle('is-complete', step.dataset.progressStep === 'schedule' && stepName === 'payment');
+        });
+        packageDialog.scrollTop = 0;
+      };
+
+      const renderBookingCalendar = () => {
+        const [year, month] = currentCalendarMonth.split('-').map(Number);
+        const firstWeekday = new Date(year, month - 1, 1).getDay();
+        const daysInMonth = new Date(year, month, 0).getDate();
+        const availableDays = availableDates[currentCalendarMonth] || [];
+        calendarMonthLabel.textContent = new Intl.DateTimeFormat('id-ID', { month: 'long', year: 'numeric' }).format(new Date(year, month - 1, 1));
+        calendarGrid.replaceChildren();
+        ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'].forEach((day) => {
+          const heading = document.createElement('span');
+          heading.className = 'booking-weekday';
+          heading.setAttribute('role', 'columnheader');
+          heading.textContent = day;
+          calendarGrid.append(heading);
+        });
+        for (let blank = 0; blank < firstWeekday; blank += 1) {
+          const spacer = document.createElement('span');
+          spacer.className = 'booking-calendar-spacer';
+          spacer.setAttribute('aria-hidden', 'true');
+          calendarGrid.append(spacer);
+        }
+        for (let day = 1; day <= daysInMonth; day += 1) {
+          const dateKey = `${currentCalendarMonth}-${String(day).padStart(2, '0')}`;
+          const isAvailable = availableDays.includes(day);
+          const dateButton = document.createElement('button');
+          dateButton.type = 'button';
+          dateButton.className = 'booking-calendar-day';
+          dateButton.textContent = String(day);
+          dateButton.disabled = !isAvailable;
+          dateButton.setAttribute('role', 'gridcell');
+          dateButton.setAttribute('aria-label', formatBookingDate(dateKey));
+          if (isAvailable) dateButton.classList.add('is-available');
+          if (dateKey === selectedBookingDate) {
+            dateButton.classList.add('is-selected');
+            dateButton.setAttribute('aria-pressed', 'true');
+          }
+          dateButton.addEventListener('click', () => {
+            selectedBookingDate = dateKey;
+            renderBookingCalendar();
+          });
+          calendarGrid.append(dateButton);
+        }
+        calendarPrev.disabled = currentCalendarMonth === '2026-09';
+        calendarNext.disabled = currentCalendarMonth === '2026-10';
+      };
+
+      const renderQrCodeMockup = () => {
+        const code = packageDialog.querySelector('[data-qris-code]');
+        if (code.childElementCount) return;
+        const size = 29;
+        const cells = [];
+        const finderAt = (x, y, originX, originY) => {
+          const localX = x - originX;
+          const localY = y - originY;
+          if (localX < 0 || localY < 0 || localX > 6 || localY > 6) return null;
+          return localX === 0 || localY === 0 || localX === 6 || localY === 6 || (localX >= 2 && localX <= 4 && localY >= 2 && localY <= 4);
+        };
+        for (let y = 0; y < size; y += 1) {
+          for (let x = 0; x < size; x += 1) {
+            let isDark = finderAt(x, y, 0, 0) ?? finderAt(x, y, size - 7, 0) ?? finderAt(x, y, 0, size - 7);
+            if (isDark === null) isDark = ((x * 17 + y * 31 + x * y * 7) % 11) < 5;
+            const cell = document.createElement('span');
+            if (isDark) cell.className = 'is-dark';
+            cells.push(cell);
+          }
+        }
+        code.append(...cells);
+      };
+
+      const selectedPackage = () => packageChoices.find((choice) => choice.checked)?.value;
+      const updatePaymentSummary = () => {
+        const packageInfo = packageDetails[selectedPackage()];
+        packageDialog.querySelector('[data-summary-mentor]').textContent = selectedBookingMentor;
+        packageDialog.querySelector('[data-summary-package]').textContent = packageInfo.label;
+        packageDialog.querySelector('[data-summary-schedule]').textContent = `${formatBookingDate(selectedBookingDate)} · ${selectedBookingTime}`;
+        packageDialog.querySelector('[data-summary-total]').textContent = `Rp ${packageInfo.price.toLocaleString('id-ID')}`;
+      };
+
+      document.querySelectorAll('[data-book-mentor]').forEach((button) => {
+        button.addEventListener('click', () => {
+          selectedBookingMentor = button.dataset.bookMentor;
+          const mentorCard = button.closest('.mentor-directory-card');
+          const mentorAvatar = mentorCard.querySelector('.mentor-card-profile > img');
+          packageMentorName.textContent = selectedBookingMentor;
+          bookingMentorAvatar.src = mentorAvatar.src;
+          bookingMentorAvatar.alt = `Foto ${selectedBookingMentor}`;
+          bookingMentorBadge.textContent = mentorCard.querySelector('.mentor-status-tag').textContent;
+          bookingMentorDescription.textContent = mentorCard.querySelector('.mentor-description').textContent;
+          bookingMentorRating.textContent = mentorCard.querySelector('.mentor-rating strong').textContent;
+          packageChoices.forEach((choice) => {
+            choice.checked = choice.value === 'video';
+          });
+          updatePackageSelectionStyle();
+          currentCalendarMonth = '2026-10';
+          selectedBookingDate = '2026-10-04';
+          selectedBookingTime = '14:00 - 15:00';
+          packageDialog.querySelectorAll('[data-time-slot]').forEach((slot) => {
+            const isSelected = slot.dataset.timeSlot === selectedBookingTime;
+            slot.classList.toggle('is-selected', isSelected);
+            slot.setAttribute('aria-pressed', String(isSelected));
+          });
+          renderBookingCalendar();
+          setBookingStep('schedule');
+          packageDialog.showModal();
+        });
+      });
+      packageChoices.forEach((choice) => {
+        choice.addEventListener('change', updatePackageSelectionStyle);
+      });
+      packageDialog.querySelectorAll('[data-time-slot]').forEach((slot) => {
+        slot.addEventListener('click', () => {
+          selectedBookingTime = slot.dataset.timeSlot;
+          packageDialog.querySelectorAll('[data-time-slot]').forEach((option) => {
+            const isSelected = option === slot;
+            option.classList.toggle('is-selected', isSelected);
+            option.setAttribute('aria-pressed', String(isSelected));
+          });
+        });
+      });
+      calendarPrev.addEventListener('click', () => { currentCalendarMonth = '2026-09'; renderBookingCalendar(); });
+      calendarNext.addEventListener('click', () => { currentCalendarMonth = '2026-10'; renderBookingCalendar(); });
+      continuePaymentButton.addEventListener('click', () => {
+        if (!selectedBookingDate || !availableSlots.includes(selectedBookingTime)) return;
+        updatePaymentSummary();
+        renderQrCodeMockup();
+        setBookingStep('payment');
+      });
+      packageDialog.querySelector('[data-back-to-schedule]').addEventListener('click', () => setBookingStep('schedule'));
+      document.querySelector('[data-close-package]').addEventListener('click', () => packageDialog.close());
+      packageDialog.addEventListener('click', (event) => {
+        if (event.target === packageDialog) packageDialog.close();
+      });
+      checkPaymentButton.addEventListener('click', () => {
+        if (pendingPayment) return;
+        pendingPayment = true;
+        checkPaymentButton.disabled = true;
+        checkPaymentButton.innerHTML = '<span class="qris-spinner" aria-hidden="true"></span>Memeriksa pembayaran...';
+        window.setTimeout(() => {
+          const packageInfo = packageDetails[selectedPackage()];
+          const booking = {
+            mentor: selectedBookingMentor,
+            package: selectedPackage(),
+            consultation: packageInfo.label,
+            price: packageInfo.price,
+            date: selectedBookingDate,
+            time: selectedBookingTime,
+            topic: mentorCards.find((card) => card.querySelector('.mentor-identity h3').textContent.trim() === selectedBookingMentor)?.querySelector('.mentor-identity p').textContent || 'Sesi konsultasi mentoring',
+            invoiceNo: `#INV/KW-${selectedBookingDate.replaceAll('-', '')}/${String(89 + mentorBookings.length).padStart(4, '0')}`,
+            bookedAt: new Date().toISOString()
+          };
+          mentorBookings.unshift(booking);
+          mentorPackages[selectedBookingMentor] = booking.package;
+          let saved = false;
+          try {
+            localStorage.setItem(bookingStorageKey, JSON.stringify(mentorBookings));
+            localStorage.setItem(packageStorageKey, JSON.stringify(mentorPackages));
+            saved = true;
+          } catch {}
+          pendingPayment = false;
+          checkPaymentButton.disabled = false;
+          checkPaymentButton.textContent = 'Cek Status Pembayaran';
+          if (!saved) {
+            mentorBookings.pop();
+            showMentoringToast('Penyimpanan browser tidak tersedia. Silakan coba kembali.');
+            return;
+          }
+          if (selectedBookingMentor === rizkaMentorName) {
+            updateUpcomingPackage();
+            updateUpcomingBooking();
+          }
+          renderPaidBookings();
+          addPaymentNotification(booking);
+          packageDialog.close();
+          showPaymentSuccess(booking);
+        }, 1000);
+      });
+      updateUpcomingPackage();
+      updateUpcomingBooking();
+      renderPaidBookings();
+      const sessionNoteDialog = document.querySelector('[data-session-note-dialog]');
+      const mentorReviewDialog = document.querySelector('[data-mentor-review-dialog]');
+      const mentorReviewForm = document.querySelector('[data-mentor-review-form]');
+      const reviewText = document.querySelector('[data-review-text]');
+      const reviewCaption = document.querySelector('[data-rating-caption]');
+      const reviewSubmitButton = document.querySelector('[data-submit-review]');
+      const ratingStorageKey = 'kawira-mentor-session-ratings';
+      const ratingCaptions = ['', 'Perlu Ditingkatkan', 'Cukup Membantu', 'Baik & Bermanfaat', 'Sangat Baik & Praktikal', 'Sangat Membantu & Inspiratif!'];
+      let selectedReviewMentor = '';
+      let selectedRating = 0;
+      let mentorRatings = {};
+      try {
+        const savedRatings = JSON.parse(localStorage.getItem(ratingStorageKey) || '{}');
+        if (savedRatings && typeof savedRatings === 'object' && !Array.isArray(savedRatings)) {
+          mentorRatings = Object.fromEntries(Object.entries(savedRatings)
+            .filter(([, rating]) => Number.isFinite(Number(rating)) && Number(rating) > 0));
+        }
+      } catch {}
+
+      const getCompletedSessionDetails = (button) => {
+        const card = button.closest('.completed-session-card');
+        return {
+          mentor: card.querySelector('.completed-session-copy h3').textContent.trim(),
+          topic: card.querySelector('.completed-session-copy > p').textContent.trim(),
+          avatar: card.querySelector(':scope > img').getAttribute('src')
+        };
+      };
+
+      document.querySelectorAll('[data-session-note]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const session = getCompletedSessionDetails(button);
+          sessionNoteDialog.querySelector('[data-session-note-mentor]').textContent = `Mentor: ${session.mentor} · ${session.topic}`;
+          sessionNoteDialog.showModal();
+        });
+      });
+      document.querySelectorAll('[data-session-rating]').forEach((button) => {
+        const savedRating = mentorRatings[button.dataset.sessionRating];
+        if (savedRating) {
+          button.textContent = `Sudah Dinilai (★ ${Number(savedRating).toFixed(1)})`;
+          button.disabled = true;
+          button.classList.add('is-rated');
+        }
+        button.addEventListener('click', () => {
+          const session = getCompletedSessionDetails(button);
+          selectedReviewMentor = session.mentor;
+          selectedRating = 0;
+          mentorReviewForm.reset();
+          mentorReviewForm.querySelectorAll('[data-rating-star]').forEach((star) => {
+            star.classList.remove('is-selected', 'is-hovered');
+            star.setAttribute('aria-pressed', 'false');
+          });
+          reviewCaption.textContent = 'Pilih jumlah bintang';
+          reviewSubmitButton.disabled = true;
+          mentorReviewDialog.querySelector('[data-review-mentor-name]').textContent = session.mentor;
+          mentorReviewDialog.querySelector('[data-review-mentor-avatar]').src = session.avatar;
+          mentorReviewDialog.querySelector('[data-review-mentor-avatar]').alt = `Foto ${session.mentor}`;
+          mentorReviewDialog.querySelector('[data-mentor-review-description]').textContent = `Bagikan pengalaman mentoring kamu bersama ${session.mentor} untuk membantu wirausaha lainnya.`;
+          mentorReviewDialog.showModal();
+        });
+      });
+
+      const closeOnBackdrop = (dialog) => dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      document.querySelectorAll('[data-close-session-note]').forEach((button) => button.addEventListener('click', () => sessionNoteDialog.close()));
+      document.querySelectorAll('[data-close-mentor-review]').forEach((button) => button.addEventListener('click', () => mentorReviewDialog.close()));
+      closeOnBackdrop(sessionNoteDialog);
+      closeOnBackdrop(mentorReviewDialog);
+
+      mentorReviewForm.querySelectorAll('[data-rating-star]').forEach((star) => {
+        star.addEventListener('mouseenter', () => {
+          const hoverRating = Number(star.dataset.ratingStar);
+          mentorReviewForm.querySelectorAll('[data-rating-star]').forEach((item) => item.classList.toggle('is-hovered', Number(item.dataset.ratingStar) <= hoverRating));
+        });
+        star.addEventListener('focus', () => star.dispatchEvent(new Event('mouseenter')));
+        star.addEventListener('click', () => {
+          selectedRating = Number(star.dataset.ratingStar);
+          mentorReviewForm.querySelectorAll('[data-rating-star]').forEach((item) => {
+            const isSelected = Number(item.dataset.ratingStar) <= selectedRating;
+            item.classList.toggle('is-selected', isSelected);
+            item.classList.remove('is-hovered');
+            item.setAttribute('aria-pressed', String(Number(item.dataset.ratingStar) === selectedRating));
+          });
+          reviewCaption.textContent = ratingCaptions[selectedRating];
+          reviewSubmitButton.disabled = false;
+        });
+      });
+      mentorReviewForm.querySelector('.mentor-rating-stars').addEventListener('mouseleave', () => {
+        mentorReviewForm.querySelectorAll('[data-rating-star]').forEach((star) => star.classList.remove('is-hovered'));
+      });
+      mentorReviewForm.querySelectorAll('[data-review-tag]').forEach((tag) => {
+        tag.addEventListener('click', () => {
+          const phrase = tag.dataset.reviewTag;
+          const currentText = reviewText.value.trim();
+          if (!currentText.split(/[,\n]/).map((part) => part.trim()).includes(phrase)) {
+            reviewText.value = currentText ? `${currentText}${currentText.endsWith('.') ? ' ' : ', '}${phrase}` : phrase;
+          }
+          tag.classList.toggle('is-selected');
+          reviewText.focus();
+        });
+      });
+      mentorReviewForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!selectedReviewMentor || !selectedRating) return;
+        mentorRatings[selectedReviewMentor] = selectedRating;
+        try { localStorage.setItem(ratingStorageKey, JSON.stringify(mentorRatings)); } catch {}
+        const ratingButton = document.querySelector(`[data-session-rating="${CSS.escape(selectedReviewMentor)}"]`);
+        ratingButton.textContent = `Sudah Dinilai (★ ${selectedRating.toFixed(1)})`;
+        ratingButton.disabled = true;
+        ratingButton.classList.add('is-rated');
+        mentorReviewDialog.close();
+        showMentoringToast('✓ Terima kasih! Ulasanmu telah berhasil dikirim.');
+      });
+      document.querySelectorAll('[data-download-template]').forEach((button) => {
+        button.addEventListener('click', () => showMentoringToast('Template_PitchDeck_P2MW_Revisi.pdf siap diunduh untuk demo.'));
+      });
+      document.querySelector('[data-download-session-notes]').addEventListener('click', () => window.print());
+    </script>
+  </body>
+</html>

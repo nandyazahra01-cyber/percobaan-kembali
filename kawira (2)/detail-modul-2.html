@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ruang belajar interaktif Modul 2 KAWIRA: Perilaku Konsumen dan Validasi Kebutuhan Pasar." />
+    <title>Perilaku Konsumen | Ruang Belajar KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261001-module2-study" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="study-page study-module2-page">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout study-dashboard-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy"><strong>Kawira</strong><small>Platform Kawan Wirausaha</small></span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span>Dashboard</span></a>
+          <a class="dashboard-nav-link" href="mentoring.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg><span>Mentoring</span></a>
+          <a class="dashboard-nav-link" href="pembukuan.html"><img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" /><span>Pembukuan</span></a>
+          <a class="dashboard-nav-link is-active" href="modul.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg><span>Modul &amp; Template</span></a>
+          <a class="dashboard-nav-link" href="komunitas.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg><span>Komunitas</span></a>
+          <a class="dashboard-nav-link" href="profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg><span>Profil &amp; Pengaturan</span></a>
+          <a class="dashboard-signout" href="login.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg><span>Keluar dari Akun</span></a>
+        </nav>
+        <a class="dashboard-user sidebar-user-card" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="Foto profil Kawira Anindya" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <div class="study-workspace">
+        <header class="study-topbar">
+          <a class="study-back-link" href="modul.html"><span aria-hidden="true">←</span> Kembali ke Modul &amp; Template</a>
+          <div class="study-topbar-right">
+            <span class="study-course-label">MODUL 2 <span aria-hidden="true">/</span> RISET PASAR &amp; KONSUMEN</span>
+            <button class="study-outline-toggle" type="button" aria-label="Buka / Tutup Daftar Sub-Bab" title="Buka / Tutup Daftar Sub-Bab" aria-expanded="true" aria-controls="study-outline" data-outline-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+          </div>
+        </header>
+
+        <main class="study-layout" data-study-layout>
+          <aside class="study-outline" id="study-outline" aria-label="Outline materi Modul 2">
+            <div class="study-outline-panel">
+              <div class="study-outline-progress-heading"><span>MODUL 2: RISET PASAR &amp; KONSUMEN</span><strong data-progress-label>0% Selesai</strong></div>
+              <div class="study-progress-track" role="progressbar" aria-label="Progres materi 0 persen" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span data-progress-fill></span></div>
+              <h1>Memahami Pasar &amp; Perilaku Konsumen</h1>
+              <p class="study-outline-intro">Metode riset, pengalaman pelanggan, dan pola belanja konsumen muda.</p>
+              <nav class="study-lesson-list" aria-label="Navigasi sub-bab Modul 2">
+                <button class="study-lesson is-active" type="button" aria-current="page" aria-pressed="true" data-outline-lesson="2.1" data-target="subbab-2-1"><span class="study-lesson-top"><span class="study-reading-badge" data-reading-status>SEDANG DIBACA</span><span>12 Menit</span></span><span class="study-lesson-title">2.1 Teknik Wawancara Konsumen &amp; Riset Kualitatif</span></button>
+                <button class="study-lesson" type="button" aria-pressed="false" data-outline-lesson="2.2" data-target="subbab-2-2"><span class="study-lesson-top"><span class="study-lesson-radio" aria-hidden="true"></span><span class="study-reading-badge" data-reading-status>SEDANG DIBACA</span><span class="study-lesson-time">15 Menit</span></span><span class="study-lesson-title">2.2 Pemetaan Customer Journey &amp; Empathy Map</span></button>
+                <button class="study-lesson" type="button" aria-pressed="false" data-outline-lesson="2.3" data-target="subbab-2-3"><span class="study-lesson-top"><span class="study-lesson-radio" aria-hidden="true"></span><span class="study-reading-badge" data-reading-status>SEDANG DIBACA</span><span class="study-lesson-time">14 Menit</span></span><span class="study-lesson-title">2.3 Perilaku Belanja &amp; Karakteristik Konsumen Gen Z</span></button>
+                <button class="study-quiz-outline" type="button" aria-pressed="false" data-outline-lesson="quiz" data-target="quiz-evaluation"><span class="study-quiz-icon"><img src="assets/IconCheck.svg" alt="" /></span><span class="study-quiz-copy"><strong>Kuis Evaluasi Modul 2</strong><small>5 Soal · Standar lulus 80% · Terkunci</small></span><span class="study-quiz-lock" aria-hidden="true">▣</span></button>
+              </nav>
+              <div class="study-peers"><div class="study-peer-avatars" aria-hidden="true"><span>FA</span><span>BP</span><span>SN</span></div><p><strong>48 Rekan Mahasiswa</strong> sedang mempelajari modul ini.</p></div>
+            </div>
+          </aside>
+
+          <article class="study-article">
+            <section class="study-panel is-active" id="subbab-2-1" data-study-panel="subbab-2-1">
+              <header class="study-article-header"><div class="study-article-tags"><span class="study-time-tag"><img src="assets/IconClock.svg" alt="" />12 Menit Estimasi Baca</span><span class="study-topic-tag">Riset Pengguna</span></div><h1>2.1 Menggali Masalah Riil Pasar: Metodologi Wawancara dan Uji Hipotesis</h1><p>Menghindari bias konfirmasi dan menguji apakah masalah yang ingin diselesaikan benar-benar dirasakan oleh target konsumen.</p></header>
+              <section class="study-section"><div class="study-section-heading"><span class="study-section-number">A</span><div><h2>Aturan Emas Validasi Pasar: The Mom Test</h2><p>Fokus pada perilaku lampau, bukan janji atau opini tentang ide masa depan.</p></div></div><blockquote class="study-quote">“Aturan Emas Validasi Pasar (The Mom Test): Jangan tanyakan apakah mereka menyukai ide bisnismu, tanyakan bagaimana mereka menyelesaikan masalah tersebut di kehidupan nyata saat ini.”</blockquote></section>
+              <section class="study-section"><div class="study-section-heading"><span class="study-section-number">B</span><div><h2>Pertanyaan Bias vs. Pertanyaan Validasi Riil</h2><p>Ganti pertanyaan yang memancing persetujuan dengan pertanyaan berbasis pengalaman konkret.</p></div></div>
+                <div class="study-table-wrap" role="region" aria-label="Tabel pertanyaan wawancara konsumen" tabindex="0"><table class="study-data-table"><thead><tr><th>Kategori Pertanyaan</th><th>Pertanyaan Kurang Tepat (Bias)</th><th>Pertanyaan Validasi Tepat</th><th>Insight yang Didapatkan</th></tr></thead><tbody>
+                  <tr><th scope="row">Minat produk</th><td>“Kamu suka nggak dengan ide produk ini?”</td><td>“Kapan terakhir kali kamu menghadapi masalah ini?”</td><td>Frekuensi dan konteks masalah nyata.</td></tr>
+                  <tr><th scope="row">Solusi saat ini</th><td>“Kalau ada aplikasi ini, kamu mau pakai?”</td><td>“Ceritakan cara yang sekarang kamu gunakan untuk mengatasinya.”</td><td>Alternatif, biaya, dan hambatan solusi lama.</td></tr>
+                  <tr><th scope="row">Kesediaan membayar</th><td>“Mau beli kalau harganya Rp 25.000?”</td><td>“Berapa biaya yang kamu keluarkan terakhir untuk solusi ini?”</td><td>Bukti pengeluaran dan prioritas anggaran.</td></tr>
+                  <tr><th scope="row">Dampak masalah</th><td>“Ide kami akan sangat membantu, kan?”</td><td>“Apa yang terjadi saat masalah itu tidak terselesaikan?”</td><td>Konsekuensi, urgensi, dan dampak pada aktivitas.</td></tr>
+                </tbody></table></div>
+              </section>
+              <section class="study-section"><div class="study-section-heading"><span class="study-section-number">C</span><div><h2>4 Langkah Wawancara Problem-Validation</h2><p>Dengarkan cerita, cari bukti, dan biarkan data membentuk hipotesis.</p></div></div>
+                <div class="study-validation-grid"><article class="study-validation-card"><span>01</span><h3>Tentukan hipotesis</h3><p>Tulis segmen, masalah, dan asumsi yang ingin diuji sebelum wawancara.</p></article><article class="study-validation-card"><span>02</span><h3>Pilih responden tepat</h3><p>Temui calon pengguna yang benar-benar mengalami masalah tersebut.</p></article><article class="study-validation-card"><span>03</span><h3>Gali pengalaman nyata</h3><p>Gunakan pertanyaan terbuka tentang kejadian terakhir dan solusi yang dipakai.</p></article><article class="study-validation-card"><span>04</span><h3>Sintesis bukti</h3><p>Catat pola berulang, intensitas masalah, dan bukti perilaku sebelum mengubah MVP.</p></article></div>
+              </section>
+              <div class="study-article-end"><span>MODUL 2 · RISET PASAR &amp; KONSUMEN</span><span>Sub-bab 2.1 · Riset Pengguna</span></div>
+            </section>
+
+            <section class="study-panel" id="subbab-2-2" data-study-panel="subbab-2-2" hidden>
+              <header class="study-article-header"><div class="study-article-tags"><span class="study-time-tag"><img src="assets/IconClock.svg" alt="" />15 Menit Estimasi Baca</span><span class="study-topic-tag">User Experience &amp; Mapping</span></div><h1>2.2 Membedah Pikiran Konsumen: Framework Empathy Map &amp; Alur Pembelian</h1><p>Menyelami apa yang dirasakan, didengar, dan dilakukan konsumen sebelum memutuskan transaksi.</p></header>
+              <section class="study-section"><div class="study-section-heading"><span class="study-section-number">A</span><div><h2>Matriks Empathy Map</h2><p>Satukan sinyal ucapan, pikiran, tindakan, dan emosi untuk memahami kebutuhan di balik perilaku.</p></div></div>
+                <div class="study-empathy-grid"><article class="study-empathy-card is-says"><span>SAYS · UCAPAN</span><h3>Apa yang diucapkan?</h3><p>Pernyataan publik konsumen, misalnya “Aku ingin pesan makan tanpa antre panjang.”</p></article><article class="study-empathy-card is-thinks"><span>THINKS · PIKIRAN</span><h3>Apa yang dipikirkan?</h3><p>Kekhawatiran terpendam seperti harga, kualitas, keamanan, dan apakah produk sepadan.</p></article><article class="study-empathy-card is-does"><span>DOES · TINDAKAN</span><h3>Apa yang dilakukan?</h3><p>Aksi yang terlihat: membandingkan harga di Shopee/GoFood atau membaca ulasan sebelum checkout.</p></article><article class="study-empathy-card is-feels"><span>FEELS · PERASAAN</span><h3>Apa yang dirasakan?</h3><p>Emosi saat menghadapi masalah: frustrasi, terburu-buru, ragu-ragu, atau lega setelah terbantu.</p></article></div>
+              </section>
+              <section class="study-section"><div class="study-section-heading"><span class="study-section-number">B</span><div><h2>Customer Journey: Dari Awareness ke Advocacy</h2><p>Temukan pain point pada tiap fase dan peluang untuk menciptakan pengalaman yang lebih baik.</p></div></div>
+                <div class="study-journey-scroll" role="region" aria-label="Customer Journey lima fase" tabindex="0"><div class="study-journey-line"><article class="study-journey-stage"><span>01</span><h3>Awareness</h3><p class="study-journey-pain"><b>Pain point</b>Belum sadar solusi tersedia.</p><p class="study-journey-gain"><b>Gain creator</b>Konten relevan dan mudah ditemukan.</p></article><article class="study-journey-stage"><span>02</span><h3>Consideration</h3><p class="study-journey-pain"><b>Pain point</b>Sulit membandingkan manfaat.</p><p class="study-journey-gain"><b>Gain creator</b>Ulasan, FAQ, dan demo transparan.</p></article><article class="study-journey-stage"><span>03</span><h3>Purchase</h3><p class="study-journey-pain"><b>Pain point</b>Checkout rumit atau lambat.</p><p class="study-journey-gain"><b>Gain creator</b>Pembayaran QRIS yang ringkas.</p></article><article class="study-journey-stage"><span>04</span><h3>Retention</h3><p class="study-journey-pain"><b>Pain point</b>Pengalaman sesudah beli terputus.</p><p class="study-journey-gain"><b>Gain creator</b>Layanan purna jual dan benefit loyalti.</p></article><article class="study-journey-stage"><span>05</span><h3>Advocacy</h3><p class="study-journey-pain"><b>Pain point</b>Pelanggan puas tak tahu cara berbagi.</p><p class="study-journey-gain"><b>Gain creator</b>Program referral dan konten pelanggan.</p></article></div></div>
+              </section>
+              <div class="study-article-end"><span>MODUL 2 · RISET PASAR &amp; KONSUMEN</span><span>Sub-bab 2.2 · User Experience &amp; Mapping</span></div>
+            </section>
+
+            <section class="study-panel" id="subbab-2-3" data-study-panel="subbab-2-3" hidden>
+              <header class="study-article-header"><div class="study-article-tags"><span class="study-time-tag"><img src="assets/IconClock.svg" alt="" />14 Menit Estimasi Baca</span><span class="study-topic-tag">Tren &amp; Psikologi Konsumen</span></div><h1>2.3 Menaklukkan Pasar Generasi Z: Pola Konsumsi Spontan dan Ekspektasi Layanan</h1><p>Menganalisis kebiasaan beli mahasiswa dan Gen Z di era media sosial dan dompet digital.</p></header>
+              <section class="study-section"><div class="study-section-heading"><span class="study-section-number">A</span><div><h2>3 Pilar Perilaku Belanja Gen Z</h2><p>Rancang pengalaman yang sesuai dengan cara konsumen muda menemukan, menilai, dan membeli produk.</p></div></div>
+                <div class="study-genz-grid"><article class="study-genz-card is-visual"><span class="study-genz-index">01 · VISUAL &amp; MOMEN</span><span class="study-genz-icon"><img src="assets/IconVideo.svg" alt="" /></span><h3>Visual-First &amp; FOMO</h3><p>Keputusan beli dipicu bukti visual yang menarik—TikTok, Reels, dan UGC—serta momentum tren yang terasa relevan.</p><b>Rancang konten yang autentik dan mudah dibagikan.</b></article><article class="study-genz-card is-payment"><span class="study-genz-index">02 · TANPA HAMBATAN</span><span class="study-genz-icon"><img src="assets/WalletIcon.svg" alt="" /></span><h3>Frictionless Payment</h3><p>Konsumen muda mengharapkan transaksi praktis dengan QRIS dan e-wallet instan dibanding alur tunai yang berbelit.</p><b>Persingkat langkah dari keranjang ke checkout.</b></article><article class="study-genz-card is-authentic"><span class="study-genz-index">03 · KEPERCAYAAN</span><span class="study-genz-icon"><img src="assets/IconStar.svg" alt="" /></span><h3>Nilai Otentisitas</h3><p>Pilih brand yang transparan, konsisten, dan punya brand value yang terasa relevan.</p><b>Buktikan janji brand lewat pengalaman nyata.</b></article></div>
+              </section>
+              <section class="study-section"><div class="study-section-heading"><span class="study-section-number">B</span><div><h2>Checklist Audit Bisnis Ramah Konsumen Muda</h2><p>Periksa pengalaman digital dan layanan sebelum mendorong lebih banyak trafik.</p></div></div>
+                <div class="study-audit-checklist"><label><input type="checkbox" /> Foto/video produk asli, jelas, dan mudah ditemukan.</label><label><input type="checkbox" /> Harga, ukuran, bahan, dan ongkir transparan sebelum checkout.</label><label><input type="checkbox" /> Pembayaran QRIS/e-wallet tersedia dengan langkah singkat.</label><label><input type="checkbox" /> Kemasan higienis dan instruksi pemesanan mudah dipahami.</label><label><input type="checkbox" /> Ulasan dan respons layanan ditangani secara konsisten.</label><label><input type="checkbox" /> Nilai brand disampaikan dengan jujur, bukan sekadar tren.</label></div>
+              </section>
+              <div class="study-article-end"><span>MODUL 2 · RISET PASAR &amp; KONSUMEN</span><span>Sub-bab 2.3 · Tren &amp; Psikologi Konsumen</span></div>
+            </section>
+
+            <section class="study-panel study-quiz-panel-view" id="quiz-evaluation" data-study-panel="quiz-evaluation" hidden>
+              <header class="study-article-header"><div class="study-article-tags"><span class="study-time-tag"><img src="assets/IconClock.svg" alt="" />10 Menit</span><span class="study-topic-tag">Evaluasi Modul 2</span></div><h1>Kuis Evaluasi Modul 2</h1><p>5 Pertanyaan · Standar Kelulusan 80% (Min. Benar 4 Soal).</p></header>
+              <div class="study-quiz-lock-notice" data-quiz-locked><span aria-hidden="true">▣</span><p><strong>Kuis masih terkunci.</strong> Tandai semua sub-bab 2.1–2.3 selesai dibaca untuk membuka evaluasi.</p></div>
+              <form class="study-quiz-flow" data-quiz-flow hidden novalidate><div class="study-quiz-flow-progress"><strong data-question-counter>Pertanyaan 1 dari 5</strong><span><i data-question-progress></i></span></div><div class="study-question-card"><span class="study-question-kicker" data-question-topic></span><h2 data-question-text></h2><div class="study-question-options" data-question-options></div><div class="study-question-review" data-question-review hidden></div><p class="study-question-feedback" data-question-feedback hidden></p></div><div class="study-question-actions"><button class="study-question-previous" type="button" data-question-previous disabled>Sebelumnya</button><button class="study-question-next" type="button" data-question-next>Selanjutnya</button><button class="study-question-submit" type="button" data-question-submit hidden>Kirim Jawaban &amp; Lihat Skor</button></div></form>
+            </section>
+          </article>
+        </main>
+
+        <footer class="study-sticky-footer"><button class="study-footer-previous" type="button" data-study-previous>← Kembali ke Katalog</button><label class="study-read-toggle" data-read-control><input type="checkbox" data-mark-read /><span>Tandai Selesai<br />Dibaca <b data-read-mark>○</b></span></label><button class="study-footer-next" type="button" data-study-next disabled>Lanjutkan Materi <span aria-hidden="true">→</span></button></footer>
+      </div>
+    </div>
+    <dialog class="study-quiz-result-dialog" data-quiz-result-dialog aria-labelledby="quiz-result-title"><section class="study-quiz-result-card" data-quiz-result-card aria-live="polite"><div class="study-result-mark" data-result-mark aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m11 25 8 8 18-19" /></svg></div><span class="study-result-badge" data-result-badge>LULUS</span><h2 id="quiz-result-title" data-result-title>Selamat! Kamu Telah Menuntaskan Seluruh Materi Modul 2</h2><strong class="study-result-score" data-result-score>Skor: 100 / 100 - LULUS</strong><p data-result-message>Risetmu kini berpijak pada kebutuhan konsumen nyata.</p><div class="study-result-actions"><a class="study-result-primary" href="modul.html" data-result-back>Kembali ke Katalog Modul</a><button class="study-result-review" type="button" data-review-quiz>Tinjau Pembahasan</button><button class="study-question-retry" type="button" data-retry-quiz hidden>Ulangi Kuis</button></div></section></dialog>
+        <div class="study-toast" role="status" aria-live="polite" data-study-toast hidden></div>
+      </div>
+    <script>
+      const layout = document.querySelector('[data-study-layout]');
+      const outlineToggle = document.querySelector('[data-outline-toggle]');
+      const outlineItems = document.querySelectorAll('[data-target]');
+      const panels = document.querySelectorAll('[data-study-panel]');
+      const readToggle = document.querySelector('[data-mark-read]');
+      const nextButton = document.querySelector('[data-study-next]');
+      const previousButton = document.querySelector('[data-study-previous]');
+      const progressLabel = document.querySelector('[data-progress-label]');
+      const progressFill = document.querySelector('[data-progress-fill]');
+      const progressTrack = document.querySelector('.study-progress-track');
+      const quizStorageKey = 'kawira_modul2_quiz_passed';
+      const moduleCompleteKey = 'kawira_modul2_completed';
+      const moduleScoreKey = 'kawira_modul2_score';
+      const progressStorageKey = 'kawira_modul2_progress';
+      const readStorage = (key, fallback = '') => {
+        try { return localStorage.getItem(key) || fallback; } catch { return fallback; }
+      };
+      const lessonNumbers = { 'subbab-2-1': '2.1', 'subbab-2-2': '2.2', 'subbab-2-3': '2.3' };
+      const progressState = { '2.1': false, '2.2': false, '2.3': false };
+      const lessonFlow = {
+        'subbab-2-1': { previous: 'modul', previousLabel: '← Kembali ke Katalog', next: 'subbab-2-2', nextLabel: 'Lanjut ke 2.2' },
+        'subbab-2-2': { previous: 'subbab-2-1', previousLabel: '← Kembali ke 2.1', next: 'subbab-2-3', nextLabel: 'Lanjut ke 2.3' },
+        'subbab-2-3': { previous: 'subbab-2-2', previousLabel: '← Kembali ke 2.2', next: 'quiz-evaluation', nextLabel: 'Mulai Kuis Evaluasi Bab 2' }
+      };
+      const quizQuestions = [
+        { topic: 'PRINSIP THE MOM TEST', prompt: 'Mengapa tidak disarankan menanyakan “Apakah kamu mau membeli produk ini jika harganya Rp 25.000?” kepada calon konsumen?', options: ['A. Pertanyaan terlalu teknis untuk konsumen', 'B. Menghasilkan opini bias dan janji palsu yang belum tentu terbukti saat transaksi riil', 'C. Konsumen tidak boleh mengetahui harga sebelum produk diluncurkan', 'D. Pertanyaan hanya menguji kualitas kemasan'], answer: 1, explanation: 'Pertanyaan hipotetis mendorong jawaban menyenangkan pewawancara. Gali perilaku dan transaksi lampau untuk mendapat bukti nyata.' },
+        { topic: 'EMPATHY MAP', prompt: 'Apa fungsi utama Empathy Map dalam riset bisnis rintisan?', options: ['A. Menghitung biaya akuisisi pelanggan', 'B. Menentukan harga jual akhir', 'C. Memetakan kebutuhan emosional, kekhawatiran terpendam, dan motif riil di balik tindakan konsumen', 'D. Menyusun laporan laba-rugi bulanan'], answer: 2, explanation: 'Empathy Map menyatukan apa yang konsumen katakan, pikirkan, lakukan, dan rasakan.' },
+        { topic: 'CUSTOMER JOURNEY', prompt: 'Pada diagram Customer Journey, di manakah momen paling rawan terjadi pembatalan pesanan (drop-off) bagi konsumen digital?', options: ['A. Awareness saat melihat konten', 'B. Consideration saat membaca ulasan', 'C. Retention setelah menerima produk', 'D. Checkout/pembayaran yang terlalu rumit dan memakan waktu'], answer: 3, explanation: 'Friction pada checkout dapat menggagalkan pembelian yang sudah hampir terjadi; sederhanakan langkah dan pilihan pembayaran.' },
+        { topic: 'KARAKTER KONSUMEN GEN Z', prompt: 'Karakteristik paling menonjol dari konsumen generasi muda dalam memilih gerai makanan/minuman saat ini adalah...', options: ['A. Hanya memilih gerai dengan harga termurah', 'B. Mengutamakan kecepatan transaksi digital, higienitas kemasan, dan daya tarik visual produk', 'C. Menghindari pembayaran digital', 'D. Mengutamakan promosi tanpa melihat kualitas'], answer: 1, explanation: 'Pengalaman visual, transaksi praktis, dan higienitas ikut membentuk kepercayaan dan keputusan beli konsumen muda.' },
+        { topic: 'PRODUCT-MARKET FIT', prompt: 'Apa pengertian Product-Market Fit (PMF) di tahap awal validasi?', options: ['A. Produk selesai dibuat sesuai seluruh rencana awal', 'B. Produk menjadi viral di media sosial', 'C. Produk terbukti memuaskan kebutuhan pasar yang nyata dan menghasilkan permintaan berulang', 'D. Bisnis sudah memiliki banyak varian produk'], answer: 2, explanation: 'PMF tercapai saat produk menyelesaikan masalah penting bagi pasar dan pengguna terus kembali menggunakannya atau membelinya.' }
+      ];
+      const selectedAnswers = Array(quizQuestions.length).fill(null);
+      const completedLessons = new Set();
+      const quizFlow = document.querySelector('[data-quiz-flow]');
+      const quizLockedNotice = document.querySelector('[data-quiz-locked]');
+      const questionCounter = document.querySelector('[data-question-counter]');
+      const questionProgress = document.querySelector('[data-question-progress]');
+      const questionTopic = document.querySelector('[data-question-topic]');
+      const questionText = document.querySelector('[data-question-text]');
+      const questionOptions = document.querySelector('[data-question-options]');
+      const questionReview = document.querySelector('[data-question-review]');
+      const questionFeedback = document.querySelector('[data-question-feedback]');
+      const previousQuestionButton = document.querySelector('[data-question-previous]');
+      const nextQuestionButton = document.querySelector('[data-question-next]');
+      const submitQuizButton = document.querySelector('[data-question-submit]');
+      const quizResultDialog = document.querySelector('[data-quiz-result-dialog]');
+      let currentQuestionIndex = 0;
+      let currentPanel = location.hash === '#subbab-2-2' ? 'subbab-2-2' : location.hash === '#subbab-2-3' ? 'subbab-2-3' : 'subbab-2-1';
+      let reviewMode = false;
+
+      try {
+        const savedProgress = JSON.parse(readStorage(progressStorageKey, 'null'));
+        if (savedProgress && typeof savedProgress === 'object') {
+          Object.keys(progressState).forEach((lesson) => { progressState[lesson] = savedProgress[lesson] === true; });
+        }
+        Object.entries(lessonNumbers).forEach(([panelId, lesson]) => { if (progressState[lesson]) completedLessons.add(panelId); });
+      } catch {}
+
+      const isReadComplete = (panelId) => Boolean(progressState[lessonNumbers[panelId]]);
+      const saveProgress = () => {
+        try {
+          localStorage.setItem(progressStorageKey, JSON.stringify(progressState));
+          const allLessonsRead = Object.values(progressState).every(Boolean);
+          const quizPassed = readStorage(quizStorageKey, 'false') === 'true';
+          if (allLessonsRead || quizPassed) localStorage.setItem(moduleCompleteKey, 'true');
+          else localStorage.removeItem(moduleCompleteKey);
+        } catch {}
+      };
+
+      const updateProgress = () => {
+        const count = Object.values(progressState).filter(Boolean).length;
+        const progress = [0, 33, 66, 100][count];
+        progressLabel.textContent = `${progress}% Selesai`;
+        progressFill.style.width = `${progress}%`;
+        progressTrack.setAttribute('aria-valuenow', String(progress));
+        progressTrack.setAttribute('aria-label', `Progres materi ${progress} persen`);
+      };
+
+      const updateOutline = () => {
+        outlineItems.forEach((item) => {
+          const target = item.dataset.target;
+          const active = target === currentPanel;
+          item.classList.toggle('is-active', active);
+          item.setAttribute('aria-pressed', String(active));
+          if (active) item.setAttribute('aria-current', 'page');
+          else item.removeAttribute('aria-current');
+          if (target === 'quiz-evaluation') {
+            const unlocked = Object.values(progressState).every(Boolean);
+            const passed = readStorage(quizStorageKey, 'false') === 'true';
+            item.classList.toggle('is-unlocked', unlocked);
+            item.querySelector('.study-quiz-copy small').textContent = passed ? `Lulus · Skor ${readStorage(moduleScoreKey, '100')}%` : unlocked ? '5 Soal · Siap Dimulai' : '5 Soal · Terkunci';
+            item.querySelector('.study-quiz-lock').textContent = passed ? '✓' : unlocked ? '→' : '▣';
+            return;
+          }
+          const complete = isReadComplete(target);
+          item.classList.toggle('is-complete', complete);
+          const badge = item.querySelector('[data-reading-status]');
+          badge.textContent = complete ? '✓ SELESAI' : active ? 'SEDANG DIBACA' : 'BELUM DIBACA';
+          badge.classList.toggle('is-complete', complete);
+          item.querySelector('.study-lesson-title').classList.toggle('is-read', complete);
+          const radio = item.querySelector('.study-lesson-radio');
+          if (radio) { radio.textContent = complete ? '✓' : ''; radio.classList.toggle('is-complete', complete); }
+        });
+      };
+
+      const updateQuizGate = () => {
+        const unlocked = Object.values(progressState).every(Boolean);
+        quizLockedNotice.hidden = unlocked;
+        quizFlow.hidden = !unlocked;
+      };
+
+      const updateFooter = () => {
+        const footer = document.querySelector('.study-sticky-footer');
+        const isQuiz = currentPanel === 'quiz-evaluation';
+        footer.hidden = isQuiz;
+        if (isQuiz) return;
+        const flow = lessonFlow[currentPanel];
+        const complete = isReadComplete(currentPanel);
+        readToggle.checked = complete;
+        nextButton.disabled = !complete;
+        nextButton.dataset.target = flow.next;
+        nextButton.innerHTML = `${flow.nextLabel} <span aria-hidden="true">→</span>`;
+        previousButton.textContent = flow.previousLabel;
+        previousButton.dataset.target = flow.previous;
+      };
+
+      const switchPanel = (id) => {
+        const panel = document.querySelector(`[data-study-panel="${id}"]`);
+        if (!panel) return;
+        currentPanel = id;
+        panels.forEach((item) => { const active = item === panel; item.hidden = !active; item.classList.toggle('is-active', active); });
+        updateOutline();
+        updateFooter();
+        if (id === 'quiz-evaluation') updateQuizGate();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      const renderQuestion = () => {
+        const question = quizQuestions[currentQuestionIndex];
+        questionCounter.textContent = `Pertanyaan ${currentQuestionIndex + 1} dari 5`;
+        questionProgress.style.width = `${((currentQuestionIndex + 1) / 5) * 100}%`;
+        questionTopic.textContent = question.topic;
+        questionText.textContent = question.prompt;
+        questionOptions.replaceChildren();
+        question.options.forEach((option, index) => {
+          const label = document.createElement('label');
+          label.className = 'study-answer-option';
+          const input = document.createElement('input');
+          input.type = 'radio'; input.name = `module2-question-${currentQuestionIndex}`; input.value = String(index); input.checked = selectedAnswers[currentQuestionIndex] === index; input.disabled = reviewMode;
+          const text = document.createElement('span'); text.textContent = option;
+          if (reviewMode && index === question.answer) label.classList.add('is-correct');
+          if (reviewMode && selectedAnswers[currentQuestionIndex] === index && index !== question.answer) label.classList.add('is-incorrect');
+          label.append(input, text); questionOptions.append(label);
+        });
+        questionReview.hidden = !reviewMode;
+        if (reviewMode) questionReview.textContent = `Jawaban benar: ${question.options[question.answer]}. ${question.explanation}`;
+        previousQuestionButton.disabled = currentQuestionIndex === 0;
+        nextQuestionButton.hidden = currentQuestionIndex === 4;
+        submitQuizButton.hidden = reviewMode || currentQuestionIndex !== 4;
+        questionFeedback.hidden = true;
+      };
+
+      outlineToggle.addEventListener('click', () => {
+        const expanded = outlineToggle.getAttribute('aria-expanded') === 'true';
+        outlineToggle.setAttribute('aria-expanded', String(!expanded));
+        layout.classList.toggle('is-outline-collapsed', expanded);
+      });
+      outlineItems.forEach((item) => item.addEventListener('click', () => switchPanel(item.dataset.target)));
+      readToggle.addEventListener('change', () => {
+        const number = lessonNumbers[currentPanel]; if (!number) return;
+        progressState[number] = readToggle.checked;
+        if (readToggle.checked) completedLessons.add(currentPanel); else completedLessons.delete(currentPanel);
+        saveProgress();
+        updateOutline(); updateProgress(); updateFooter();
+        if (currentPanel === 'subbab-2-3') updateQuizGate();
+      });
+      previousButton.addEventListener('click', () => { if (previousButton.dataset.target === 'modul') window.location.href = 'modul.html'; else switchPanel(previousButton.dataset.target); });
+      nextButton.addEventListener('click', () => { if (!nextButton.disabled) switchPanel(nextButton.dataset.target); });
+      submitQuizButton.addEventListener('click', () => {
+        if (selectedAnswers.some((answer) => answer === null)) { questionFeedback.hidden = false; questionFeedback.textContent = 'Jawab semua pertanyaan sebelum mengirim kuis.'; return; }
+        const correct = selectedAnswers.reduce((sum, answer, index) => sum + Number(answer === quizQuestions[index].answer), 0);
+        const score = correct * 20; const passed = score >= 80;
+        document.querySelector('[data-result-mark]').classList.toggle('is-failed', !passed);
+        document.querySelector('[data-result-mark]').textContent = passed ? '✓' : '×';
+        document.querySelector('[data-result-badge]').textContent = passed ? 'LULUS' : 'BELUM LULUS';
+        document.querySelector('[data-result-badge]').classList.toggle('is-passed', passed);
+        document.querySelector('[data-result-title]').textContent = passed ? 'Selamat! Kamu Telah Menuntaskan Seluruh Materi Modul 2' : 'Kuis Modul 2 Belum Lulus';
+        document.querySelector('[data-result-score]').textContent = `Skor: ${score} / 100 - ${passed ? 'LULUS' : 'BELUM LULUS'}`;
+        document.querySelector('[data-result-message]').textContent = passed ? 'Seluruh materi riset pasar dan evaluasi Modul 2 telah berhasil diselesaikan. Pemahaman konsumenmu siap diterapkan ke praktik usaha nyata.' : `${correct} dari 5 jawaban benar. Minimal 4 jawaban benar untuk lulus. Tinjau pembahasan atau ulangi kuis.`;
+        document.querySelector('[data-result-back]').hidden = !passed;
+        document.querySelector('[data-retry-quiz]').hidden = passed;
+        if (passed) {
+          try { localStorage.setItem(quizStorageKey, 'true'); localStorage.setItem(moduleCompleteKey, 'true'); localStorage.setItem(moduleScoreKey, String(score)); } catch {}
+          updateOutline(); updateProgress();
+        }
+        document.querySelector('[data-quiz-result-dialog]').showModal();
+      });
+      document.querySelector('[data-review-quiz]').addEventListener('click', () => {
+        document.querySelector('[data-quiz-result-dialog]').close(); reviewMode = true; currentQuestionIndex = 0; quizFlow.hidden = false; renderQuestion();
+      });
+      document.querySelector('[data-retry-quiz]').addEventListener('click', () => {
+        document.querySelector('[data-quiz-result-dialog]').close(); reviewMode = false; selectedAnswers.fill(null); currentQuestionIndex = 0; quizFlow.hidden = false; renderQuestion();
+      });
+      questionOptions.addEventListener('change', (event) => { if (event.target.matches('input[type="radio"]')) selectedAnswers[currentQuestionIndex] = Number(event.target.value); });
+      nextQuestionButton.addEventListener('click', () => {
+        if (reviewMode || selectedAnswers[currentQuestionIndex] !== null) { currentQuestionIndex += 1; renderQuestion(); }
+        else { questionFeedback.hidden = false; questionFeedback.textContent = 'Pilih satu jawaban sebelum melanjutkan.'; }
+      });
+      previousQuestionButton.addEventListener('click', () => { if (currentQuestionIndex > 0) { currentQuestionIndex -= 1; renderQuestion(); } });
+
+      Object.keys(lessonNumbers).forEach((id) => { if (progressState[lessonNumbers[id]]) completedLessons.add(id); });
+      if (Object.values(progressState).every(Boolean)) {
+        try { localStorage.setItem(moduleCompleteKey, 'true'); } catch {}
+      }
+      updateOutline(); updateProgress(); updateFooter();
+      if (currentPanel === 'quiz-evaluation') updateQuizGate();
+      panels.forEach((panel) => { const active = panel.dataset.studyPanel === currentPanel; panel.hidden = !active; panel.classList.toggle('is-active', active); });
+      renderQuestion();
+    </script>
+  </body>
+</html>
+    </html>

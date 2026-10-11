@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ruang diskusi mentoring KAWIRA bersama Rizka Amalia Putri." />
+    <title>Ruang Chat Mentor | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-chat-page" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body chat-mentor-page">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout chat-mentor-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Platform Kawan Wirausaha</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="dashboard-nav-link is-active" href="mentoring.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="pembukuan.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h14v15H5z"/><path d="M8 8h8M8 11.5h8M8 15h5"/><path d="M8 4.5v15"/></svg>
+            <span>Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link" href="modul.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
+            <span>Modul &amp; Template</span>
+          </a>
+          <a class="dashboard-nav-link" href="komunitas.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main chat-main">
+        <section class="chat-workspace" aria-label="Ruang chat mentor">
+          <header class="chat-page-header">
+            <div class="chat-header-topline">
+              <a class="chat-back-link" href="mentoring.html">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6M9 12h12"/></svg>
+                Kembali ke Mentoring
+              </a>
+              <div class="chat-demo-control">
+                <span>Demo Juri</span>
+                <button class="chat-session-toggle" type="button" role="switch" aria-checked="false" aria-label="Buka sesi mentoring untuk demo" data-session-toggle>
+                  <span>[ Simulasi Peran Mentor: Buka / Tutup Sesi ]</span>
+                  <span class="chat-switch-track" aria-hidden="true"><span></span></span>
+                </button>
+                <small class="chat-demo-note">*Khusus prototype: Mensimulasikan kontrol dari sisi dashboard mentor.</small>
+              </div>
+            </div>
+            <div class="chat-mentor-overview">
+              <img src="assets/Image%20(Speaker).png" alt="Rizka Amalia Putri" />
+              <div class="chat-mentor-copy">
+                <h1>Rizka Amalia Putri</h1>
+                <p>Strategi Penetrasi Pasar F&amp;B</p>
+              </div>
+              <span class="chat-session-badge" data-session-badge><span></span>Sesi Ditutup</span>
+              <span class="chat-package-status"><span aria-hidden="true">🏷️</span>Paket Chat Mentoring · 60 Menit</span>
+            </div>
+          </header>
+
+          <div class="chat-message-feed" data-message-feed role="log" aria-label="Riwayat percakapan" aria-live="polite" aria-relevant="additions"></div>
+
+          <div class="chat-session-banner" data-session-banner role="status" aria-live="polite">
+            <span aria-hidden="true">🔒</span>
+            <p>Sesi obrolan saat ini belum dibuka. Ruang diskusi aktif pada jadwal mentoring (Minggu, 4 Oktober 2026 · 14:00 WIB).</p>
+          </div>
+
+          <form class="chat-message-composer is-disabled" data-message-form>
+            <input class="chat-file-input" type="file" accept="image/*,.pdf,application/pdf" multiple aria-label="Pilih gambar atau dokumen PDF" data-file-input />
+            <button class="chat-attach-button" type="button" aria-label="Lampirkan gambar atau PDF" title="Lampirkan gambar atau PDF" data-attach-button disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11.1-8.5 8.5a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></svg>
+            </button>
+            <input class="chat-message-input" type="text" name="message" placeholder="Ketik pesan untuk mentor..." aria-label="Ketik pesan untuk mentor" autocomplete="off" data-message-input disabled />
+            <button class="chat-send-button" type="submit" aria-label="Kirim pesan" title="Kirim pesan" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 3-7.2 18-3.7-7.1L3 10.2 21 3Z"/><path d="m10.1 13.9 4.4-4.4"/></svg>
+            </button>
+          </form>
+          <p class="chat-upload-note">Gambar dan dokumen PDF dapat dilampirkan saat sesi dibuka.</p>
+          <div class="chat-page-toast" data-chat-toast role="status" aria-live="polite" hidden></div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const messageFeed = document.querySelector('[data-message-feed]');
+      const messageForm = document.querySelector('[data-message-form]');
+      const messageInput = document.querySelector('[data-message-input]');
+      const fileInput = document.querySelector('[data-file-input]');
+      const attachButton = document.querySelector('[data-attach-button]');
+      const sendButton = messageForm.querySelector('[type="submit"]');
+      const sessionToggle = document.querySelector('[data-session-toggle]');
+      const sessionBadge = document.querySelector('[data-session-badge]');
+      const sessionBanner = document.querySelector('[data-session-banner]');
+      const chatToast = document.querySelector('[data-chat-toast]');
+      const storageKey = 'kawira-mentor-chat-messages';
+      const autoReply = 'Baik, nanti kita bahas detail saat sesi dimulai ya! 👍';
+      const defaultMessages = [
+        { sender: 'mentor', type: 'text', text: 'Halo Anindya! Siap untuk sesi mentoring nanti pukul 14:00? Materi pitch deck-mu sudah saya review ya.', date: '2026-10-04', time: '13:45' },
+        { sender: 'user', type: 'text', text: 'Siap kak, terima kasih banyak! Nanti ada beberapa poin di bagian keuangan yang ingin saya tanyakan.', date: '2026-10-04', time: '13:46' },
+        { sender: 'mentor', type: 'text', text: 'Siap, Anindya. Saya sudah siapkan catatan untuk proyeksi pendapatan dan perhitungan margin produkmu.', date: '2026-10-04', time: '13:48' },
+        { sender: 'user', type: 'text', text: 'Wah, baik kak. Sampai bertemu nanti pukul 14:00!', date: '2026-10-04', time: '13:50' }
+      ];
+      let messages = loadMessages();
+      let sessionIsOpen = false;
+      let toastTimeout;
+
+      function loadMessages() {
+        try {
+          const savedMessages = JSON.parse(localStorage.getItem(storageKey) || '[]');
+          if (Array.isArray(savedMessages) && savedMessages.every((message) => message && ['mentor', 'user'].includes(message.sender) && typeof message.date === 'string' && typeof message.time === 'string')) {
+            return savedMessages;
+          }
+        } catch {
+          showToast('Riwayat sebelumnya tidak dapat dibaca. Chat dimulai dengan riwayat demo.');
+        }
+        return [...defaultMessages];
+      }
+
+      function saveMessages() {
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(messages));
+          return true;
+        } catch {
+          showToast('Penyimpanan penuh. Lampiran berikutnya mungkin tidak tersimpan setelah halaman dimuat ulang.');
+          return false;
+        }
+      }
+
+      function localDateKey(date = new Date()) {
+        return [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('-');
+      }
+
+      function formatDate(dateKey) {
+        const [year, month, day] = dateKey.split('-').map(Number);
+        return new Intl.DateTimeFormat('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(year, month - 1, day));
+      }
+
+      function scrollToLatest() {
+        messageFeed.scrollTop = messageFeed.scrollHeight;
+      }
+
+      function renderMessages() {
+        messageFeed.replaceChildren();
+        let lastDate = '';
+        messages.forEach((message) => {
+          if (message.date !== lastDate) {
+            const divider = document.createElement('div');
+            divider.className = 'chat-date-divider';
+            const dateLabel = document.createElement('span');
+            dateLabel.textContent = formatDate(message.date);
+            divider.append(dateLabel);
+            messageFeed.append(divider);
+            lastDate = message.date;
+          }
+          messageFeed.append(createMessageBubble(message));
+        });
+        scrollToLatest();
+      }
+
+      function createMessageBubble(message) {
+        const row = document.createElement('article');
+        row.className = `chat-message-row chat-message-row-${message.sender}`;
+        const bubble = document.createElement('div');
+        bubble.className = `chat-message-bubble chat-message-bubble-${message.sender}`;
+
+        if (message.type === 'image' && typeof message.imageData === 'string' && message.imageData.startsWith('data:image/')) {
+          const image = document.createElement('img');
+          image.className = 'chat-message-image';
+          image.src = message.imageData;
+          image.alt = message.fileName ? `Gambar terlampir: ${message.fileName}` : 'Gambar terlampir';
+          bubble.append(image);
+          if (message.fileName) {
+            const fileName = document.createElement('p');
+            fileName.className = 'chat-attachment-name';
+            fileName.textContent = message.fileName;
+            bubble.append(fileName);
+          }
+        } else if (message.type === 'file') {
+          const fileCard = document.createElement('div');
+          fileCard.className = 'chat-document-card';
+          fileCard.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>';
+          const fileDetails = document.createElement('span');
+          const fileName = document.createElement('strong');
+          fileName.textContent = message.fileName || 'Dokumen PDF';
+          const fileSize = document.createElement('small');
+          fileSize.textContent = formatFileSize(message.fileSize || 0);
+          fileDetails.append(fileName, fileSize);
+          fileCard.append(fileDetails);
+          bubble.append(fileCard);
+        } else {
+          const text = document.createElement('p');
+          text.textContent = message.text || '';
+          bubble.append(text);
+        }
+
+        const time = document.createElement('time');
+        time.dateTime = `${message.date}T${message.time}`;
+        time.textContent = message.time;
+        bubble.append(time);
+        row.append(bubble);
+        return row;
+      }
+
+      function formatFileSize(bytes) {
+        if (bytes < 1024 * 1024) return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+        return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+      }
+
+      function showToast(message) {
+        chatToast.textContent = message;
+        chatToast.hidden = false;
+        window.clearTimeout(toastTimeout);
+        toastTimeout = window.setTimeout(() => { chatToast.hidden = true; }, 4000);
+      }
+
+      function addMessage(message) {
+        messages.push(message);
+        saveMessages();
+        renderMessages();
+      }
+
+      function makeMessage(sender, type, details = {}) {
+        const now = new Date();
+        return { sender, type, date: localDateKey(now), time: [now.getHours(), now.getMinutes()].map((value) => String(value).padStart(2, '0')).join(':'), ...details };
+      }
+
+      function setSessionState(isOpen) {
+        sessionIsOpen = isOpen;
+        sessionToggle.setAttribute('aria-checked', String(isOpen));
+        sessionToggle.setAttribute('aria-label', isOpen ? 'Tutup sesi mentoring untuk demo' : 'Buka sesi mentoring untuk demo');
+        sessionBadge.classList.toggle('is-open', isOpen);
+        sessionBadge.innerHTML = `<span></span>Sesi ${isOpen ? 'Berlangsung' : 'Ditutup'}`;
+        sessionBanner.classList.toggle('is-open', isOpen);
+        sessionBanner.querySelector('span').textContent = isOpen ? '🟢' : '🔒';
+        sessionBanner.querySelector('p').textContent = isOpen
+          ? 'Sesi mentoring sedang berlangsung. Diskusi aktif hingga pukul 15:00 WIB.'
+          : 'Sesi obrolan saat ini belum dibuka. Ruang diskusi aktif pada jadwal mentoring (Minggu, 4 Oktober 2026 · 14:00 WIB).';
+        messageInput.disabled = !isOpen;
+        sendButton.disabled = !isOpen;
+        attachButton.disabled = !isOpen;
+        messageForm.classList.toggle('is-disabled', !isOpen);
+        if (isOpen) messageInput.focus();
+      }
+
+      async function makeImagePreview(file) {
+        const bitmap = await createImageBitmap(file);
+        const scale = Math.min(1, 1280 / bitmap.width, 1280 / bitmap.height);
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+        canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+        const context = canvas.getContext('2d');
+        context.fillStyle = '#ffffff';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+        bitmap.close();
+        return canvas.toDataURL('image/jpeg', 0.8);
+      }
+
+      sessionToggle.addEventListener('click', () => setSessionState(!sessionIsOpen));
+      messageForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const text = messageInput.value.trim();
+        if (!sessionIsOpen || !text) return;
+        addMessage(makeMessage('user', 'text', { text }));
+        messageInput.value = '';
+        window.setTimeout(() => addMessage(makeMessage('mentor', 'text', { text: autoReply })), 1500);
+      });
+      attachButton.addEventListener('click', () => {
+        if (sessionIsOpen) fileInput.click();
+      });
+      fileInput.addEventListener('change', async () => {
+        const selectedFiles = [...fileInput.files];
+        fileInput.value = '';
+        for (const file of selectedFiles) {
+          if (file.type.startsWith('image/')) {
+            try {
+              const imageData = await makeImagePreview(file);
+              addMessage(makeMessage('user', 'image', { fileName: file.name, imageData }));
+            } catch {
+              showToast(`Gambar ${file.name} tidak dapat ditampilkan. Coba format gambar lain.`);
+            }
+          } else if (file.type === 'application/pdf' || file.name.toLocaleLowerCase('id').endsWith('.pdf')) {
+            addMessage(makeMessage('user', 'file', { fileName: file.name, fileSize: file.size }));
+          } else {
+            showToast('Lampiran yang didukung adalah gambar dan dokumen PDF.');
+          }
+        }
+      });
+
+      renderMessages();
+      setSessionState(false);
+    </script>
+  </body>
+</html>

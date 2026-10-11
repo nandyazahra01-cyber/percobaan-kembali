@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard Mentor KAWIRA untuk mengelola jadwal bimbingan dan sesi konsultasi wirausaha." />
+    <title>Dashboard Mentor | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-mentor-v1" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="dashboard.js" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/Image%20(Aditya%20Ramadhan).png" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+
+    <div class="dashboard-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard mentor">
+        <a class="dashboard-brand" href="dashboard-mentor.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Portal Mentor Sebaya</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu mentor">
+          <a class="dashboard-nav-link is-active" href="dashboard-mentor.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard Mentor</span>
+          </a>
+          <a class="dashboard-nav-link" href="chat-mentor.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Chat Mahasiswa</span>
+          </a>
+          <a class="dashboard-nav-link" href="mentoring.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Daftar Mentor Lain</span>
+          </a>
+          <a class="dashboard-nav-link" href="modul.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
+            <span>Materi Kurikulum</span>
+          </a>
+          <a class="dashboard-nav-link" href="komunitas.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Forum Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil Mentor</span>
+          </a>
+          <a class="dashboard-nav-link" href="dashboard.html" title="Beralih ke Dashboard Mahasiswa">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>Mode Mahasiswa</span>
+          </a>
+          <a class="dashboard-signout" href="login.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/Image%20(Aditya%20Ramadhan).png" alt="Foto Mentor Aditya Ramadhan" />
+          <span class="dashboard-user-copy"><strong>Aditya Ramadhan</strong><small>Mentor Kuliner & Startup</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-topbar">
+          <div>
+            <h1>Halo, Mentor Aditya! <span aria-hidden="true">👨‍🏫</span></h1>
+            <time datetime="2026-10-11">Minggu, 11 Oktober 2026</time>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <button class="mentor-availability-pill" id="status-toggle" type="button" title="Klik untuk ubah ketersediaan">
+              <span class="dot"></span>
+              <span id="status-text">Menerima Sesi Baru</span>
+            </button>
+            <button class="notification-button" type="button" aria-label="Notifikasi, 3 baru">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <!-- Stat Grid Row -->
+          <div class="stats-grid-row">
+            <div class="stat-card-item">
+              <div class="stat-card-header">
+                <span class="stat-card-title">Sesi Konsultasi Selesai</span>
+                <span class="stat-card-icon purple">✓</span>
+              </div>
+              <div class="stat-card-val">42</div>
+              <div class="stat-card-change">↑ 12% dari bulan lalu</div>
+            </div>
+
+            <div class="stat-card-item">
+              <div class="stat-card-header">
+                <span class="stat-card-title">Mahasiswa Dibimbing</span>
+                <span class="stat-card-icon green">👥</span>
+              </div>
+              <div class="stat-card-val">28</div>
+              <div class="stat-card-change">Tersebar di 9 kampus</div>
+            </div>
+
+            <div class="stat-card-item">
+              <div class="stat-card-header">
+                <span class="stat-card-title">Rating Kepuasan</span>
+                <span class="stat-card-icon amber">⭐</span>
+              </div>
+              <div class="stat-card-val">4.9 <small style="font-size:0.8rem; font-weight:500; color:#79728b;">/ 5.0</small></div>
+              <div class="stat-card-change">Dari 38 ulasan aktif</div>
+            </div>
+
+            <div class="stat-card-item">
+              <div class="stat-card-header">
+                <span class="stat-card-title">Honorarium Bulan Ini</span>
+                <span class="stat-card-icon blue">💰</span>
+              </div>
+              <div class="stat-card-val">Rp 1.890.000</div>
+              <div class="stat-card-change">Siap ditarik ke rekening</div>
+            </div>
+          </div>
+
+          <!-- Permintaan Mentoring Masuk -->
+          <div class="card-panel">
+            <div class="card-panel-header">
+              <h2 class="card-panel-title">
+                <span>Permintaan Mentoring Baru</span>
+                <span class="badge-tag amber">2 Menunggu Konfirmasi</span>
+              </h2>
+            </div>
+
+            <div class="request-card-list">
+              <div class="request-card-item" id="req-1">
+                <div class="request-card-user">
+                  <img src="assets/fotoProfil.jpg" alt="Foto profil Kawira Anindya" />
+                  <div class="request-card-info">
+                    <h4>Kawira Anindya <small style="color:#704cf5; font-weight:600;">· Dapur Nusantara</small></h4>
+                    <p>“Halo Kak Aditya! Kami ingin konsultasi penetapan HPP paket frozen food dan strategi promo pre-order untuk kompetisi P2MW.”</p>
+                    <small style="color:#9891a9;">Paket 1 Jam · Jadwal diajukan: Hari ini, 15:30 WIB</small>
+                  </div>
+                </div>
+                <div class="request-card-actions">
+                  <button type="button" class="btn-sm-action" onclick="handleRequest('req-1', 'diterima', 'Kawira Anindya')">Terima Sesi</button>
+                  <button type="button" class="btn-sm-danger" onclick="handleRequest('req-1', 'ditolak', 'Kawira Anindya')">Tolak</button>
+                </div>
+              </div>
+
+              <div class="request-card-item" id="req-2">
+                <div class="request-card-user">
+                  <img src="assets/Nasywa.png" alt="Foto Nasywa" />
+                  <div class="request-card-info">
+                    <h4>Fikri Ramadhan <small style="color:#704cf5; font-weight:600;">· EcoCraft Studio</small></h4>
+                    <p>“Mohon arahan perbaikan desain Business Model Canvas dan strategi validasi pasar segmen korporat.”</p>
+                    <small style="color:#9891a9;">Paket 1.5 Jam · Jadwal diajukan: Besok, 13:00 WIB</small>
+                  </div>
+                </div>
+                <div class="request-card-actions">
+                  <button type="button" class="btn-sm-action" onclick="handleRequest('req-2', 'diterima', 'Fikri Ramadhan')">Terima Sesi</button>
+                  <button type="button" class="btn-sm-danger" onclick="handleRequest('req-2', 'ditolak', 'Fikri Ramadhan')">Tolak</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sesi Mendatang -->
+          <div class="card-panel">
+            <div class="card-panel-header">
+              <h2 class="card-panel-title">Jadwal Sesi Mendatang Hari Ini & Pekan Ini</h2>
+              <a href="chat-mentor.html" class="btn-sm-ghost">Buka Semua Room Chat →</a>
+            </div>
+
+            <div class="custom-table-wrap">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Mahasiswa / Bisnis</th>
+                    <th>Waktu & Sesi</th>
+                    <th>Topik Bimbingan</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Kawira Anindya</strong><br />
+                      <small style="color:#704cf5;">Dapur Nusantara</small>
+                    </td>
+                    <td>Hari ini, 14:00 - 15:00 WIB</td>
+                    <td>Validasi Ide & Cashflow Usaha</td>
+                    <td><span class="badge-tag green">Terkonfirmasi</span></td>
+                    <td>
+                      <a href="chat-mentor.html" class="btn-sm-action">Mulai Chat</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Siti Nurhaliza</strong><br />
+                      <small style="color:#704cf5;">Hijab Modis</small>
+                    </td>
+                    <td>Senin, 12 Okt 2026, 16:00 WIB</td>
+                    <td>Strategi Iklan Meta & TikTok</td>
+                    <td><span class="badge-tag green">Terkonfirmasi</span></td>
+                    <td>
+                      <a href="chat-mentor.html" class="btn-sm-action">Buka Chat</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Budi Prasetyo</strong><br />
+                      <small style="color:#704cf5;">WarungDigital UNJ</small>
+                    </td>
+                    <td>Rabu, 14 Okt 2026, 10:00 WIB</td>
+                    <td>Penyusunan Pitch Deck</td>
+                    <td><span class="badge-tag amber">Menunggu Konfirmasi</span></td>
+                    <td>
+                      <button type="button" class="btn-sm-ghost" onclick="showMentorToast('Notifikasi pengingat telah dikirim ke mahasiswa.')">Ingatkan</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="dashboard-toast" data-dashboard-toast role="status" aria-live="polite" hidden></div>
+
+    <script>
+      function showMentorToast(msg) {
+        const toast = document.querySelector('[data-dashboard-toast]');
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.hidden = false;
+        setTimeout(() => { toast.hidden = true; }, 3200);
+      }
+
+      function handleRequest(id, status, name) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.style.opacity = '0.5';
+          el.innerHTML = `<div style="padding:12px; font-size:0.85rem; color:${status === 'diterima' ? '#16a34a' : '#e11d48'};">✓ Permintaan sesi dari <strong>${name}</strong> telah ${status}.</div>`;
+        }
+        showMentorToast(`Permintaan sesi dari ${name} berhasil ${status}!`);
+      }
+
+      document.getElementById('status-toggle')?.addEventListener('click', function() {
+        const textEl = document.getElementById('status-text');
+        const isAccepting = textEl.textContent.includes('Menerima');
+        if (isAccepting) {
+          textEl.textContent = 'Istirahat / Sibuk';
+          this.style.background = '#fef2f2';
+          this.style.borderColor = '#fecaca';
+          this.style.color = '#dc2626';
+          this.querySelector('.dot').style.background = '#dc2626';
+          showMentorToast('Status ketersediaan diubah: Tidak menerima sesi baru.');
+        } else {
+          textEl.textContent = 'Menerima Sesi Baru';
+          this.style.background = '#eefdf3';
+          this.style.borderColor = '#bbf7d0';
+          this.style.color = '#15803d';
+          this.querySelector('.dot').style.background = '#22c55e';
+          showMentorToast('Status ketersediaan diubah: Menerima sesi konsultasi.');
+        }
+      });
+    </script>
+  </body>
+</html>

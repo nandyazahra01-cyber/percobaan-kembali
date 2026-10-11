@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Riwayat transaksi dan invoice mentoring KAWIRA." />
+    <title>Riwayat Transaksi &amp; E-Invoice | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261001-invoice-history" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body invoice-history-page">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout invoice-history-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Platform Kawan Wirausaha</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="dashboard-nav-link is-active" href="mentoring.html?tab=jadwal" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="pembukuan.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h14v15H5z"/><path d="M8 8h8M8 11.5h8M8 15h5"/><path d="M8 4.5v15"/></svg>
+            <span>Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link" href="modul.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
+            <span>Modul &amp; Template</span>
+          </a>
+          <a class="dashboard-nav-link" href="komunitas.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main invoice-history-main">
+        <header class="invoice-history-header">
+          <a class="invoice-history-back" href="mentoring.html?tab=jadwal"><span aria-hidden="true">←</span>Kembali ke Jadwal Mentoring</a>
+        </header>
+        <section class="invoice-history-content">
+          <div class="invoice-history-title">
+            <h1>Riwayat Transaksi &amp; E-Invoice</h1>
+            <p>Daftar seluruh transaksi pemesanan mentoring dan bukti invoice resmi KAWIRA.</p>
+          </div>
+          <section aria-labelledby="invoice-history-list-title">
+            <div class="invoice-history-title">
+              <h2 id="invoice-history-list-title">Semua Transaksi</h2>
+              <p data-invoice-history-count></p>
+            </div>
+            <div class="invoice-history-list" data-invoice-history-list></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="invoice-dialog" data-invoice-dialog aria-labelledby="invoice-title">
+      <article class="invoice-document">
+        <button class="meet-dialog-close invoice-close-button" type="button" aria-label="Tutup invoice" data-close-invoice>×</button>
+        <header class="invoice-document-header">
+          <img src="assets/logoLandingPage.svg" alt="KAWIRA" />
+          <div>
+            <span class="invoice-kicker">KAWIRA · PLATFORM KAWAN WIRAUSAHA</span>
+            <h2 id="invoice-title">E-Invoice Pembayaran</h2>
+            <p data-invoice-number></p>
+          </div>
+        </header>
+        <div class="invoice-paid-badge"><span></span>LUNAS (QRIS)</div>
+        <dl class="invoice-details">
+          <div><dt>Nama Pemesan</dt><dd>Kawira Anindya</dd></div>
+          <div><dt>Mentor</dt><dd data-invoice-mentor></dd></div>
+          <div><dt>Layanan</dt><dd data-invoice-service></dd></div>
+          <div><dt>Jadwal</dt><dd data-invoice-schedule></dd></div>
+          <div class="invoice-total-row"><dt>Total</dt><dd data-invoice-total></dd></div>
+        </dl>
+        <aside class="invoice-email-callout">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          <p>Salinan invoice dan informasi konsultasi telah dikirimkan ke email: <strong>anindya@dapurnusantara.id</strong>.</p>
+        </aside>
+        <footer class="invoice-actions">
+          <button class="invoice-print-button" type="button" data-print-invoice>Cetak / Unduh PDF</button>
+          <button class="invoice-dismiss-button" type="button" data-close-invoice>Tutup</button>
+        </footer>
+      </article>
+    </dialog>
+
+    <script>
+      const bookingStorageKey = 'kawira-mentor-bookings';
+      const invoiceList = document.querySelector('[data-invoice-history-list]');
+      const historyCount = document.querySelector('[data-invoice-history-count]');
+      const invoiceDialog = document.querySelector('[data-invoice-dialog]');
+      const invoiceMentorImages = {
+        'Aditya Ramadhan': 'assets/Image%20(Aditya%20Ramadhan).png',
+        'Dimas Prasetyo': 'assets/Image%20(Budi%20Santoso).png',
+        'Rizka Amalia Putri': 'assets/Image%20(Speaker).png',
+        'Sari Dewi Lestari': 'assets/Image%20(Sari%20Indah%20Pertiwi).png',
+        'Andika Budi Wijaya': 'assets/Image%20(Budi%20Santoso).png',
+        'Nadia Kusuma Wati': 'assets/Image%20(Kawira%20Anindya).png',
+        'Fajar Eko Santoso': 'assets/Image%20(Aditya%20Ramadhan).png'
+      };
+      const sampleBookings = [
+        { mentor: 'Aditya Ramadhan', topic: 'Validasi Ide & Pitch Deck P2MW', package: 'video', consultation: 'Sesi Call (Google Meet)', price: 75000, date: '2026-10-04', time: '14:00 - 15:00', invoiceNo: '#INV/KW-20261004/0089', bookedAt: '2026-10-01T10:00:00.000Z' },
+        { mentor: 'Dimas Prasetyo', topic: 'Digital Marketing & Branding', package: 'chat', consultation: 'Sesi Chat Real-time', price: 37500, date: '2026-09-22', time: '19:30 - 20:30', invoiceNo: '#INV/KW-20260922/0088', bookedAt: '2026-09-20T10:00:00.000Z' }
+      ];
+      let bookings = sampleBookings;
+
+      try {
+        const savedBookings = JSON.parse(localStorage.getItem(bookingStorageKey) || '[]');
+        if (Array.isArray(savedBookings) && savedBookings.length && savedBookings.every((booking) => booking
+          && typeof booking.mentor === 'string'
+          && typeof booking.date === 'string'
+          && typeof booking.time === 'string'
+          && Number.isFinite(Number(booking.price)))) bookings = savedBookings;
+      } catch {}
+
+      const formatDate = (dateKey) => {
+        const [year, month, day] = dateKey.split('-').map(Number);
+        return new Intl.DateTimeFormat('id-ID', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(year, month - 1, day));
+      };
+
+      const getInvoiceNumber = (booking, index) => booking.invoiceNo || `#INV/KW-${booking.date.replaceAll('-', '')}/${String(88 + index).padStart(4, '0')}`;
+      const bookingTimestamp = (booking) => Date.parse(booking.bookedAt || `${booking.date}T${booking.time.split(' - ')[0]}:00`) || 0;
+
+      const openInvoice = (booking, index) => {
+        invoiceDialog.querySelector('[data-invoice-number]').textContent = getInvoiceNumber(booking, index);
+        invoiceDialog.querySelector('[data-invoice-mentor]').textContent = booking.mentor;
+        invoiceDialog.querySelector('[data-invoice-service]').textContent = booking.package === 'chat'
+          ? 'Sesi Konsultasi Chat Mentoring (60 Menit)'
+          : 'Sesi Konsultasi Google Meet (60 Menit)';
+        invoiceDialog.querySelector('[data-invoice-schedule]').textContent = `${formatDate(booking.date)} · ${booking.time} WIB`;
+        invoiceDialog.querySelector('[data-invoice-total]').textContent = `Rp ${(Number(booking.price) || 0).toLocaleString('id-ID')}`;
+        invoiceDialog.showModal();
+      };
+
+      const renderHistory = () => {
+        invoiceList.replaceChildren();
+        const orderedBookings = [...bookings].sort((first, second) => bookingTimestamp(second) - bookingTimestamp(first));
+        historyCount.textContent = `${orderedBookings.length} transaksi`;
+        orderedBookings.forEach((booking, index) => {
+          const item = document.createElement('article');
+          item.className = 'paid-booking-card invoice-history-item';
+          const avatar = document.createElement('img');
+          avatar.className = 'paid-booking-avatar';
+          avatar.src = booking.avatar || invoiceMentorImages[booking.mentor] || 'assets/fotoProfil.jpg';
+          avatar.alt = '';
+          const copy = document.createElement('div');
+          copy.className = 'paid-booking-copy';
+          const mentor = document.createElement('h3');
+          mentor.textContent = booking.mentor;
+          const topic = document.createElement('p');
+          topic.className = 'paid-booking-topic';
+          topic.textContent = booking.topic || booking.consultation || 'Sesi konsultasi mentoring';
+          const packageBadge = document.createElement('span');
+          packageBadge.className = `paid-booking-package${booking.package === 'chat' ? ' is-chat' : ''}`;
+          packageBadge.textContent = booking.package === 'chat' ? 'Paket Chat Mentoring' : 'Paket Google Meet';
+          const schedule = document.createElement('p');
+          schedule.className = 'paid-booking-schedule';
+          schedule.textContent = `${formatDate(booking.date)} · ${booking.time} WIB`;
+          const status = document.createElement('span');
+          status.className = 'invoice-history-status';
+          status.textContent = 'Lunas - QRIS';
+          copy.append(mentor, topic, packageBadge, schedule, status);
+          const amount = document.createElement('div');
+          amount.className = 'invoice-history-amount';
+          const price = document.createElement('strong');
+          price.textContent = `Rp ${(Number(booking.price) || 0).toLocaleString('id-ID')}`;
+          const invoiceButton = document.createElement('button');
+          invoiceButton.type = 'button';
+          invoiceButton.className = 'paid-booking-invoice-button';
+          invoiceButton.innerHTML = '<span aria-hidden="true">🧾</span> Lihat Invoice';
+          invoiceButton.addEventListener('click', () => openInvoice(booking, index));
+          amount.append(price, invoiceButton);
+          item.append(avatar, copy, amount);
+          invoiceList.append(item);
+        });
+      };
+
+      document.querySelectorAll('[data-close-invoice]').forEach((button) => button.addEventListener('click', () => invoiceDialog.close()));
+      invoiceDialog.addEventListener('click', (event) => { if (event.target === invoiceDialog) invoiceDialog.close(); });
+      document.querySelector('[data-print-invoice]').addEventListener('click', () => window.print());
+      renderHistory();
+    </script>
+  </body>
+</html>

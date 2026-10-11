@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ruang belajar interaktif Modul 1 KAWIRA: Pengantar Bisnis." />
+    <title>Pengantar Bisnis | Ruang Belajar KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261001-module1-study" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="study-page">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout study-dashboard-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy"><strong>Kawira</strong><small>Platform Kawan Wirausaha</small></span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span>Dashboard</span></a>
+          <a class="dashboard-nav-link" href="mentoring.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg><span>Mentoring</span></a>
+          <a class="dashboard-nav-link" href="pembukuan.html"><img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" /><span>Pembukuan</span></a>
+          <a class="dashboard-nav-link is-active" href="modul.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg><span>Modul &amp; Template</span></a>
+          <a class="dashboard-nav-link" href="komunitas.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg><span>Komunitas</span></a>
+          <a class="dashboard-nav-link" href="profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg><span>Profil &amp; Pengaturan</span></a>
+          <a class="dashboard-signout" href="login.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg><span>Keluar dari Akun</span></a>
+        </nav>
+        <a class="dashboard-user sidebar-user-card" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="Foto profil Kawira Anindya" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <div class="study-workspace">
+      <header class="study-topbar">
+      <a class="study-back-link" href="modul.html"><span aria-hidden="true">←</span> Kembali ke Modul &amp; Template</a>
+      <div class="study-topbar-right">
+        <span class="study-course-label">MODUL 1 <span aria-hidden="true">/</span> PENGANTAR BISNIS</span>
+        <button class="study-outline-toggle" type="button" aria-label="Buka / Tutup Daftar Sub-Bab" title="Buka / Tutup Daftar Sub-Bab" aria-expanded="true" aria-controls="study-outline" data-outline-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </header>
+
+    <main class="study-layout" data-study-layout>
+      <aside class="study-outline" id="study-outline" aria-label="Outline materi Modul 1">
+        <div class="study-outline-panel">
+          <div class="study-outline-progress-heading"><span>MODUL 1: PENGANTAR BISNIS</span><strong data-progress-label>33% Selesai</strong></div>
+          <div class="study-progress-track" role="progressbar" aria-label="Progres materi 0 persen" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span data-progress-fill></span></div>
+          <h1>Mengenal Dasar-Dasar Dunia Bisnis</h1>
+          <p class="study-outline-intro">Fondasi orientasi kewirausahaan, siklus pembentukan, dan legalitas usaha mahasiswa.</p>
+
+          <nav class="study-lesson-list" aria-label="Navigasi sub-bab">
+            <button class="study-lesson is-active" type="button" aria-current="page" aria-pressed="true" data-outline-lesson="1.1" data-target="subbab-1-1">
+              <span class="study-lesson-top"><span class="study-reading-badge" data-reading-status>SEDANG DIBACA</span><span>12 Menit</span></span>
+              <span class="study-lesson-title">1.1 Kewirausahaan &amp; Pembentukan Entitas Bisnis</span>
+            </button>
+            <button class="study-lesson" type="button" aria-pressed="false" data-outline-lesson="1.2" data-target="subbab-1-2">
+              <span class="study-lesson-top"><span class="study-lesson-radio" aria-hidden="true"></span><span class="study-reading-badge" data-reading-status>SEDANG DIBACA</span><span class="study-lesson-time">15 Menit</span></span><span class="study-lesson-title">1.2 Strategi Pemasaran &amp; Penetrasi Pasar Global</span>
+            </button>
+            <button class="study-lesson" type="button" aria-pressed="false" data-outline-lesson="1.3" data-target="subbab-1-3">
+              <span class="study-lesson-top"><span class="study-lesson-radio" aria-hidden="true"></span><span class="study-reading-badge" data-reading-status>SEDANG DIBACA</span><span class="study-lesson-time">14 Menit</span></span><span class="study-lesson-title">1.3 Akuntansi, Pelaporan, dan Manajemen Keuangan</span>
+            </button>
+            <button class="study-quiz-outline" type="button" aria-pressed="false" data-outline-lesson="quiz" data-target="quiz-evaluation">
+              <span class="study-quiz-icon"><img src="assets/IconCheck.svg" alt="" /></span>
+              <span class="study-quiz-copy"><strong>Kuis Evaluasi Sub-bab 1.1</strong><small>Standar Lulus Min. 80% · Terkunci</small></span>
+              <span class="study-quiz-lock" aria-hidden="true">▣</span>
+            </button>
+          </nav>
+
+          <div class="study-peers">
+            <div class="study-peer-avatars" aria-hidden="true"><span>FA</span><span>BP</span><span>SN</span></div>
+            <p><strong>52 Rekan Mahasiswa</strong> telah menuntaskan materi ini.</p>
+          </div>
+        </div>
+      </aside>
+
+      <article class="study-article">
+        <div class="study-panel is-active" id="subbab-1-1" data-study-panel="subbab-1-1">
+        <header class="study-article-header">
+          <div class="study-article-tags"><span class="study-time-tag"><img src="assets/IconClock.svg" alt="" />12 Menit Estimasi Baca</span><span class="study-topic-tag">Orientasi Entitas Bisnis</span></div>
+          <h1>Kewirausahaan &amp; Pembentukan Entitas Bisnis: Dari Siklus Eksekusi hingga Badan Hukum</h1>
+          <p>Membedah esensi pola pikir wirausaha, tahapan validasi operasional Ready-Set-Start, pemilihan bentuk kepemilikan bisnis, serta opsi ekspansi modern bagi founder mahasiswa.</p>
+        </header>
+
+        <section class="study-section" id="fundamentals" aria-labelledby="fundamentals-title">
+          <div class="study-section-heading"><span class="study-section-number">01</span><div><h2 id="fundamentals-title">1.1 Kewirausahaan &amp; Pembentukan Entitas Bisnis</h2><p>Fundamental &amp; Orientasi Kewirausahaan (Entrepreneurial Orientation) · Wibowo &amp; Narmaditya (2022); Felix (2021); Lumpkin &amp; Dess</p></div></div>
+          <blockquote class="study-quote">“Orientasi kewirausahaan—yang dioperasionalisasikan melalui inovasi terarah, inisiatif proaktif, dan keberanian mengambil risiko terukur—merupakan penentu utama resiliensi usaha mahasiswa dalam mengonversi gagasan menjadi entitas bisnis mandiri yang berdaya saing.”</blockquote>
+          <div class="study-dimension-grid" aria-label="Lima dimensi orientasi kewirausahaan">
+            <article class="study-dimension-card"><span class="study-card-icon"><img src="assets/IconStar.svg" alt="" /></span><h3>1. Inovasi <small>(Innovativeness)</small></h3><p>Kreativitas dan pembaruan solusi produk maupun teknologi untuk menjawab kebutuhan pelanggan.</p></article>
+            <article class="study-dimension-card"><span class="study-card-icon"><img src="assets/TrendUpIcon.svg" alt="" /></span><h3>2. Tindakan Proaktif <small>(Proactiveness)</small></h3><p>Kecepatan menangkap peluang pasar sebelum kompetitor bergerak.</p></article>
+            <article class="study-dimension-card"><span class="study-card-icon"><img src="assets/IconCheck.svg" alt="" /></span><h3>3. Pengambilan Risiko Terukur</h3><p>Komitmen modal dengan mitigasi risiko yang berpijak pada data riil.</p></article>
+            <article class="study-dimension-card"><span class="study-card-icon"><img src="assets/IconArrowRight.svg" alt="" /></span><h3>4. Agresivitas Kompetitif</h3><p>Keunggulan diferensiasi nilai dan strategi penetrasi pasar yang tepat sasaran.</p></article>
+            <article class="study-dimension-card"><span class="study-card-icon"><img src="assets/UsersIcon.svg" alt="" /></span><h3>5. Otonomi Keputusan <small>(Autonomy)</small></h3><p>Kemandirian tim pendiri memegang kendali visi bisnis tanpa birokrasi kaku.</p></article>
+          </div>
+          <aside class="study-insight"><span class="study-insight-mark" aria-hidden="true">i</span><p><strong>Insight Praktik</strong> Karakter wirausaha bukanlah bakat lahir, melainkan kompetensi dinamis (resiliensi &amp; ambidexterity) yang dilatih lewat aksi nyata.</p></aside>
+        </section>
+
+        <section class="study-section" id="execution" aria-labelledby="execution-title">
+          <div class="study-section-heading"><span class="study-section-number">02</span><div><h2 id="execution-title">Tahapan Eksekusi Usaha: Siklus Ready – Set – Start</h2><p>Kerangka eksekusi bertahap · Nasution et al.; Alhassan et al.</p></div></div>
+          <div class="study-benchmark">
+            <div class="study-benchmark-copy"><span class="study-eyebrow">EO BENCHMARK</span><h3>Skor Kesiapan Tim</h3><p>Profil kesiapan untuk mengeksekusi dan mengembangkan gagasan usaha.</p><strong>80 <small>/ 100</small></strong></div>
+            <div class="study-radar" role="img" aria-label="Diagram radar kesiapan tim: inovasi 80, proaktif 76, risiko 68, kompetitif 84, otonomi 90">
+              <svg viewBox="0 0 240 210" aria-hidden="true">
+                <polygon class="study-radar-ring" points="120,20 204,81 172,180 68,180 36,81" />
+                <polygon class="study-radar-ring" points="120,45 183,91 159,165 81,165 57,91" />
+                <polygon class="study-radar-ring" points="120,70 162,101 146,150 94,150 78,101" />
+                <path class="study-radar-axis" d="M120 20v160M36 81l136 99M204 81 68 180M36 81h168M68 180l52-160M172 180 68 81" />
+                <polygon class="study-radar-data" points="120,52 178,96 146,151 83,154 59,96" />
+                <circle class="study-radar-point" cx="120" cy="52" r="3"/><circle class="study-radar-point" cx="178" cy="96" r="3"/><circle class="study-radar-point" cx="146" cy="151" r="3"/><circle class="study-radar-point" cx="83" cy="154" r="3"/><circle class="study-radar-point" cx="59" cy="96" r="3"/>
+              </svg>
+              <div class="study-radar-labels"><span>Inovasi</span><span>Proaktif</span><span>Risiko</span><span>Kompetitif</span><span>Otonomi</span></div>
+            </div>
+          </div>
+          <div class="study-phase-grid">
+            <article class="study-phase-card is-ready"><span class="study-phase-label">FASE 1 · READY</span><h3>Riset &amp; Validasi</h3><ul><li>Wawancara 30 target konsumen.</li><li>Uji MVP melalui pre-order.</li><li>Output: BMC tervalidasi.</li></ul><span class="study-phase-benchmark">Benchmark: 2–4 Minggu</span></article>
+            <article class="study-phase-card is-set"><span class="study-phase-label">FASE 2 · SET</span><h3>Fondasi &amp; Penataan</h3><ul><li>Founders' Agreement: ekuitas dan vesting.</li><li>NIB via OSS dan rekening giro bisnis.</li><li>Susun SOP baku.</li></ul><span class="study-phase-benchmark">Titik kritis: Perizinan OSS beres</span></article>
+            <article class="study-phase-card is-start"><span class="study-phase-label">FASE 3 · START</span><h3>Peluncuran &amp; Scale</h3><ul><li>Go-To-Market multichannel.</li><li>Cash Flow Watch: jaga runway dan HPP.</li><li>Pantau metrik unit usaha.</li></ul><span class="study-phase-benchmark">Target: Positive Unit Margin</span></article>
+          </div>
+        </section>
+
+        <section class="study-section" id="ownership" aria-labelledby="ownership-title">
+          <div class="study-section-heading"><span class="study-section-number">03</span><div><h2 id="ownership-title">Bentuk Kepemilikan Bisnis &amp; Proteksi Aset Pribadi</h2><p>Rujukan: UU Cipta Kerja; Anie (2022); Ahmad &amp; Fakih</p></div></div>
+          <div class="study-protection">
+            <div class="study-protection-heading"><span class="study-protection-shield" aria-hidden="true">⬟</span><div><h3>Prinsip Proteksi Kekayaan Pribadi vs. Liabilitas Bisnis</h3><p>Perbandingan dampak hukum bagi founder mahasiswa saat terjadi wanprestasi atau kebangkrutan.</p></div><span class="study-law-pill">Solusi UU Cipta Kerja</span></div>
+            <div class="study-ownership-grid">
+              <article class="study-ownership-card is-risk"><div class="study-ownership-card-top"><div><span class="study-warning" aria-hidden="true">△</span><strong>Tanpa Badan Hukum<br />(Perseorangan / CV)</strong></div><span class="study-risk-pill">Risiko Sangat Tinggi</span></div><div class="study-asset-box"><span>Tabungan Mahasiswa &amp; Aset Pribadi:</span><strong>TERANCAM DISITA</strong><div class="study-liability-meter"><span></span></div><p>Bila usaha berutang Rp 50 juta dan kas usaha habis, kreditur <strong>berhak secara hukum menyita laptop, motor, dan tabungan pribadi</strong> founder.</p></div></article>
+              <article class="study-ownership-card is-protected"><div class="study-ownership-card-top"><div><span class="study-verified" aria-hidden="true">✦</span><strong>PT Perorangan<br />(Badan Hukum)</strong></div><span class="study-protection-pill">Tembok Proteksi Hukum</span></div><div class="study-asset-box"><span>Tabungan Mahasiswa &amp; Aset Pribadi:</span><strong>100% AMAN TERPISAH</strong><div class="study-liability-meter"><span></span></div><p>Liabilitas kerugian dibatasi <strong>hanya sebatas modal disetor perusahaan</strong>. Kekayaan pribadi founder kampus tidak dapat disentuh oleh pihak ketiga.</p></div></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="study-section" id="expansion" aria-labelledby="expansion-title">
+          <div class="study-section-heading"><span class="study-section-number">04</span><div><h2 id="expansion-title">Opsi Ekspansi Usaha &amp; Alternatif Pertumbuhan</h2><p>Rujukan strategi skala: Ahsan et al.; Al-Tabbaa &amp; Zahoor.</p></div></div>
+          <div class="study-scaling-grid">
+            <article class="study-scaling-card"><span class="study-scaling-index">01</span><h3>Waralaba <small>(Franchising)</small></h3><p>Replikasi model teruji dan SOP standar melalui modal mitra.</p><span>Contoh: kedai kopi kampus</span></article>
+            <article class="study-scaling-card"><span class="study-scaling-index">02</span><h3>Koperasi Usaha Mahasiswa</h3><p>Skalasi berbasis solidaritas dan pengadaan bahan baku grosir bersama.</p><span>Kolaborasi komunitas</span></article>
+            <article class="study-scaling-card"><span class="study-scaling-index">03</span><h3>Aliansi Strategis <small>(Strategic Alliance)</small></h3><p>Kolaborasi efisiensi capex antar brand lokal untuk memperluas jangkauan.</p><span>Berbagi sumber daya</span></article>
+            <article class="study-scaling-card"><span class="study-scaling-index">04</span><h3>Acquihiring <small>(Akuisisi Talenta)</small></h3><p>Integrasi tim inovator berkinerja tinggi untuk memperkuat kapasitas usaha.</p><span>Ekspansi kapabilitas</span></article>
+          </div>
+        </section>
+
+        <div class="study-article-end"><span>MODUL 1 · PENGANTAR BISNIS</span><span>Sub-bab 1.1 · Kewirausahaan &amp; Entitas Bisnis</span></div>
+        </div>
+
+        <section class="study-panel" id="subbab-1-2" data-study-panel="subbab-1-2" hidden>
+          <header class="study-article-header"><div class="study-article-tags"><span class="study-time-tag"><img src="assets/IconClock.svg" alt="" />15 Menit Estimasi Baca</span><span class="study-topic-tag">Marketing &amp; Go-To-Market</span></div><h1>1.2 Strategi Pemasaran Terpadu: Dari Validasi Pasar Lokal Menuju Penetrasi Global</h1><p>Membangun positioning brand mahasiswa yang kokoh, matriks saluran pemasaran digital, dan strategi penetrasi segmen pasar bertahap.</p></header>
+          <section class="study-section" aria-labelledby="stp-title"><div class="study-section-heading"><span class="study-section-number">A</span><div><h2 id="stp-title">Matriks Segmenting, Targeting, &amp; Positioning Mahasiswa</h2><p>Temukan segmen yang tepat dan bangun alasan kuat agar pelanggan memilih brand-mu.</p></div></div>
+            <aside class="study-value-callout"><span class="study-value-mark" aria-hidden="true">i</span><p><strong>Value proposition bukan sekadar solusi.</strong> Tawarkan manfaat unik yang paling dihargai target pelanggan, lalu tunjukkan mengapa nilainya lebih relevan dibanding alternatif kompetitor.</p></aside>
+            <div class="study-stp-grid">
+              <article class="study-stp-card is-segment"><span class="study-stp-step">01 · SEGMENTASI</span><span class="study-stp-icon"><img src="assets/UsersIcon.svg" alt="" /></span><h3>Pilah perilaku pasar</h3><p>Kelompokkan pasar berdasarkan perilaku belanja digital Gen Z, kebutuhan, minat, dan kebiasaan menemukan produk.</p></article>
+              <article class="study-stp-card is-target"><span class="study-stp-step">02 · TARGETING</span><span class="study-stp-icon"><img src="assets/IconSearch.svg" alt="" /></span><h3>Pilih early adopter</h3><p>Tentukan early adopter di ekosistem kampus atau komunitas yang paling terbuka mencoba solusi baru.</p></article>
+              <article class="study-stp-card is-position"><span class="study-stp-step">03 · POSITIONING</span><span class="study-stp-icon"><img src="assets/IconStar.svg" alt="" /></span><h3>Tegaskan diferensiasi</h3><p>Bangun positioning: “Produk Lokal Kualitas Premium, Harga Mahasiswa”.</p></article>
+            </div>
+          </section>
+          <section class="study-section" aria-labelledby="channel-title"><div class="study-section-heading"><span class="study-section-number">B</span><div><h2 id="channel-title">Saluran Akuisisi Pelanggan</h2><p>Customer Acquisition Channels · sesuaikan kanal dengan fase dan kapasitas usaha.</p></div></div>
+            <div class="study-table-wrap" role="region" aria-label="Tabel komparasi saluran akuisisi pelanggan" tabindex="0"><table class="study-data-table"><thead><tr><th>Saluran Pemasaran</th><th>Karakteristik Biaya (CAC)</th><th>Kecepatan Konversi</th><th>Rekomendasi Tahap Usaha</th></tr></thead><tbody>
+              <tr><th scope="row">Organik TikTok / IG Reels</th><td>Rendah biaya, tinggi waktu produksi konten.</td><td>Sedang; bergantung konsistensi dan jangkauan.</td><td><span class="study-stage-tag is-validation">Fase Validasi</span></td></tr>
+              <tr><th scope="row">Paid Ads Meta / TikTok</th><td>Menengah–tinggi; perlu uji biaya per hasil.</td><td>Cepat jika target dan materi iklan tepat.</td><td><span class="study-stage-tag is-scaling">Fase Scaling</span></td></tr>
+              <tr><th scope="row">Micro-influencer Kampus</th><td>Rendah–menengah; barter atau fee kampanye.</td><td>Cepat pada komunitas dengan kepercayaan tinggi.</td><td><span class="study-stage-tag is-validation">Fase Validasi</span></td></tr>
+              <tr><th scope="row">Bazar &amp; Komunitas</th><td>Menengah; biaya booth dan sampel produk.</td><td>Langsung; umpan balik didapat di tempat.</td><td><span class="study-stage-tag is-validation">Validasi → Scaling</span></td></tr>
+            </tbody></table></div>
+          </section>
+          <section class="study-section" aria-labelledby="aida-title"><div class="study-section-heading"><span class="study-section-number">C</span><div><h2 id="aida-title">Funnel Konversi AIDA &amp; Retensi</h2><p>Rancang pengalaman dari perhatian pertama hingga pembelian berulang.</p></div></div>
+            <div class="study-aida-funnel" aria-label="Empat tahap funnel AIDA">
+              <article class="study-aida-step is-attention"><span>01</span><div><h3>Attention</h3><p>Tarik perhatian dengan hook konten video pendek.</p></div><b>Jangkauan</b></article>
+              <article class="study-aida-step is-interest"><span>02</span><div><h3>Interest</h3><p>Bangun minat lewat ulasan sosial dan bukti testimoni.</p></div><b>Kepercayaan</b></article>
+              <article class="study-aida-step is-desire"><span>03</span><div><h3>Desire</h3><p>Tumbuhkan keinginan dengan bundling terbatas.</p></div><b>Pertimbangan</b></article>
+              <article class="study-aida-step is-action"><span>04</span><div><h3>Action</h3><p>Permudah checkout melalui QRIS atau e-commerce.</p></div><b>Konversi</b></article>
+            </div>
+            <aside class="study-retention-callout"><img src="assets/TrendUpIcon.svg" alt="" /><p><strong>Kunci Pertumbuhan Berkelanjutan</strong>Tingkat Pembelian Berulang <b>(Repeat Order Rate &gt; 25%)</b></p></aside>
+          </section>
+          <div class="study-article-end"><span>MODUL 1 · PENGANTAR BISNIS</span><span>Sub-bab 1.2 · Marketing &amp; Go-To-Market</span></div>
+        </section>
+
+        <section class="study-panel" id="subbab-1-3" data-study-panel="subbab-1-3" hidden>
+          <header class="study-article-header"><div class="study-article-tags"><span class="study-time-tag"><img src="assets/IconClock.svg" alt="" />14 Menit Estimasi Baca</span><span class="study-topic-tag">Literasi Finansial</span></div><h1>1.3 Akuntansi Praktis, Arus Kas, dan Tata Kelola Finansial Startup Mahasiswa</h1><p>Penyusunan laporan laba-rugi sederhana, menjaga ketahanan kas (runway), dan integrasi pembukuan digital tanpa beban akuntansi rumit.</p></header>
+          <section class="study-section" aria-labelledby="financial-pillars-title"><div class="study-section-heading"><span class="study-section-number">A</span><div><h2 id="financial-pillars-title">3 Pilar Utama Laporan Keuangan Rintisan</h2><p>Catatan sederhana memberi gambaran kesehatan usaha dan dasar keputusan.</p></div></div>
+            <div class="study-finance-grid">
+              <article class="study-finance-card is-cash"><span class="study-finance-icon"><img src="assets/WalletIcon.svg" alt="" /></span><span class="study-finance-kicker">01 · LIKUIDITAS</span><h3>Arus Kas <small>(Cash Flow Statement)</small></h3><p>Urat nadi operasional harian: pantau kas masuk dibandingkan kas keluar.</p><div class="study-finance-meter"><span></span></div><b>Kas Masuk ↔ Kas Keluar</b></article>
+              <article class="study-finance-card is-profit"><span class="study-finance-icon"><img src="assets/TrendUpIcon.svg" alt="" /></span><span class="study-finance-kicker">02 · PROFITABILITAS</span><h3>Laba Rugi <small>(Profit &amp; Loss)</small></h3><p>Ukur profitabilitas riil setelah seluruh beban operasional dikurangkan.</p><div class="study-finance-meter"><span></span></div><b>Pendapatan − Beban = Laba</b></article>
+              <article class="study-finance-card is-balance"><span class="study-finance-icon"><img src="assets/CalcIcon.svg" alt="" /></span><span class="study-finance-kicker">03 · POSISI USAHA</span><h3>Neraca Sederhana <small>(Balance Sheet)</small></h3><p>Petakan aset usaha, utang lancar, dan modal pemilik pada satu periode.</p><div class="study-finance-meter"><span></span></div><b>Aset = Liabilitas + Ekuitas</b></article>
+            </div>
+          </section>
+          <section class="study-section" aria-labelledby="runway-title"><div class="study-section-heading"><span class="study-section-number">B</span><div><h2 id="runway-title">Rumus &amp; Visualisasi Cash Runway</h2><p>Perkirakan berapa lama bisnis beroperasi dengan saldo kas tersedia.</p></div></div>
+            <div class="study-runway-card"><div class="study-runway-formula"><span class="study-runway-label">FORMULA CASH RUNWAY</span><p>Cash Runway = Total Saldo Kas Tersedia ÷ Rata-rata Burn Rate Bersih per Bulan</p></div><div class="study-runway-example"><div><span>CONTOH KASUS MAHASISWA</span><p>Kas sisa <strong>Rp 12.000.000</strong><br />Pengeluaran minus pemasukan <strong>Rp 3.000.000 / bulan</strong></p></div><div class="study-runway-result"><strong>4</strong><span>BULAN<br />OPERASIONAL</span></div></div><div class="study-runway-meter" role="img" aria-label="Runway aman empat bulan"><span></span><span></span><span></span><span></span></div><small class="study-runway-caption">Runway aman: 4 bulan operasional</small></div>
+          </section>
+          <section class="study-section" aria-labelledby="finance-sop-title"><div class="study-section-heading"><span class="study-section-number">C</span><div><h2 id="finance-sop-title">SOP Disiplin Keuangan &amp; Rekonsiliasi Kas</h2><p>Ritme pencatatan rutin mencegah selisih kas dan keputusan berbasis asumsi.</p></div></div>
+            <div class="study-table-wrap" role="region" aria-label="Tabel SOP disiplin keuangan" tabindex="0"><table class="study-data-table"><thead><tr><th>Frekuensi</th><th>Aktivitas Wajib</th><th>PIC / Tanggung Jawab</th></tr></thead><tbody>
+              <tr><th scope="row">Harian</th><td>Rekap kasir via Google Sheets / KAWIRA dan catat transaksi.</td><td>Kasir / Founder operasional</td></tr>
+              <tr><th scope="row">Mingguan</th><td>Stock opname bahan baku dan cocokkan stok fisik dengan catatan.</td><td>Operasional / PIC inventaris</td></tr>
+              <tr><th scope="row">Bulanan</th><td>Evaluasi margin kotor, HPP, dan burn rate usaha.</td><td>Founder keuangan</td></tr>
+              <tr><th scope="row">Akhir Periode</th><td>Rekonsiliasi rekening bank dengan buku kas.</td><td>Founder / Bendahara</td></tr>
+            </tbody></table></div>
+          </section>
+          <div class="study-article-end"><span>MODUL 1 · PENGANTAR BISNIS</span><span>Sub-bab 1.3 · Literasi Finansial</span></div>
+        </section>
+
+        <section class="study-panel study-quiz-panel-view" id="quiz-evaluation" data-study-panel="quiz-evaluation" hidden>
+          <header class="study-article-header"><div class="study-article-tags"><span class="study-time-tag"><img src="assets/IconClock.svg" alt="" />10 Menit</span><span class="study-topic-tag">Evaluasi Modul 1</span></div><h1>Kuis Evaluasi: Pengantar Bisnis &amp; Entitas Usaha</h1><p>5 Soal Pilihan Ganda · Standar Kelulusan 80% (Min. Benar 4 Soal) · Batas Waktu 10 Menit</p></header>
+          <div class="study-quiz-lock-notice" data-quiz-locked><span aria-hidden="true">▣</span><p><strong>Kuis masih terkunci.</strong> Tandai Sub-bab 1.1 selesai dibaca untuk membuka evaluasi.</p><button type="button" data-mark-1-1-read>Baca dan Tandai Sub-bab 1.1</button></div>
+          <form class="study-quiz-flow" data-quiz-flow hidden novalidate>
+            <div class="study-quiz-flow-progress"><strong data-question-counter>Pertanyaan 1 dari 5</strong><span><i data-question-progress></i></span></div>
+            <div class="study-question-card">
+              <span class="study-question-kicker" data-question-topic></span>
+              <h2 data-question-text></h2>
+              <div class="study-question-options" data-question-options></div>
+              <div class="study-question-review" data-question-review hidden></div>
+              <p class="study-question-feedback" data-question-feedback hidden></p>
+            </div>
+            <div class="study-question-actions"><button class="study-question-previous" type="button" data-question-previous disabled>Sebelumnya</button><button class="study-question-next" type="button" data-question-next>Selanjutnya</button><button class="study-question-submit" type="button" data-question-submit hidden>Kirim Jawaban &amp; Lihat Skor</button></div>
+          </form>
+        </section>
+      </article>
+      <dialog class="study-quiz-result-dialog" data-quiz-result-dialog aria-labelledby="quiz-result-title">
+        <section class="study-quiz-result-card" data-quiz-result-card aria-live="polite">
+          <div class="study-result-mark" data-result-mark aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m11 25 8 8 18-19" /></svg></div>
+          <span class="study-result-badge" data-result-badge>LULUS</span>
+          <h2 id="quiz-result-title" data-result-title>Selamat! Kamu Telah Menuntaskan Modul 1</h2>
+          <strong class="study-result-score" data-result-score>Skor: 100 / 100 - LULUS</strong>
+          <p data-result-message>Seluruh materi dan evaluasi dasar bisnis telah berhasil diselesaikan. Pemahaman fondasimu siap diterapkan ke praktik usaha nyata.</p>
+          <div class="study-result-actions"><a class="study-result-primary" href="modul.html" data-result-back>Kembali ke Katalog Modul</a><button class="study-result-review" type="button" data-review-quiz>Tinjau Pembahasan Kuis</button><button class="study-question-retry" type="button" data-retry-quiz hidden>Ulangi Kuis</button></div>
+        </section>
+      </dialog>
+    </main>
+
+    <footer class="study-sticky-footer">
+      <button class="study-footer-previous" type="button" data-study-previous>← Kembali ke Modul</button>
+      <label class="study-read-toggle" data-read-control><input type="checkbox" data-mark-read /><span>Tandai Selesai<br />Dibaca <b data-read-mark>○</b></span></label>
+      <button class="study-footer-next" type="button" data-study-next disabled>Selesai Membaca &amp; Mulai Kuis Evaluasi Sub-bab 1.1 <span aria-hidden="true">→</span></button>
+    </footer>
+      </div>
+
+    <div class="study-toast" role="status" aria-live="polite" data-study-toast hidden></div>
+  </div>
+
+    <script>
+      const layout = document.querySelector('[data-study-layout]');
+      const outlineToggle = document.querySelector('[data-outline-toggle]');
+      const readToggle = document.querySelector('[data-mark-read]');
+      const readControl = document.querySelector('[data-read-control]');
+      const nextButton = document.querySelector('[data-study-next]');
+      const previousButton = document.querySelector('[data-study-previous]');
+      const panels = document.querySelectorAll('[data-study-panel]');
+      const outlineItems = document.querySelectorAll('[data-target]');
+      const quizFlow = document.querySelector('[data-quiz-flow]');
+      const quizLockedNotice = document.querySelector('[data-quiz-locked]');
+      const questionCounter = document.querySelector('[data-question-counter]');
+      const questionProgress = document.querySelector('[data-question-progress]');
+      const questionTopic = document.querySelector('[data-question-topic]');
+      const questionText = document.querySelector('[data-question-text]');
+      const questionOptions = document.querySelector('[data-question-options]');
+      const questionReview = document.querySelector('[data-question-review]');
+      const questionFeedback = document.querySelector('[data-question-feedback]');
+      const previousQuestionButton = document.querySelector('[data-question-previous]');
+      const nextQuestionButton = document.querySelector('[data-question-next]');
+      const submitQuizButton = document.querySelector('[data-question-submit]');
+      const quizResultDialog = document.querySelector('[data-quiz-result-dialog]');
+      const quizResultCard = document.querySelector('[data-quiz-result-card]');
+      const progressLabel = document.querySelector('[data-progress-label]');
+      const progressFill = document.querySelector('[data-progress-fill]');
+      const progressTrack = document.querySelector('.study-progress-track');
+      const quizStorageKey = 'kawira_module1_quiz_passed';
+      const progressStorageKey = 'kawira_modul1_progress';
+      const lessonNumbers = {
+        'subbab-1-1': '1.1',
+        'subbab-1-2': '1.2',
+        'subbab-1-3': '1.3'
+      };
+      const progressState = { '1.1': false, '1.2': false, '1.3': false };
+      try {
+        const savedProgress = JSON.parse(localStorage.getItem(progressStorageKey) || 'null');
+        if (savedProgress && typeof savedProgress === 'object') {
+          Object.keys(progressState).forEach((lesson) => { progressState[lesson] = savedProgress[lesson] === true; });
+        } else {
+          progressState['1.1'] = localStorage.getItem('kawira_module1_read_complete') === 'true';
+          progressState['1.2'] = localStorage.getItem('kawira_module1_2_read_complete') === 'true';
+          progressState['1.3'] = localStorage.getItem('kawira_module1_3_read_complete') === 'true';
+        }
+      } catch {}
+
+      const isReadComplete = (panelId) => Boolean(progressState[lessonNumbers[panelId]]);
+      const saveProgress = () => {
+        try { localStorage.setItem(progressStorageKey, JSON.stringify(progressState)); } catch {}
+      };
+      const lessonFlow = {
+        'subbab-1-1': { next: 'quiz-evaluation', nextLabel: 'Selesai Membaca & Mulai Kuis Evaluasi Sub-bab 1.1', previous: 'modul', previousLabel: '← Kembali ke Modul' },
+        'subbab-1-2': { next: 'subbab-1-3', nextLabel: 'Lanjut ke 1.3: Manajemen Keuangan', previous: 'subbab-1-1', previousLabel: '← Kembali ke 1.1' },
+        'subbab-1-3': { next: 'quiz-evaluation', nextLabel: 'Mulai Kuis Evaluasi Sub-bab 1.1', previous: 'subbab-1-2', previousLabel: '← Kembali ke 1.2' }
+      };
+      const quizQuestions = [
+        { topic: 'DIMENSI ORIENTASI KEWIRAUSAHAAN', prompt: 'Seorang mahasiswa founder cepat menangkap tren minuman herbal baru di kampus sebelum kompetitor lain menyadarinya. Dimensi Entrepreneurial Orientation (EO) apa yang paling menonjol?', options: ['A. Inovasi', 'B. Tindakan Proaktif', 'C. Otonomi', 'D. Agresivitas Kompetitif'], answer: 1, explanation: 'Tindakan proaktif terlihat dari kecepatan mengantisipasi tren dan bergerak sebelum kompetitor.' },
+        { topic: 'SIKLUS EKSEKUSI BISNIS', prompt: 'Pada tahapan Ready – Set – Start, pada fase manakah pengurusan legalitas izin usaha (NIB via OSS) dan penyusunan Founders’ Agreement wajib diselesaikan?', options: ['A. Fase Ready', 'B. Fase Set', 'C. Fase Start', 'D. Fase Scale-up'], answer: 1, explanation: 'Fase SET menata fondasi: founders’ agreement, legalitas dasar, rekening usaha, dan SOP.' },
+        { topic: 'PROTEKSI ASET & HUKUM', prompt: 'Apa keunggulan mendirikan PT Perorangan dibandingkan usaha perseorangan biasa menurut regulasi terkini?', options: ['A. Bebas seluruh jenis pajak', 'B. Modal pendirian minimal wajib Rp 1 Miliar', 'C. Memisahkan kekayaan pribadi pendiri dari liabilitas utang perusahaan', 'D. Wajib memiliki minimal 5 orang pemegang saham'], answer: 2, explanation: 'Badan hukum memisahkan kekayaan pribadi dan perusahaan; tanggung jawab pemilik dibatasi sesuai ketentuan yang berlaku.' },
+        { topic: 'STRATEGI PERTUMBUHAN', prompt: 'Model ekspansi usaha yang mereplikasi format bisnis teruji dan standar SOP melalui kerja sama permodalan mitra disebut...', options: ['A. Waralaba / Franchising', 'B. Joint Venture', 'C. Acquihiring', 'D. Merger Vertikal'], answer: 0, explanation: 'Waralaba memperluas model bisnis melalui mitra dengan mereplikasi format dan SOP yang teruji.' },
+        { topic: 'ETIKA & TATA KELOLA KEUANGAN', prompt: 'Mengapa pemisahan rekening kas pribadi dengan kas operasional bisnis rintisan sangat krusial sejak hari pertama?', options: ['A. Agar bisnis terlihat besar di media sosial', 'B. Mencegah ilusi keuntungan dan kebocoran modal yang mengancam cash runway', 'C. Memenuhi syarat wajib pengajuan pinjaman bank besar', 'D. Mengurangi biaya administrasi bank'], answer: 1, explanation: 'Pemisahan kas mencegah pencatatan menyesatkan, memperjelas performa usaha, dan menjaga runway.' }
+      ];
+      const selectedAnswers = Array(quizQuestions.length).fill(null);
+      let currentQuestionIndex = 0;
+      let reviewMode = false;
+      let currentPanel = location.hash === '#subbab-1-2' ? 'subbab-1-2' : location.hash === '#subbab-1-3' ? 'subbab-1-3' : 'subbab-1-1';
+
+      const updateProgress = () => {
+        const completedCount = Object.values(progressState).filter(Boolean).length;
+        const progress = [0, 33, 66, 100][completedCount];
+        progressLabel.textContent = `${progress}% Selesai`;
+        progressFill.style.width = `${progress}%`;
+        progressTrack.setAttribute('aria-valuenow', String(progress));
+        progressTrack.setAttribute('aria-label', `Progres materi ${progress} persen`);
+      };
+
+      const updateOutlineState = () => {
+        outlineItems.forEach((item) => {
+          const target = item.dataset.target;
+          const active = target === currentPanel;
+          item.classList.toggle('is-active', active);
+          item.setAttribute('aria-pressed', String(active));
+          if (active) item.setAttribute('aria-current', 'page');
+          else item.removeAttribute('aria-current');
+          if (target === 'quiz-evaluation') {
+            const unlocked = isReadComplete('subbab-1-1');
+            const passed = (() => { try { return localStorage.getItem(quizStorageKey) === 'true'; } catch { return false; } })();
+            item.classList.toggle('is-unlocked', unlocked);
+            item.querySelector('.study-quiz-copy small').textContent = passed ? 'Lulus · Kuis selesai' : unlocked ? 'Standar Lulus Min. 80% · Siap Dimulai' : 'Standar Lulus Min. 80% · Terkunci';
+            item.querySelector('.study-quiz-lock').textContent = passed ? '✓' : unlocked ? '→' : '▣';
+            return;
+          }
+          const complete = isReadComplete(target);
+          item.classList.toggle('is-complete', complete);
+          const badge = item.querySelector('[data-reading-status]');
+          if (badge) {
+            badge.textContent = complete ? '✓ SELESAI' : active ? 'SEDANG DIBACA' : 'BELUM DIBACA';
+            badge.classList.toggle('is-complete', complete);
+          }
+          item.querySelector('.study-lesson-title').classList.toggle('is-read', complete);
+          const marker = item.querySelector('.study-lesson-radio');
+          if (marker) {
+            marker.textContent = complete ? '✓' : '';
+            marker.classList.toggle('is-complete', complete);
+          }
+        });
+      };
+
+      const updateQuizAvailability = () => {
+        const unlocked = isReadComplete('subbab-1-1');
+        quizLockedNotice.hidden = unlocked;
+        quizFlow.hidden = !unlocked;
+      };
+
+      const updateFooter = () => {
+        const footer = document.querySelector('.study-sticky-footer');
+        const isQuiz = currentPanel === 'quiz-evaluation';
+        footer.hidden = isQuiz;
+        if (isQuiz) return;
+        const flow = lessonFlow[currentPanel];
+        const complete = isReadComplete(currentPanel);
+        readControl.hidden = false;
+        readToggle.checked = complete;
+        nextButton.disabled = !complete;
+        nextButton.dataset.target = flow.next;
+        nextButton.innerHTML = `${flow.nextLabel} <span aria-hidden="true">→</span>`;
+        previousButton.textContent = flow.previousLabel;
+        previousButton.dataset.target = flow.previous;
+      };
+
+      const switchPanel = (panelId) => {
+        const target = document.querySelector(`[data-study-panel="${panelId}"]`);
+        if (!target) return;
+        currentPanel = panelId;
+        panels.forEach((panel) => {
+          const active = panel === target;
+          panel.hidden = !active;
+          panel.classList.toggle('is-active', active);
+        });
+        updateOutlineState();
+        updateFooter();
+        if (panelId === 'quiz-evaluation') updateQuizAvailability();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      const renderQuestion = () => {
+        const question = quizQuestions[currentQuestionIndex];
+        questionCounter.textContent = `Pertanyaan ${currentQuestionIndex + 1} dari ${quizQuestions.length}`;
+        questionProgress.style.width = `${((currentQuestionIndex + 1) / quizQuestions.length) * 100}%`;
+        questionTopic.textContent = question.topic;
+        questionText.textContent = question.prompt;
+        questionOptions.replaceChildren();
+        question.options.forEach((option, optionIndex) => {
+          const label = document.createElement('label');
+          label.className = 'study-answer-option';
+          const input = document.createElement('input');
+          input.type = 'radio';
+          input.name = `question-${currentQuestionIndex}`;
+          input.value = String(optionIndex);
+          input.checked = selectedAnswers[currentQuestionIndex] === optionIndex;
+          input.disabled = reviewMode;
+          const text = document.createElement('span');
+          text.textContent = option;
+          if (reviewMode && optionIndex === question.answer) label.classList.add('is-correct');
+          if (reviewMode && selectedAnswers[currentQuestionIndex] === optionIndex && optionIndex !== question.answer) label.classList.add('is-incorrect');
+          label.append(input, text);
+          questionOptions.append(label);
+        });
+        questionReview.hidden = !reviewMode;
+        if (reviewMode) questionReview.textContent = `Jawaban benar: ${question.options[question.answer]}. ${question.explanation}`;
+        previousQuestionButton.disabled = currentQuestionIndex === 0;
+        nextQuestionButton.hidden = currentQuestionIndex === quizQuestions.length - 1;
+        submitQuizButton.hidden = reviewMode || currentQuestionIndex !== quizQuestions.length - 1;
+        questionFeedback.hidden = true;
+        questionFeedback.textContent = '';
+      };
+
+      outlineToggle.addEventListener('click', () => {
+        const expanded = outlineToggle.getAttribute('aria-expanded') === 'true';
+        outlineToggle.setAttribute('aria-expanded', String(!expanded));
+        layout.classList.toggle('is-outline-collapsed', expanded);
+      });
+      outlineItems.forEach((item) => item.addEventListener('click', () => switchPanel(item.dataset.target)));
+      readToggle.addEventListener('change', () => {
+        const lessonNumber = lessonNumbers[currentPanel];
+        if (!lessonNumber) return;
+        progressState[lessonNumber] = readToggle.checked;
+        saveProgress();
+        updateOutlineState();
+        updateProgress();
+        updateFooter();
+        if (currentPanel === 'subbab-1-1') updateQuizAvailability();
+      });
+      previousButton.addEventListener('click', () => {
+        if (previousButton.dataset.target === 'modul') window.location.href = 'modul.html';
+        else switchPanel(previousButton.dataset.target);
+      });
+      nextButton.addEventListener('click', () => { if (!nextButton.disabled) switchPanel(nextButton.dataset.target); });
+      document.querySelector('[data-mark-1-1-read]').addEventListener('click', () => {
+        progressState['1.1'] = true;
+        saveProgress();
+        updateOutlineState();
+        updateProgress();
+        switchPanel('subbab-1-1');
+        readToggle.checked = true;
+      });
+      questionOptions.addEventListener('change', (event) => {
+        if (event.target.matches('input[type="radio"]')) selectedAnswers[currentQuestionIndex] = Number(event.target.value);
+      });
+      nextQuestionButton.addEventListener('click', () => {
+        if (selectedAnswers[currentQuestionIndex] === null) {
+          questionFeedback.hidden = false;
+          questionFeedback.textContent = 'Pilih satu jawaban sebelum melanjutkan.';
+          return;
+        }
+        currentQuestionIndex += 1;
+        renderQuestion();
+      });
+      previousQuestionButton.addEventListener('click', () => {
+        if (currentQuestionIndex > 0) { currentQuestionIndex -= 1; renderQuestion(); }
+      });
+
+      submitQuizButton.addEventListener('click', () => {
+        if (selectedAnswers.some((answer) => answer === null)) {
+          questionFeedback.hidden = false;
+          questionFeedback.textContent = 'Jawab semua pertanyaan sebelum mengirim kuis.';
+          return;
+        }
+        const correct = selectedAnswers.reduce((total, answer, index) => total + Number(answer === quizQuestions[index].answer), 0);
+        const score = correct * 20;
+        const passed = score >= 80;
+        quizResultCard.classList.toggle('is-failed', !passed);
+        document.querySelector('[data-result-mark]').classList.toggle('is-failed', !passed);
+        document.querySelector('[data-result-mark]').textContent = passed ? '✓' : '×';
+        document.querySelector('[data-result-badge]').textContent = passed ? 'LULUS' : 'BELUM LULUS';
+        document.querySelector('[data-result-badge]').classList.toggle('is-passed', passed);
+        document.querySelector('[data-result-title]').textContent = passed ? 'Selamat! Kamu Telah Menuntaskan Modul 1' : 'Kuis Belum Lulus';
+        document.querySelector('[data-result-score]').textContent = `Skor: ${score} / 100 - ${passed ? 'LULUS' : 'BELUM LULUS'}`;
+        document.querySelector('[data-result-message]').textContent = passed
+          ? 'Seluruh materi dan evaluasi dasar bisnis telah berhasil diselesaikan. Pemahaman fondasimu siap diterapkan ke praktik usaha nyata.'
+          : `${correct} dari 5 jawaban benar. Minimal 4 jawaban benar untuk lulus. Tinjau pembahasan atau ulangi kuis setelah belajar kembali.`;
+        document.querySelector('[data-result-back]').hidden = !passed;
+        document.querySelector('[data-retry-quiz]').hidden = passed;
+        if (passed) {
+          try { localStorage.setItem(quizStorageKey, 'true'); } catch {}
+          try {
+            localStorage.setItem('kawira_modul1_completed', 'true');
+            localStorage.setItem('kawira_modul1_score', String(score));
+          } catch {}
+          document.querySelector('.study-quiz-copy small').textContent = `Lulus · Skor ${score}%`;
+          document.querySelector('.study-quiz-lock').textContent = '✓';
+          updateProgress();
+        }
+        quizResultDialog.showModal();
+      });
+      document.querySelector('[data-review-quiz]').addEventListener('click', () => {
+        quizResultDialog.close();
+        reviewMode = true;
+        currentQuestionIndex = 0;
+        quizFlow.hidden = false;
+        renderQuestion();
+      });
+      document.querySelector('[data-retry-quiz]').addEventListener('click', () => {
+        quizResultDialog.close();
+        reviewMode = false;
+        selectedAnswers.fill(null);
+        currentQuestionIndex = 0;
+        quizFlow.hidden = false;
+        renderQuestion();
+      });
+      quizResultDialog.addEventListener('click', (event) => { if (event.target === quizResultDialog) quizResultDialog.close(); });
+
+      updateOutlineState();
+      updateProgress();
+      updateFooter();
+      if (currentPanel === 'quiz-evaluation') updateQuizAvailability();
+      panels.forEach((panel) => { const active = panel.dataset.studyPanel === currentPanel; panel.hidden = !active; panel.classList.toggle('is-active', active); });
+      renderQuestion();
+    </script>
+  </body>
+</html>

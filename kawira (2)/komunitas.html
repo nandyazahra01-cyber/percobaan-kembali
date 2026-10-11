@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Terhubung dan bertumbuh bersama komunitas wirausaha muda KAWIRA." />
+    <title>Pusat Komunitas &amp; Jejaring | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-community-v1" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body community-page">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Platform Kawan Wirausaha</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="dashboard-nav-link" href="mentoring.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="pembukuan.html">
+            <img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" />
+            <span>Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link" href="modul.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
+            <span>Modul &amp; Template</span>
+          </a>
+          <a class="dashboard-nav-link is-active" href="komunitas.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main community-main">
+        <header class="community-page-heading">
+          <div>
+            <h1>Pusat Komunitas &amp; Jejaring</h1>
+            <p>Temukan rekan kolaborasi, ikuti sesi sharing mingguan, dan berdiskusi di grup resmi bersama ribuan wirausaha muda.</p>
+          </div>
+          <button class="notification-button" type="button" aria-label="Notifikasi">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+            <span></span>
+          </button>
+        </header>
+
+        <section class="community-channel-grid" aria-label="Saluran komunitas">
+          <article class="community-channel-card">
+            <header class="community-channel-heading whatsapp-heading">
+              <span class="community-channel-icon"><img src="assets/IconWhatsApp.svg" alt="" /></span>
+              <span><span class="community-channel-label">WhatsApp Official</span><strong>Grup Diskusi Harian &amp; Info Hibah</strong></span>
+            </header>
+            <div class="community-channel-body">
+              <div class="community-members">
+                <span class="community-avatar-stack" aria-hidden="true">
+                  <img src="assets/Image (Kawira Anindya).png" alt="" />
+                  <img src="assets/Image (Aditya Ramadhan).png" alt="" />
+                  <img src="assets/Image (Sari Indah Pertiwi).png" alt="" />
+                  <img src="assets/Image (Budi Santoso).png" alt="" />
+                </span>
+                <span>850+ Wirausaha Muda bergabung</span>
+              </div>
+              <div class="community-status-row">
+                <span class="community-active-tag">Grup Aktif</span>
+                <span>Info terbaru setiap hari</span>
+              </div>
+              <button class="community-channel-button whatsapp-button" type="button" data-community-action="whatsapp">
+                <img src="assets/IconWhatsApp.svg" alt="" />
+                Buka Grup WhatsApp
+              </button>
+            </div>
+          </article>
+
+          <article class="community-channel-card">
+            <header class="community-channel-heading discord-heading">
+              <span class="community-channel-icon"><img src="assets/IconDiscord.svg" alt="" /></span>
+              <span><span class="community-channel-label">Discord Server</span><strong>Kawira Lounge</strong></span>
+            </header>
+            <div class="community-channel-body">
+              <p class="community-channel-description">Voice Chat, Co-working &amp; Channel Industri tersedia 24/7 untuk semua member aktif.</p>
+              <div class="community-tags" aria-label="Kanal yang tersedia">
+                <span># Voice Chat</span><span># Co-working</span><span># Industri</span>
+              </div>
+              <span class="community-active-tag community-free-tag">Gratis untuk Member</span>
+              <button class="community-channel-button discord-button" type="button" data-community-action="discord">
+                <img src="assets/IconDiscord.svg" alt="" />
+                Masuk Discord Server
+              </button>
+            </div>
+          </article>
+        </section>
+
+        <section class="community-agenda" aria-labelledby="community-agenda-title">
+          <h2 id="community-agenda-title">Agenda &amp; Sesi Sharing</h2>
+
+          <article class="community-featured-event">
+            <div class="community-event-featured-heading">
+              <span class="community-live-badge"><span aria-hidden="true">●</span> Live malam ini</span>
+              <h3>Sharing Session: Strategi Tembus Pendanaan P2MW &amp; Modal Awal</h3>
+              <div class="community-speaker">
+                <span class="community-speaker-avatar" aria-hidden="true">RP</span>
+                <span><strong>Reza Prasetya</strong><small>Founder Kopi Sebelah</small></span>
+              </div>
+            </div>
+            <div class="community-event-details">
+              <div class="community-schedule"><span class="community-date-pill"><span aria-hidden="true">◷</span> Jumat, 19:30 WIB</span><span>via Zoom / Google Meet</span></div>
+              <p>Peserta terdaftar: <strong>127 orang</strong></p>
+              <button class="community-register-button" type="button" data-community-action="register">Daftar Sesi Gratis</button>
+            </div>
+          </article>
+
+          <div class="community-upcoming-list" aria-label="Agenda mendatang">
+            <article class="community-upcoming-event">
+              <span class="community-upcoming-icon" aria-hidden="true">◷</span>
+              <div><h3>Klinik Pitching Bareng Mentor</h3><p>Senin, 15 Sep · 19:00 WIB</p></div>
+              <span class="community-event-type online-type">Online</span>
+              <span class="community-attendee-count">34 daftar</span>
+            </article>
+            <article class="community-upcoming-event">
+              <span class="community-upcoming-icon" aria-hidden="true">◷</span>
+              <div><h3>Bedah Desain Kemasan UMKM</h3><p>Rabu, 17 Sep · 15:00 WIB</p></div>
+              <span class="community-event-type hybrid-type">Hybrid</span>
+              <span class="community-attendee-count">51 daftar</span>
+            </article>
+          </div>
+
+          <aside class="community-guidelines" aria-labelledby="community-guidelines-title">
+            <span class="community-guidelines-icon" aria-hidden="true">ⓘ</span>
+            <div><h3 id="community-guidelines-title">Panduan Komunitas</h3><p>Jaga etika diskusi dan hormati sesama member. Promosi diri hanya di kanal yang ditentukan.</p></div>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <div class="dashboard-toast community-toast" data-community-toast role="status" aria-live="polite" hidden></div>
+    <script>
+      const communityToast = document.querySelector('[data-community-toast]');
+      let communityToastTimeout;
+
+      document.querySelectorAll('[data-community-action]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const messages = {
+            whatsapp: 'Tautan grup WhatsApp akan segera tersedia.',
+            discord: 'Tautan Discord Kawira Lounge akan segera tersedia.',
+            register: '✓ Kamu berhasil terdaftar di sesi ini!',
+          };
+          communityToast.textContent = messages[button.dataset.communityAction];
+          communityToast.hidden = false;
+          window.clearTimeout(communityToastTimeout);
+          communityToastTimeout = window.setTimeout(() => {
+            communityToast.hidden = true;
+          }, 3200);
+        });
+      });
+    </script>
+  </body>
+</html>

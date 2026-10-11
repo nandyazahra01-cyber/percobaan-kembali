@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard KAWIRA untuk mengembangkan bisnis bersama mentor sebaya." />
+    <title>Dashboard KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-profile-v3" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="dashboard.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Platform Kawan Wirausaha</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link is-active" href="dashboard.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="dashboard-nav-link" href="mentoring.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="pembukuan.html">
+            <img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" />
+            <span>Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link" href="modul.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
+            <span>Modul &amp; Template</span>
+          </a>
+          <a class="dashboard-nav-link" href="komunitas.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login.html" onclick="logoutKawira()">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="Foto profil Kawira Anindya" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-topbar">
+          <div>
+            <h1>Halo, Pengusaha Muda! <span aria-hidden="true">👋</span></h1>
+            <time datetime="2026-09-10">Rabu, 10 September 2026</time>
+          </div>
+          <button class="notification-button" type="button" aria-label="Notifikasi, 2 baru">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+            <span></span>
+          </button>
+        </header>
+
+        <div class="dashboard-content">
+          <section class="webinar-banner" aria-labelledby="webinar-title">
+            <div class="webinar-copy">
+              <span class="webinar-badge">Webinar Eksklusif — 20 September 2026</span>
+              <h2 id="webinar-title">Skalakan Bisnis UMKM-mu Bersama Bu Dina Fitriani</h2>
+              <p>Praktisi UMKM berpengalaman 15 tahun · Live via Zoom · Gratis untuk member Kawira</p>
+              <a class="webinar-cta" href="#mentor-recommendations">Daftar Sekarang <span aria-hidden="true">→</span></a>
+            </div>
+            <img class="webinar-speaker" src="assets/Image%20(Speaker).png" alt="Bu Dina Fitriani, pembicara webinar" />
+          </section>
+
+          <section class="mentor-section" id="mentor-recommendations" aria-labelledby="mentor-title">
+            <div class="mentor-section-heading">
+              <h2 id="mentor-title">Rekomendasi Mentor Sebaya</h2>
+              <a href="mentoring.html">Lihat semua <span aria-hidden="true">→</span></a>
+            </div>
+
+            <div class="mentor-grid">
+              <article class="mentor-card">
+                <div class="mentor-profile">
+                  <img src="assets/Image%20(Aditya%20Ramadhan).png" alt="Aditya Ramadhan" />
+                  <div class="mentor-identity"><h3>Aditya Ramadhan</h3><p>Universitas Brawijaya</p><span class="mentor-status">Alumni P2MW</span></div>
+                </div>
+                <div class="mentor-tags"><span>P2MW 2024</span><span>Kuliner</span></div>
+                <div class="mentor-card-bottom">
+                  <div class="mentor-rating"><span aria-hidden="true">★</span><strong>4.9</strong><small>(38)</small><b>Rp 45.000/jam</b></div>
+                  <button type="button" class="mentor-booking">Jadwalkan Sesi</button>
+                </div>
+              </article>
+
+              <article class="mentor-card">
+                <div class="mentor-profile">
+                  <img src="assets/Image%20(Sari%20Indah%20Pertiwi).png" alt="Sari Indah Pertiwi" />
+                  <div class="mentor-identity"><h3>Sari Indah Pertiwi</h3><p>Universitas Gadjah Mada</p><span class="mentor-status">Mentor Aktif</span></div>
+                </div>
+                <div class="mentor-tags"><span>Digital Marketing</span><span>E-Commerce</span></div>
+                <div class="mentor-card-bottom">
+                  <div class="mentor-rating"><span aria-hidden="true">★</span><strong>4.8</strong><small>(52)</small><b>Rp 55.000/jam</b></div>
+                  <button type="button" class="mentor-booking">Jadwalkan Sesi</button>
+                </div>
+              </article>
+
+              <article class="mentor-card">
+                <div class="mentor-profile">
+                  <img src="assets/Image (Budi Santoso).png" alt="Ira Rahmawati" />
+                  <div class="mentor-identity"><h3>Ira Rahmawati</h3><p>Institut Teknologi Bandung</p><span class="mentor-status">Bisnis Berjalan</span></div>
+                </div>
+                <div class="mentor-tags"><span>Teknologi</span><span>SaaS</span></div>
+                <div class="mentor-card-bottom">
+                  <div class="mentor-rating"><span aria-hidden="true">★</span><strong>4.7</strong><small>(29)</small><b>Rp 60.000/jam</b></div>
+                  <button type="button" class="mentor-booking">Jadwalkan Sesi</button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="dashboard-toast" data-dashboard-toast role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

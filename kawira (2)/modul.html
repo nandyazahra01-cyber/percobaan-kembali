@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Katalog modul belajar dan template spreadsheet praktis KAWIRA." />
+    <title>Modul &amp; Template | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261001-modules" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body module-page">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout module-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Platform Kawan Wirausaha</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="dashboard-nav-link" href="mentoring.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="pembukuan.html">
+            <img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" />
+            <span>Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link is-active" href="modul.html" aria-current="page">
+            <img class="sidebar-nav-icon" src="assets/LayersIcon.svg" alt="" />
+            <span>Modul &amp; Template</span>
+          </a>
+          <a class="dashboard-nav-link" href="komunitas.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="Foto profil Kawira Anindya" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main module-main">
+        <header class="dashboard-topbar module-topbar">
+          <div class="module-heading">
+            <h1>Pusat Modul &amp; Template Praktis</h1>
+            <p>Kembangkan kompetensi bisnis rintisan dan unduh lembar kerja spreadsheet terstandarisasi.</p>
+          </div>
+          <div class="module-topbar-actions">
+            <div class="module-account-actions">
+              <span class="module-account-status" data-account-status>Akun: Freemium</span>
+              <button class="module-upgrade-button" type="button" data-upgrade-pro>⭐ Upgrade Pro</button>
+              <button class="module-reset-button" type="button" title="Klik untuk mengembalikan status akun ke Freemium guna keperluan pengujian juri." data-reset-subscription>[ Simulasi Demo: Reset ke Free ]</button>
+            </div>
+            <button class="notification-button" type="button" aria-label="Notifikasi, 1 baru">
+              <img src="assets/BellIcon.svg" alt="" />
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <div class="module-content">
+          <div class="module-tabs" role="tablist" aria-label="Modul dan template">
+            <button class="module-tab is-active" id="catalog-tab" type="button" role="tab" aria-selected="true" aria-controls="catalog-panel" data-module-tab="catalog">Katalog Modul Belajar</button>
+            <button class="module-tab" id="templates-tab" type="button" role="tab" aria-selected="false" aria-controls="templates-panel" data-module-tab="templates">Template Spreadsheet Usaha <span class="module-tab-badge" data-template-open-count>1 Terbuka</span></button>
+          </div>
+
+          <section class="module-panel is-active" id="catalog-panel" role="tabpanel" aria-labelledby="catalog-tab" data-module-panel="catalog">
+            <div class="module-sector-filters" role="group" aria-label="Filter sektor usaha">
+              <button class="module-sector-filter" type="button" aria-pressed="false" data-sector-filter="all">Semua Sektor</button>
+              <button class="module-sector-filter is-active" type="button" aria-pressed="true" data-sector-filter="produk">📦 Sektor Produk &amp; Barang (Kuliner, Kriya, Retail)</button>
+              <button class="module-sector-filter" type="button" aria-pressed="false" data-sector-filter="jasa">💼 Sektor Jasa &amp; Layanan (Agensi, Servis, Kreatif)</button>
+            </div>
+
+            <div class="module-list" data-module-list>
+              <a class="module-card is-complete module-card-link" href="detail-modul-1.html#fundamentals" aria-label="Baca Modul 1.1: Kewirausahaan dan Pembentukan Entitas Bisnis">
+                <div class="module-art modul-thumb"><img class="modul-img" src="assets/modul1.png" alt="Ilustrasi smartphone bisnis dengan tumpukan koin emas" /><span class="module-art-label">45 Menit</span></div>
+                <div class="module-card-copy">
+                  <div class="module-card-meta"><span class="module-status is-complete" data-module1-status>✓ Selesai · Skor 100% Lulus</span><span>3 Pelajaran · 1 Kuis Selesai · 45 Mnt</span><span class="module-note-button">Lihat Catatan Belajar</span></div>
+                  <h2>1. Pengantar Bisnis</h2>
+                  <p class="module-card-description">Pelajari pola pikir kewirausahaan, tahapan eksekusi Ready-Set-Start, legalitas badan hukum, serta dasar pemasaran dan tata kelola arus kas usaha.</p>
+                </div>
+              </a>
+
+              <a class="module-card is-current module-card-link" href="detail-modul-2.html#subbab-2-1" aria-label="Lanjutkan Modul 2: Perilaku Konsumen dan Validasi Kebutuhan Pasar" data-module-card data-module-sector="produk jasa" data-module2-card>
+                <div class="module-art modul-thumb"><img class="modul-img" src="assets/modul2.png" alt="Ilustrasi papan kanvas bisnis, tablet riset, dan grafik" /></div>
+                <div class="module-card-copy">
+                  <div class="module-card-meta"><span class="module-status" data-module2-status>● Sedang Berjalan · 80% Selesai</span><span>3 Pelajaran Teori [✓] · 1 Kuis Bab</span></div>
+                  <div class="module-progress" aria-label="Progres pembelajaran 65 persen">
+                    <div class="module-progress-heading"><span>Progres Pembelajaran</span><strong>65% (2/3 Materi Selesai)</strong></div>
+                    <div class="module-progress-track"><span></span></div>
+                  </div>
+                  <h2>2. Perilaku Konsumen &amp; Validasi Kebutuhan Pasar</h2>
+                  <p class="module-card-description">Teknik interview calon pelanggan, pemetaan customer journey, dan riset kebiasaan beli konsumen generasi Z.</p>
+                  <span class="module-card-action" data-module2-action>Lanjutkan Materi (Kuis Bab 2) <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+
+              <article class="module-card" data-module-card data-module-sector="produk" data-pro-content>
+                <div class="module-art modul-thumb is-locked"><img class="modul-img" src="assets/modul3.png" alt="Ilustrasi mesin kasir dan celengan babi" /><span class="module-lock" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3M12 14v3"/></svg></span><span class="module-art-label">40 Menit</span></div>
+                <div class="module-card-copy">
+                  <div class="module-card-meta"><span class="module-status is-pro-locked">🔒 KAWIRA Pro · Berlangganan</span><span>4 Pelajaran · 40 Menit</span></div>
+                  <h2>3. Pemisahan Keuangan Pribadi vs Kas Operasional Usaha</h2>
+                  <p class="module-card-description">SOP rekening terpisah, penggajian founder, dan pencegahan kebocoran kas modal pada tahap awal rintisan.</p>
+                  <button class="module-card-action module-pro-action" type="button" data-open-pro>🔓 Buka Akses via KAWIRA Pro</button>
+                </div>
+              </article>
+
+              <article class="module-card" data-module-card data-module-sector="produk" data-pro-content>
+                <div class="module-art modul-thumb is-locked"><img class="modul-img" src="assets/modul4.png" alt="Ilustrasi keranjang bahan makanan, kalkulator, dan nota resep" /><span class="module-lock" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3M12 14v3"/></svg></span><span class="module-art-label">60 Menit</span></div>
+                <div class="module-card-copy">
+                  <div class="module-card-meta"><span class="module-status is-pro-locked">🔒 KAWIRA Pro · Berlangganan</span><span>4 Pelajaran · 60 Menit</span></div>
+                  <h2>4. Menghitung HPP &amp; Margin Usaha (Food Costing &amp; BEP)</h2>
+                  <p class="module-card-description">Identifikasi bahan baku langsung, estimasi susut masak (yield resep), alokasi overhead gas/listrik, dan simulasi titik impas.</p>
+                  <button class="module-card-action module-pro-action" type="button" data-open-pro>🔓 Buka Akses via KAWIRA Pro</button>
+                </div>
+              </article>
+
+              <article class="module-card" data-module-card data-module-sector="produk jasa" data-pro-content>
+                <div class="module-art modul-thumb is-locked"><img class="modul-img" src="assets/modul5.png" alt="Ilustrasi papan menu promo diskon dan motor kurir delivery" /><span class="module-lock" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3M12 14v3"/></svg></span><span class="module-art-label">45 Menit</span></div>
+                <div class="module-card-copy">
+                  <div class="module-card-meta"><span class="module-status is-pro-locked">🔒 KAWIRA Pro · Berlangganan</span><span>4 Pelajaran · 45 Menit</span></div>
+                  <h2>5. Strategi Penetapan Harga Menu &amp; Simulasi Promo</h2>
+                  <p class="module-card-description">Merancang harga core menu vs promo combo, mengantisipasi potongan komisi 20% agregator online tanpa merusak arus kas.</p>
+                  <button class="module-card-action module-pro-action" type="button" data-open-pro>🔓 Buka Akses via KAWIRA Pro</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="module-panel" id="templates-panel" role="tabpanel" aria-labelledby="templates-tab" data-module-panel="templates" hidden>
+            <div class="module-templates-heading">
+              <div><h2>5 Template Spreadsheet Usaha</h2><p>Dokumen operasional (.xlsx &amp; Google Sheets)</p></div>
+              <span class="module-templates-count" data-template-open-count>1 Terbuka</span>
+            </div>
+            <div class="template-list">
+              <article class="template-card is-open">
+                <span class="template-icon"><img src="assets/SheetsIcon.svg" alt="" /></span>
+                <div class="template-card-copy">
+                  <div class="template-card-title"><h3>Kalkulator Kas &amp; Anggaran Awal Bisnis (.xlsx)</h3><span class="template-open-state">Terbuka</span></div>
+                  <p>Gratis Diunduh · Terhubung Modul 1</p>
+                </div>
+                <p class="template-card-description">Template proyeksi pengeluaran operasional 3 bulan awal, estimasi sewa tempat, dan dana darurat bisnis rintisan.</p>
+                <a class="template-download" href="https://docs.google.com/spreadsheets/d/1KAWIRA_TEMPLATE_ARUS_KAS/edit" target="_blank" rel="noopener noreferrer"><img src="assets/DownloadIcon.svg" alt="" /> Unduh Spreadsheet (Langsung Buka)</a>
+              </article>
+              <article class="template-card is-locked" data-pro-content data-template-id="research">
+                <span class="template-icon"><img src="assets/GridIcon.svg" alt="" /></span>
+                <div class="template-card-copy"><div class="template-card-title"><h3>Lembar Riset &amp; Kuisioner Perilaku Konsumen</h3></div><p>Format analisis data wawancara target pasar</p></div>
+                <button class="template-locked-state module-pro-action" type="button" data-open-pro>🔒 KAWIRA Pro · Berlangganan</button>
+              </article>
+              <article class="template-card is-locked" data-pro-content data-template-id="cash">
+                <span class="template-icon"><img src="assets/GridIcon.svg" alt="" /></span>
+                <div class="template-card-copy"><div class="template-card-title"><h3>Format Rekapitulasi Kas &amp; Gaji Mandiri Owner</h3></div><p>Buku kas harian dan alokasi dividen usaha</p></div>
+                <button class="template-locked-state module-pro-action" type="button" data-open-pro>🔒 KAWIRA Pro · Berlangganan</button>
+              </article>
+              <article class="template-card is-locked" data-pro-content data-template-id="food-costing">
+                <span class="template-icon"><img src="assets/GridIcon.svg" alt="" /></span>
+                <div class="template-card-copy"><div class="template-card-title"><h3>Master Sheet Food Costing, HPP &amp; BEP</h3></div><p>Otomatisasi kalkulasi resep dan titik impas modal</p></div>
+                <button class="template-locked-state module-pro-action" type="button" data-open-pro>🔒 KAWIRA Pro · Berlangganan</button>
+              </article>
+              <article class="template-card is-locked" data-pro-content data-template-id="pricing">
+                <span class="template-icon"><img src="assets/GridIcon.svg" alt="" /></span>
+                <div class="template-card-copy"><div class="template-card-title"><h3>Simulator Pricing Menu &amp; Komisi Ojol</h3></div><p>Kalkulator markup harga jual di platform delivery</p></div>
+                <button class="template-locked-state module-pro-action" type="button" data-open-pro>🔒 KAWIRA Pro · Berlangganan</button>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="module-dialog" data-pro-dialog aria-labelledby="pro-dialog-title">
+      <section class="module-dialog-panel module-pro-dialog-panel">
+        <button class="module-dialog-close" type="button" aria-label="Tutup dialog" data-close-module-dialog>×</button>
+        <section class="module-pro-step" data-pro-step="package" aria-labelledby="pro-dialog-title">
+          <span class="module-dialog-kicker">PAKET LANGGANAN KAWIRA</span>
+          <h2 id="pro-dialog-title">Tingkatkan ke KAWIRA Pro</h2>
+          <p class="module-dialog-lead">Akses tanpa batas ke seluruh kurikulum bisnis terakreditasi, pembaruan modul rutin, dan unduh 5 master template spreadsheet.</p>
+          <div class="module-plan-choices" role="radiogroup" aria-label="Pilih paket langganan">
+            <label class="module-plan-option is-selected">
+              <input type="radio" name="pro-plan" value="monthly" data-pro-plan checked />
+              <span><strong>Bulanan</strong><small>Fleksibel, bayar per bulan</small></span>
+              <strong>Rp 29.000</strong>
+            </label>
+            <label class="module-plan-option">
+              <input type="radio" name="pro-plan" value="yearly" data-pro-plan />
+              <span><strong>Tahunan</strong><small>Hemat untuk akses setahun</small></span>
+              <strong>Rp 199.000</strong>
+            </label>
+          </div>
+          <button class="module-pro-subscribe" type="button" data-continue-qris>Lanjut ke Pembayaran QRIS →</button>
+          <p class="module-demo-note">Simulasi demo BPC. Tidak ada pembayaran yang diproses.</p>
+        </section>
+
+        <section class="module-pro-step" data-pro-step="payment" aria-labelledby="pro-payment-title" hidden>
+          <span class="module-dialog-kicker">PEMBAYARAN AMAN</span>
+          <h2 id="pro-payment-title">Pembayaran Langganan KAWIRA Pro</h2>
+          <p class="module-dialog-lead">Pindai kode QRIS berikut untuk menyelesaikan simulasi pembayaran.</p>
+          <div class="module-pro-total"><span>Total Tagihan</span><strong data-pro-total>Rp 29.000</strong></div>
+          <section class="module-qris-card" aria-label="Mockup QRIS demo KAWIRA">
+            <div class="module-qris-wordmark"><strong>QRIS</strong><span>by KAWIRA</span></div>
+            <div class="module-qris-code" data-pro-qris role="img" aria-label="Kode QRIS mockup untuk simulasi"></div>
+            <span class="module-qris-demo-label">MOCKUP QRIS · DEMO</span>
+            <p>PT KAWAN WIRAUSAHA INDONESIA</p>
+          </section>
+          <p class="module-qris-supported">Mendukung Livin' by Mandiri, BCA, GoPay, OVO, Dana, dll.</p>
+          <div class="module-qris-actions">
+            <button class="module-dialog-secondary" type="button" data-back-to-package>← Ganti Paket</button>
+            <button class="module-pro-subscribe" type="button" data-check-pro-payment>Cek Status Pembayaran</button>
+          </div>
+          <p class="module-demo-note">QRIS ini hanya mockup demo dan tidak memproses transaksi.</p>
+        </section>
+      </section>
+    </dialog>
+
+    <dialog class="module-success-dialog" data-pro-success-dialog aria-labelledby="pro-success-title">
+      <section class="module-dialog-panel module-success-panel">
+        <div class="module-success-check" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m12 25 8 8 17-18" /></svg></div>
+        <h2 id="pro-success-title">✓ Pembayaran Berhasil!</h2>
+        <p class="module-dialog-lead">Selamat datang di KAWIRA Pro.</p>
+        <button class="module-pro-subscribe" type="button" data-close-success>Lanjutkan</button>
+      </section>
+    </dialog>
+
+    <script>
+      const moduleTabs = document.querySelectorAll('[data-module-tab]');
+      const modulePanels = document.querySelectorAll('[data-module-panel]');
+      const sectorFilters = document.querySelectorAll('[data-sector-filter]');
+      const moduleCards = document.querySelectorAll('[data-module-card]');
+      const proDialog = document.querySelector('[data-pro-dialog]');
+      const proStorageKey = 'kawira_pro_active';
+      const accountStatus = document.querySelector('[data-account-status]');
+      const upgradeButton = document.querySelector('[data-upgrade-pro]');
+      const resetSubscriptionButton = document.querySelector('[data-reset-subscription]');
+      const planOptions = document.querySelectorAll('[data-pro-plan]');
+      const proSteps = document.querySelectorAll('[data-pro-step]');
+      const templateOpenCounts = document.querySelectorAll('[data-template-open-count]');
+      const planPrices = { monthly: 'Rp 29.000', yearly: 'Rp 199.000' };
+      const module1Status = document.querySelector('[data-module1-status]');
+      const module2Status = document.querySelector('[data-module2-status]');
+      const module2Card = document.querySelector('[data-module2-card]');
+
+      try {
+        const module1DemoKeys = [
+          'kawira_modul1_progress', 'kawira_module1_quiz_passed', 'kawira_modul1_completed',
+          'kawira_modul1_score', 'kawira_module1_read_complete',
+          'kawira_module1_2_read_complete', 'kawira_module1_3_read_complete'
+        ];
+        if (module1DemoKeys.every((key) => localStorage.getItem(key) === null)) {
+          localStorage.setItem('kawira_modul1_progress', JSON.stringify({ '1.1': true, '1.2': true, '1.3': true }));
+          localStorage.setItem('kawira_module1_quiz_passed', 'true');
+          localStorage.setItem('kawira_modul1_completed', 'true');
+          localStorage.setItem('kawira_modul1_score', '100');
+        }
+        if (localStorage.getItem('kawira_modul1_completed') === 'true') {
+          module1Status.classList.add('is-complete');
+          module1Status.textContent = '✓ Selesai · Skor 100% Lulus';
+        }
+      } catch {}
+
+      try {
+        if (localStorage.getItem('kawira_modul2_completed') === 'true') {
+          const module2Score = localStorage.getItem('kawira_modul2_score');
+          module2Card.classList.remove('is-current');
+          module2Card.classList.add('is-complete');
+          module2Status.classList.add('is-complete');
+          module2Status.textContent = module2Score ? `✓ Selesai · Skor ${module2Score}% Lulus` : '✓ Selesai · Materi Tuntas';
+          module2Card.querySelector('[data-module2-action]').innerHTML = 'Baca Lagi <span aria-hidden="true">→</span>';
+        }
+      } catch {}
+
+      const setAccountStatus = (isPro) => {
+        accountStatus.classList.toggle('is-pro-account', isPro);
+        accountStatus.textContent = isPro ? '👑 KAWIRA Pro (Aktif)' : 'Akun: Freemium';
+        upgradeButton.hidden = isPro;
+      };
+
+      const setProStep = (step) => {
+        proSteps.forEach((panel) => {
+          panel.hidden = panel.dataset.proStep !== step;
+        });
+      };
+
+      const selectedPlan = () => document.querySelector('[data-pro-plan]:checked')?.value || 'monthly';
+
+      const renderSubscriptionQr = () => {
+        const qrCode = document.querySelector('[data-pro-qris]');
+        if (qrCode.childElementCount) return;
+        const size = 29;
+        const finderAt = (x, y, originX, originY) => {
+          const localX = x - originX;
+          const localY = y - originY;
+          if (localX < 0 || localY < 0 || localX > 6 || localY > 6) return null;
+          return localX === 0 || localY === 0 || localX === 6 || localY === 6 || (localX >= 2 && localX <= 4 && localY >= 2 && localY <= 4);
+        };
+        const cells = [];
+        for (let y = 0; y < size; y += 1) {
+          for (let x = 0; x < size; x += 1) {
+            let isDark = finderAt(x, y, 0, 0) ?? finderAt(x, y, size - 7, 0) ?? finderAt(x, y, 0, size - 7);
+            if (isDark === null) isDark = ((x * 17 + y * 31 + x * y * 7) % 11) < 5;
+            const cell = document.createElement('span');
+            if (isDark) cell.className = 'is-dark';
+            cells.push(cell);
+          }
+        }
+        qrCode.append(...cells);
+      };
+
+      const unlockProContent = () => {
+        document.querySelectorAll('[data-module-card][data-pro-content]').forEach((card) => {
+          const artwork = card.querySelector('.module-art');
+          const lockIcon = card.querySelector('.module-lock');
+          const status = card.querySelector('.module-status');
+          const action = card.querySelector('[data-open-pro]');
+          artwork.classList.remove('is-locked');
+          lockIcon?.remove();
+          status.classList.remove('is-pro-locked');
+          status.classList.add('is-pro-unlocked');
+          status.textContent = '🟢 Modul Terbuka';
+          action?.removeAttribute('data-open-pro');
+          action?.classList.remove('module-pro-action');
+          action?.classList.add('is-pro-unlocked');
+          if (action) action.textContent = 'Mulai Pelajari Materi →';
+        });
+
+        document.querySelectorAll('.template-card[data-pro-content]').forEach((card) => {
+          const accessBadge = card.querySelector('[data-open-pro]');
+          const downloadButton = document.createElement('button');
+          downloadButton.className = 'template-download template-generated-download';
+          downloadButton.type = 'button';
+          downloadButton.dataset.downloadTemplate = card.dataset.templateId;
+          downloadButton.textContent = '📥 Unduh Spreadsheet';
+          card.classList.remove('is-locked');
+          card.classList.add('is-open');
+          if (accessBadge) accessBadge.replaceWith(downloadButton);
+        });
+
+        templateOpenCounts.forEach((count) => { count.textContent = '5 Terbuka (Akses Penuh)'; });
+        setAccountStatus(true);
+      };
+
+      try {
+        if (localStorage.getItem(proStorageKey) === 'true') unlockProContent();
+        else setAccountStatus(false);
+      } catch {
+        setAccountStatus(false);
+      }
+
+      const openProDialog = () => {
+        setProStep('package');
+        proDialog.showModal();
+      };
+
+      document.querySelectorAll('[data-open-pro]').forEach((button) => {
+        button.addEventListener('click', openProDialog);
+      });
+
+      upgradeButton.addEventListener('click', openProDialog);
+      resetSubscriptionButton.addEventListener('click', () => {
+        try {
+          localStorage.removeItem(proStorageKey);
+          localStorage.removeItem('kawira-pro-subscription');
+        } catch {
+          // Reload still restores the default free state for this demo.
+        }
+        window.location.reload();
+      });
+
+      planOptions.forEach((option) => {
+        option.addEventListener('change', () => {
+          document.querySelectorAll('.module-plan-option').forEach((plan) => {
+            plan.classList.toggle('is-selected', plan.querySelector('input').checked);
+          });
+        });
+      });
+
+      document.querySelector('[data-continue-qris]').addEventListener('click', () => {
+        document.querySelector('[data-pro-total]').textContent = planPrices[selectedPlan()];
+        renderSubscriptionQr();
+        setProStep('payment');
+      });
+
+      document.querySelector('[data-back-to-package]').addEventListener('click', () => setProStep('package'));
+
+      document.querySelector('[data-check-pro-payment]').addEventListener('click', () => {
+        try {
+          localStorage.setItem(proStorageKey, 'true');
+        } catch {
+          // The active state still updates for this open page.
+        }
+        unlockProContent();
+        proDialog.close();
+        document.querySelector('[data-pro-success-dialog]').showModal();
+      });
+
+      document.querySelector('[data-close-success]').addEventListener('click', () => {
+        document.querySelector('[data-pro-success-dialog]').close();
+      });
+
+      const spreadsheetTemplates = {
+        research: {
+          filename: 'Template-Riset-Konsumen.csv',
+          rows: [['Tanggal', 'Nama Responden', 'Segmen Pelanggan', 'Masalah Utama', 'Frekuensi Masalah', 'Solusi Saat Ini', 'Kesediaan Membayar', 'Insight']]
+        },
+        cash: {
+          filename: 'Template-Rekap-Kas-dan-Gaji.csv',
+          rows: [['Tanggal', 'Keterangan', 'Kategori', 'Pemasukan (Rp)', 'Pengeluaran (Rp)', 'Saldo (Rp)', 'Gaji Owner (Rp)', 'Catatan']]
+        },
+        'food-costing': {
+          filename: 'Template-Food-Costing-HPP-BEP.csv',
+          rows: [['Nama Menu', 'Bahan', 'Jumlah', 'Satuan', 'Harga Satuan (Rp)', 'Total Biaya (Rp)', 'Yield/Porsi', 'HPP per Porsi (Rp)', 'Harga Jual (Rp)', 'Margin (%)']]
+        },
+        pricing: {
+          filename: 'Template-Simulasi-Harga-dan-Promo.csv',
+          rows: [['Nama Menu', 'Harga Normal (Rp)', 'Harga Promo (Rp)', 'Biaya Produksi (Rp)', 'Komisi Platform (%)', 'Pendapatan Bersih (Rp)', 'Margin Bersih (Rp)']]
+        }
+      };
+
+      document.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-download-template]');
+        if (!button) return;
+        const template = spreadsheetTemplates[button.dataset.downloadTemplate];
+        const csv = `\uFEFF${template.rows.map((row) => row.map((cell) => `"${String(cell).replaceAll('"', '""')}"`).join(',')).join('\r\n')}`;
+        const fileUrl = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+        const downloadLink = document.createElement('a');
+        downloadLink.href = fileUrl;
+        downloadLink.download = template.filename;
+        downloadLink.click();
+        window.setTimeout(() => URL.revokeObjectURL(fileUrl), 1000);
+      });
+
+      document.querySelectorAll('[data-close-module-dialog]').forEach((button) => {
+        button.addEventListener('click', () => button.closest('dialog').close());
+      });
+
+      proDialog.addEventListener('click', (event) => { if (event.target === proDialog) proDialog.close(); });
+
+      moduleTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const selectedPanel = tab.dataset.moduleTab;
+          moduleTabs.forEach((item) => {
+            const isActive = item === tab;
+            item.classList.toggle('is-active', isActive);
+            item.setAttribute('aria-selected', String(isActive));
+          });
+          modulePanels.forEach((panel) => {
+            const isActive = panel.dataset.modulePanel === selectedPanel;
+            panel.classList.toggle('is-active', isActive);
+            panel.hidden = !isActive;
+          });
+        });
+      });
+
+      sectorFilters.forEach((filter) => {
+        filter.addEventListener('click', () => {
+          const selectedSector = filter.dataset.sectorFilter;
+          sectorFilters.forEach((item) => {
+            const isActive = item === filter;
+            item.classList.toggle('is-active', isActive);
+            item.setAttribute('aria-pressed', String(isActive));
+          });
+          moduleCards.forEach((card) => {
+            const sectors = card.dataset.moduleSector.split(' ');
+            card.hidden = selectedSector !== 'all' && !sectors.includes(selectedSector);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kawira</title>
+    <meta name="description" content="Platform Wirausaha Mahasiswa Indonesia - Belajar bisnis, mentoring bersama ahli, bergabung dengan komunitas, dan catat pembukuan praktis." />
+    <meta property="og:title" content="Kawira" />
+    <meta property="og:description" content="Platform Wirausaha Mahasiswa Indonesia - Belajar bisnis, mentoring bersama ahli, bergabung dengan komunitas, dan catat pembukuan praktis." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-auth-v3" />
+  </head>
+  <body>
+      <header class="topbar">
+        <div class="nav-container">
+        <div class="brand-wrap">
+          <div class="brand-mark">
+            <img src="assets/logoLandingPage.svg" alt="Kawira logo" />
+          </div>
+          <div class="brand-name">Kawira</div>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Buka navigasi">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+          <a href="#tentang-kami">Tentang Kami</a>
+          <a href="#layanan">Layanan</a>
+          <a href="#komunitas">Komunitas</a>
+          <a href="tim-kami.html">Tim Kami</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="ghost-button" href="login.html">Masuk</a>
+          <a class="primary-button small" href="register.html">Daftar</a>
+        </div>
+        </div>
+      </header>
+        <button class="nav-backdrop" type="button" aria-label="Tutup navigasi" tabindex="-1" hidden></button>
+
+      <main class="landing-page">
+        <section class="hero">
+          <div class="hero-container">
+          <div class="hero-copy">
+            <div class="badge">Platform Wirausaha Mahasiswa Indonesia</div>
+            <h1>
+              Kembangkan <span class="accent-word">Bisnis</span> Bersama Sesama
+              Mahasiswa
+            </h1>
+            <p>
+              KAWIRA menghubungkan mahasiswa wirausaha dengan mentor sebaya
+              berpengalaman. Konsultasi, pembukuan, dan modul bisnis — semua
+              dalam satu platform.
+            </p>
+
+            <div class="cta-row">
+              <a class="primary-button" href="#komunitas">Mulai Konsultasi <span aria-hidden="true">→</span></a>
+              <a class="secondary-button" href="#layanan">Pelajari Lebih Lanjut</a>
+            </div>
+
+            <div class="trust-row" aria-label="Dipercaya 1.200+ mahasiswa aktif">
+              <div class="avatar-stack" aria-hidden="true">
+                <span class="avatar avatar-one">RA</span>
+                <span class="avatar avatar-two">DS</span>
+                <span class="avatar avatar-three">FK</span>
+                <span class="avatar avatar-four">NP</span>
+              </div>
+              <span class="stars">★★★★★</span>
+              <span>Dipercaya 1.200+ Mahasiswa Aktif</span>
+            </div>
+          </div>
+
+          <div class="hero-visual" role="region" aria-label="Pratinjau dashboard KAWIRA">
+            <div class="dashboard-card">
+              <div class="dashboard-banner">
+                <strong>Dashboard KAWIRA</strong>
+              </div>
+              <div class="dashboard-metrics" aria-label="Ringkasan dashboard">
+                <div class="metric-chip">
+                  <span>Sesi</span>
+                  <strong>12</strong>
+                  <small>bulan ini</small>
+                </div>
+                <div class="metric-chip">
+                  <span>Mentor</span>
+                  <strong>7/10</strong>
+                  <small>progres</small>
+                </div>
+                <div class="metric-chip">
+                  <span>Pendapatan</span>
+                  <strong>Rp 4,2jt</strong>
+                  <small>total omzet</small>
+                </div>
+              </div>
+              <div class="activity-list">
+                <h2>Aktivitas Terbaru</h2>
+                <a class="activity-item" href="#layanan" aria-label="Lihat sesi Anindya P., strategi pemasaran UMKM">
+                  <div class="mini-avatar avatar-one">AP</div>
+                  <div class="activity-copy">
+                    <strong>Anindya P.</strong>
+                    <span>Strategi pemasaran UMKM</span>
+                  </div>
+                  <time>1j lalu</time>
+                </a>
+                <a class="activity-item" href="#layanan" aria-label="Lihat sesi Farhan K., laporan keuangan sederhana">
+                  <div class="mini-avatar avatar-two">FK</div>
+                  <div class="activity-copy">
+                    <strong>Farhan K.</strong>
+                    <span>Laporan keuangan sederhana</span>
+                  </div>
+                  <time>3j lalu</time>
+                </a>
+                <a class="activity-item" href="#layanan" aria-label="Lihat sesi Salsabila R., pitching ke investor">
+                  <div class="mini-avatar avatar-three">SR</div>
+                  <div class="activity-copy">
+                    <strong>Salsabila R.</strong>
+                    <span>Pitching ke investor</span>
+                  </div>
+                  <time>Kemarin</time>
+                </a>
+              </div>
+              <div class="module-progress">
+                <div><span>Modul: Validasi Ide Bisnis</span><strong>70%</strong></div>
+                <span class="progress-track"><span></span></span>
+              </div>
+            </div>
+            <div class="mentor-toast">
+              <span class="toast-avatar">R</span>
+              <span><strong>Rizky M. mulai konsultasi</strong><small>2 menit yang lalu</small></span>
+              <i aria-hidden="true"></i>
+            </div>
+            <div class="floating-rating">
+              <span class="stars" aria-label="5 dari 5 bintang">★★★★★</span>
+              <strong>4.9/5</strong>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <section class="about-section" id="tentang-kami">
+          <div class="about-container">
+          <div class="section-header centered">
+            <span class="chip-title">Tentang Kami</span>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-stats">
+              <div class="metric-box">
+                <strong data-count="1200" data-suffix="+">1.200+</strong>
+                <span>Mahasiswa Aktif</span>
+              </div>
+              <div class="metric-box">
+                <strong data-count="340" data-suffix="+">340+</strong>
+                <span>Alumni P2MW &amp; PMW</span>
+              </div>
+              <div class="metric-box">
+                <strong data-count="80" data-suffix="+">80+</strong>
+                <span>Mentor Terverifikasi</span>
+              </div>
+              <div class="metric-box">
+                <strong data-count="4.8" data-decimals="1" data-suffix="/5">4,8/5</strong>
+                <span>Rating Platform</span>
+              </div>
+            </div>
+
+            <div class="about-copy">
+              <h2>
+                Dibangun oleh Mahasiswa, <em>untuk Mahasiswa</em>
+              </h2>
+              <p>
+                KAWIRA lahir dari keresahan nyata para founder muda Indonesia.
+                Kami memahami tantangan menjadi wirausahawan di kampus — dari
+                keterbatasan jaringan, minimnya panduan praktis, hingga
+                kesulitan mengelola keuangan bisnis pertama.
+              </p>
+              <p>
+                Platform kami dirancang khusus untuk pelajar dan mahasiswa agar
+                bisa belajar langsung dari mentor sebaya alumni <strong>P2MW</strong>
+                dan <strong>PMW</strong> yang berpengalaman.
+              </p>
+              <div class="tag-row">
+                <span>P2MW Alumni</span>
+                <span>PMW Partner</span>
+                <span>Terverifikasi Kemendikbud</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <section class="services-section" id="layanan">
+          <div class="services-container">
+          <div class="section-header centered">
+            <span class="chip-title">Layanan Kami</span>
+          </div>
+          <h2>Semua yang Kamu Butuhkan<br /><em>dalam Satu Platform</em></h2>
+          <p class="service-subtitle">
+            Dari mentoring hingga keuangan, KAWIRA hadir sebagai teman perjalanan
+            wirausahamu di kampus.
+          </p>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon"><img src="assets/IconChat.svg" alt="" /></div>
+              <span class="popular-label">Populer</span>
+              <h3>Peer Mentorship</h3>
+              <p>Konsultasi langsung dengan mentor sebaya berpengalaman melalui chat maupun sesi call video.</p>
+              <ul>
+                <li>Chat real-time dengan mentor</li>
+                <li>Sesi video call terjadwal</li>
+                <li>Matching berdasarkan bidang usaha</li>
+                <li>Ulasan &amp; rating transparan</li>
+              </ul>
+              <a class="service-select" href="login.html">
+                <span class="service-select-label">Pilih layanan</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon yellow"><img src="assets/IconBook.svg" alt="" /></div>
+              <h3>Pencatatan Keuangan</h3>
+              <p>Kelola arus kas bisnismu dengan mudah. Tidak perlu jadi akuntan — cukup catat, kami yang rekap.</p>
+              <ul>
+                <li>Input pemasukan &amp; pengeluaran</li>
+                <li>Laporan keuangan otomatis</li>
+                <li>Grafik arus kas bulanan</li>
+                <li>Ekspor ke PDF / Excel</li>
+              </ul>
+              <a class="service-select" href="login.html">
+                <span class="service-select-label">Pilih layanan</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon"><img src="assets/IconLayers.svg" alt="" /></div>
+              <h3>Modul &amp; Template</h3>
+              <p>Perpustakaan modul bisnis praktis dan template siap pakai disusun bersama praktisi nyata.</p>
+              <ul>
+                <li>50+ modul bisnis terstruktur</li>
+                <li>Template pitch deck &amp; BMC</li>
+                <li>Studi kasus UMKM lokal</li>
+                <li>Sertifikat penyelesaian</li>
+              </ul>
+              <a class="service-select" href="login.html">
+                <span class="service-select-label">Pilih layanan</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+          </div>
+          </div>
+        </section>
+
+        <section class="community-section" id="komunitas">
+          <div class="community-container">
+          <div class="section-header centered">
+            <span class="chip-title">Komunitas</span>
+          </div>
+          <h2>Bergabung dengan <em>Komunitas Kami</em></h2>
+          <p>
+            Jangan hadapi perjalanan wirausahamu sendirian. Komunitas KAWIRA
+            siap mendukungmu setiap langkahnya.
+          </p>
+
+          <div class="community-grid">
+            <article class="community-card green">
+              <div class="community-icon"><img src="assets/IconWhatsApp.svg" alt="" /></div>
+              <h3>WhatsApp Group</h3>
+              <p>Diskusi ringan, berbagi info peluang, dan update komunitas harian bersama 800+ anggota aktif.</p>
+              <div class="community-meta">
+                <span>800+ anggota</span>
+              </div>
+              <button class="group-button">Gabung Grup</button>
+            </article>
+
+            <article class="community-card purple">
+              <div class="community-icon"><img src="assets/IconDiscord.svg" alt="" /></div>
+              <h3>Discord Server</h3>
+              <p>Forum terstruktur dengan channel khusus per topik: pitching, keuangan, marketing, dan lainnya.</p>
+              <div class="community-meta">
+                <span>450+ member</span>
+              </div>
+              <button class="group-button">Join Server</button>
+            </article>
+          </div>
+          </div>
+        </section>
+
+        <section class="cta-banner">
+          <div class="cta-container">
+          <div class="cta-banner-inner">
+            <span class="chip-title inverse">Mulai Sekarang</span>
+            <h3>Siap Memulai Perjalanan Wirausahamu?</h3>
+            <p>Daftar gratis hari ini dan jadilah bagian dari ribuan mahasiswa wirausaha Indonesia yang tumbuh bersama.</p>
+            <div class="cta-actions">
+              <a class="primary-button" href="#komunitas">Mulai Konsultasi <span aria-hidden="true">→</span></a>
+              <a class="secondary-button light" href="#layanan">Pelajari Fitur</a>
+            </div>
+          </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <div class="footer-brand">
+            <div class="brand-mark small">
+              <img src="assets/logoLandingPage.svg" alt="Kawira logo" />
+            </div>
+            <div class="brand-name">Kawira</div>
+            <p>Platform peer-to-peer wirausaha untuk mahasiswa Indonesia.</p>
+          </div>
+
+          <div class="footer-links">
+            <div>
+              <h4>Platform</h4>
+              <a href="#layanan">Peer Mentorship</a>
+              <a href="#layanan">Pencatatan Keuangan</a>
+              <a href="modul.html">Modul &amp; Template</a>
+              <a href="#komunitas">Komunitas</a>
+            </div>
+            <div>
+              <h4>Perusahaan</h4>
+              <a href="#tentang-kami">Tentang Kami</a>
+              <a href="tim-kami.html">Tim Kami</a>
+              <span>Blog</span>
+            </div>
+            <div>
+              <h4>Portal Akses</h4>
+              <a href="login.html?role=mahasiswa">Login Mahasiswa</a>
+              <a href="login.html?role=mentor">Login Mentor</a>
+              <a href="login.html?role=admin">Login Admin</a>
+            </div>
+            <div>
+              <h4>Dukungan</h4>
+              <span>Pusat Bantuan</span>
+              <span>Kebijakan Privasi</span>
+              <span>Syarat &amp; Ketentuan</span>
+              <span>Hubungi Kami</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="copyright">© KAWIRA 2026 | Dibuat oleh tim MBG (Make Business Great) Untuk Lomba Innovation Clash FEB UNJ</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

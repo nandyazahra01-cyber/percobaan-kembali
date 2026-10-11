@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Workspace Mentor KAWIRA untuk memantau mentee, live chat real-time, dan input evaluasi mentoring bisnis." />
+    <title>Workspace Mentor | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-mentor-v2" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="mentor-workspace.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/Image%20(Aditya%20Ramadhan).png" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+
+    <div class="dashboard-layout">
+      <!-- Sidebar Mentor -->
+      <aside class="dashboard-sidebar" aria-label="Navigasi workspace mentor">
+        <a class="dashboard-brand" href="mentor-workspace.html">
+          <img src="assets/logoLandingPage.svg" alt="Kawira Logo" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Workspace Mentor</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu mentor">
+          <a class="dashboard-nav-link is-active" href="mentor-workspace.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Workspace Mentor</span>
+          </a>
+          <a class="dashboard-nav-link" href="#chat-section" onclick="switchTab('chat')">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Live Chat Mentee</span>
+          </a>
+          <a class="dashboard-nav-link" href="#eval-section" onclick="switchTab('eval')">
+            <img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" />
+            <span>Catatan &amp; Evaluasi</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <img class="sidebar-nav-icon" src="assets/SettingsIcon.svg" alt="" style="width:18px; height:18px;" />
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login-staff.html" onclick="logoutKawira()">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/Image%20(Aditya%20Ramadhan).png" alt="Foto Aditya Ramadhan" />
+          <span class="dashboard-user-copy"><strong>Aditya Ramadhan</strong><small>Mentor Kuliner &amp; Bisnis</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <!-- Main Workspace -->
+      <main class="dashboard-main">
+        <header class="dashboard-topbar">
+          <div>
+            <h1>Workspace Mentor <span aria-hidden="true">💼</span></h1>
+            <p style="margin:4px 0 0 0; font-size:0.85rem; color:#6d6780;">Pantau progres mentee, balas live chat, dan buat evaluasi bisnis secara terintegrasi.</p>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <button class="mentor-availability-pill" id="ws-availability-btn" type="button" title="Ubah status ketersediaan">
+              <span class="dot"></span>
+              <span id="ws-status-text">Siap Mentoring</span>
+            </button>
+            <button class="notification-button" type="button" aria-label="Notifikasi">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+              <span></span>
+            </button>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <!-- Navigasi Tab Utama Workspace -->
+          <div class="role-selector" style="margin-bottom:20px;">
+            <button type="button" class="role-tab active" id="tab-btn-mentees" onclick="switchTab('mentees')">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+              <span>Daftar Mentee Saya (<span id="mentee-count-badge">5</span>)</span>
+            </button>
+            <button type="button" class="role-tab" id="tab-btn-chat" onclick="switchTab('chat')">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>Live Chat Mentee</span>
+            </button>
+            <button type="button" class="role-tab" id="tab-btn-eval" onclick="switchTab('eval')">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>Catatan &amp; Evaluasi</span>
+            </button>
+          </div>
+
+          <!-- ================= TAB 1: PANEL PEMANTAUAN MENTEE ================= -->
+          <section id="panel-mentees" class="workspace-section">
+            <div class="card-panel">
+              <div class="card-panel-header">
+                <div>
+                  <h2 class="card-panel-title">
+                    <span>Mentee Monitoring Dashboard</span>
+                    <span class="badge-tag green">Data Real-Time</span>
+                  </h2>
+                  <p style="margin:4px 0 0; font-size:0.8rem; color:#79728b;">Daftar mentee yang terhubung, memesan sesi konsultasi, dan sedang dibimbing.</p>
+                </div>
+                <div style="display:flex; gap:8px; align-items:center;">
+                  <input type="text" id="mentee-search-input" placeholder="Cari nama mentee atau bisnis..." style="padding:7px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.82rem; width:220px;" oninput="filterMentees()" />
+                  <select id="mentee-status-filter" style="padding:7px 10px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.82rem;" onchange="filterMentees()">
+                    <option value="all">Semua Status</option>
+                    <option value="Aktif">Sesi Aktif</option>
+                    <option value="Selesai">Selesai</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="mentees-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(310px, 1fr)); gap:18px;">
+                <!-- Di-render dinamis oleh mentor-workspace.js -->
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= TAB 2: LIVE CHAT REAL-TIME ================= -->
+          <section id="panel-chat" class="workspace-section" style="display:none;">
+            <div class="card-panel" style="padding:0; overflow:hidden;">
+              <div style="display:grid; grid-template-columns:300px 1fr; min-height:560px;">
+                <!-- Sidebar Mentee List for Chat -->
+                <div style="border-right:1px solid #ece8f6; background:#faf9fe; display:flex; flex-direction:column;">
+                  <div style="padding:16px; border-bottom:1px solid #ece8f6;">
+                    <h3 style="margin:0 0 6px 0; font-size:0.95rem; font-weight:700;">Percakapan Mentee</h3>
+                    <span style="font-size:0.75rem; color:#79728b;">Pilih mentee untuk memulai chat live</span>
+                  </div>
+                  <div id="chat-mentee-list" style="overflow-y:auto; flex:1;">
+                    <!-- Di-render oleh mentor-workspace.js -->
+                  </div>
+                </div>
+
+                <!-- Chat Room Area -->
+                <div style="display:flex; flex-direction:column; background:#ffffff;">
+                  <!-- Chat Header -->
+                  <div id="active-chat-header" style="padding:14px 20px; border-bottom:1px solid #ece8f6; display:flex; align-items:center; justify-content:space-between; background:#ffffff;">
+                    <div style="display:flex; align-items:center; gap:12px;">
+                      <img id="chat-header-avatar" src="assets/fotoProfil.jpg" alt="" style="width:42px; height:42px; border-radius:50%; object-fit:cover;" />
+                      <div>
+                        <div style="display:flex; align-items:center; gap:6px;">
+                          <h4 id="chat-header-name" style="margin:0; font-size:0.95rem; font-weight:700;">Kawira Anindya</h4>
+                          <span id="chat-header-status-dot" class="mentor-availability-pill" style="padding:2px 8px; font-size:0.68rem;"><span class="dot"></span> Online</span>
+                        </div>
+                        <small id="chat-header-business" style="color:#704cf5; font-weight:600;">Dapur Nusantara · Kuliner &amp; F&B</small>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-sm-ghost" onclick="quickFillNoteForActiveMentee()">+ Buat Catatan Sesi</button>
+                  </div>
+
+                  <!-- Messages Body -->
+                  <div id="chat-messages-container" style="flex:1; padding:20px; overflow-y:auto; display:flex; flex-direction:column; gap:12px; background:#fcfbfe; min-height:360px;">
+                    <!-- Pesan di-render oleh JS -->
+                  </div>
+
+                  <!-- Quick Reply Bar -->
+                  <div style="padding:8px 16px; background:#f8f6fc; border-top:1px solid #eeeaf6; display:flex; gap:6px; overflow-x:auto;">
+                    <span style="font-size:0.72rem; color:#79728b; white-space:nowrap; align-self:center;">Balasan Cepat:</span>
+                    <button type="button" class="demo-chip" onclick="sendQuickReply('Halo! Bagaimana progres validasi idemu pekan ini?')">Tanya Progres</button>
+                    <button type="button" class="demo-chip" onclick="sendQuickReply('Margin laba kotor 40% sudah sangat ideal untuk bisnis F&B pemula.')">Apresiasi Margin</button>
+                    <button type="button" class="demo-chip" onclick="sendQuickReply('Mari kita simulasikan harga bundling di sesi video call nanti.')">Ajak Simulasi</button>
+                  </div>
+
+                  <!-- Chat Input Area -->
+                  <form id="chat-form" style="padding:14px 18px; border-top:1px solid #ece8f6; display:flex; gap:10px; background:#ffffff;" onsubmit="handleSendMessage(event)">
+                    <input type="text" id="chat-message-input" placeholder="Tulis pesan bimbingan untuk mentee..." style="flex:1; padding:10px 14px; border:1px solid #dcd7ee; border-radius:10px; font-size:0.85rem;" required />
+                    <button type="submit" class="btn-sm-action" style="padding:10px 20px;">
+                      <span>Kirim</span>
+                      <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= TAB 3: CATATAN & EVALUASI MENTORING ================= -->
+          <section id="panel-eval" class="workspace-section" style="display:none;">
+            <div style="display:grid; grid-template-columns:minmax(320px, 1fr) 1.2fr; gap:20px;">
+              <!-- Form Input Catatan Baru -->
+              <div class="card-panel">
+                <div class="card-panel-header">
+                  <h2 class="card-panel-title">
+                    <span>Input Catatan Mentoring &amp; Evaluasi</span>
+                  </h2>
+                </div>
+                <form id="eval-form" onsubmit="handleSaveEvaluation(event)" style="display:flex; flex-direction:column; gap:14px;">
+                  <div>
+                    <label style="display:block; font-size:0.78rem; font-weight:600; color:#554f68; margin-bottom:5px;">Pilih Mentee *</label>
+                    <select id="eval-mentee-select" style="width:100%; padding:9px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.85rem;" required>
+                      <!-- Options di-load dari API -->
+                    </select>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                    <div>
+                      <label style="display:block; font-size:0.78rem; font-weight:600; color:#554f68; margin-bottom:5px;">Tanggal Sesi *</label>
+                      <input type="date" id="eval-date" style="width:100%; padding:8px 10px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.82rem;" required />
+                    </div>
+                    <div>
+                      <label style="display:block; font-size:0.78rem; font-weight:600; color:#554f68; margin-bottom:5px;">Rating Kemajuan (1-5)</label>
+                      <select id="eval-rating" style="width:100%; padding:8px 10px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.82rem;">
+                        <option value="5">⭐⭐⭐⭐⭐ (Sangat Bagus)</option>
+                        <option value="4" selected>⭐⭐⭐⭐ (Bagus)</option>
+                        <option value="3">⭐⭐⭐ (Cukup)</option>
+                        <option value="2">⭐⭐ (Perlu Bimbingan Ekstra)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label style="display:block; font-size:0.78rem; font-weight:600; color:#554f68; margin-bottom:5px;">Fokus Bahasan Sesi *</label>
+                    <input type="text" id="eval-focus" placeholder="Contoh: Validasi HPP, BMC, atau Strategi Iklan" style="width:100%; padding:8px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.85rem;" required />
+                  </div>
+
+                  <div>
+                    <label style="display:block; font-size:0.78rem; font-weight:600; color:#554f68; margin-bottom:5px;">Ringkasan Progress Mentee *</label>
+                    <textarea id="eval-summary" rows="3" placeholder="Jelaskan capaian mentee selama sesi bimbingan..." style="width:100%; padding:10px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.85rem; font-family:inherit;" required></textarea>
+                  </div>
+
+                  <div>
+                    <label style="display:block; font-size:0.78rem; font-weight:600; color:#554f68; margin-bottom:5px;">Rekomendasi &amp; Catatan Khusus Mentor</label>
+                    <textarea id="eval-recommendations" rows="2" placeholder="Saran perbaikan, template yang harus diunduh, dll..." style="width:100%; padding:10px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.85rem; font-family:inherit;"></textarea>
+                  </div>
+
+                  <div>
+                    <label style="display:block; font-size:0.78rem; font-weight:600; color:#554f68; margin-bottom:5px;">Target Langkah Selanjutnya (PR Mentee)</label>
+                    <input type="text" id="eval-next-step" placeholder="Contoh: Selesaikan kalkulasi biaya kemasan sebelum hari Jumat" style="width:100%; padding:8px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.85rem;" />
+                  </div>
+
+                  <div>
+                    <label style="display:block; font-size:0.78rem; font-weight:600; color:#554f68; margin-bottom:5px;">Status Sesi Mentoring</label>
+                    <select id="eval-status" style="width:100%; padding:8px 12px; border:1px solid #dcd7ee; border-radius:8px; font-size:0.85rem;">
+                      <option value="Perlu Sesi Lanjutan">Perlu Sesi Lanjutan</option>
+                      <option value="Selesai (Target Tercapai)">Selesai (Target Tercapai)</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn-sm-action" style="padding:11px; justify-content:center; margin-top:6px;">
+                    <span>Simpan &amp; Terbitkan Catatan ke Mentee</span>
+                  </button>
+                </form>
+              </div>
+
+              <!-- Daftar Riwayat Evaluasi yang Telah Dibuat -->
+              <div class="card-panel">
+                <div class="card-panel-header">
+                  <h2 class="card-panel-title">
+                    <span>Riwayat Evaluasi &amp; Catatan Tersimpan</span>
+                  </h2>
+                  <span id="eval-count-badge" class="badge-tag purple">2 Catatan</span>
+                </div>
+
+                <div id="eval-history-list" style="display:flex; flex-direction:column; gap:14px; max-height:680px; overflow-y:auto;">
+                  <!-- Di-render oleh JS -->
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="dashboard-toast" data-dashboard-toast role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kelola data diri dan profil usaha KAWIRA." />
+    <title>Data Diri &amp; Profil Usaha | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261001-profile-v4" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="dashboard.js" defer></script>
+    <script src="profile.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout profile-dashboard-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Platform Kawan Wirausaha</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="dashboard-nav-link" href="mentoring.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link" href="pembukuan.html">
+            <img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" />
+            <span>Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link" href="modul.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
+            <span>Modul &amp; Template</span>
+          </a>
+          <a class="dashboard-nav-link" href="komunitas.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link is-active" href="profile.html" aria-current="page">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+
+        <a class="dashboard-user sidebar-user-card is-current" id="account-profile" href="profile.html" aria-current="page">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="Foto profil Kawira Anindya" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main profile-main">
+        <div class="profile-content">
+          <header class="profile-page-heading">
+            <h1>Data Diri &amp; Profil Usaha</h1>
+            <p>Kelola informasi identitas perintis dan ringkasan profil usaha tokomu</p>
+          </header>
+
+          <form class="profile-grid" data-profile-form>
+            <section class="profile-card" aria-labelledby="owner-profile-title">
+              <header class="profile-card-header">
+                <h2 id="owner-profile-title">Data Diri Pemilik Usaha</h2>
+                <p>Informasi pribadi dan latar belakang kamu</p>
+              </header>
+
+              <div class="profile-card-body">
+                <div class="profile-photo-row">
+                  <img class="profile-photo-preview" src="assets/fotoProfil.jpg" alt="Foto Kawira Anindya Putri" data-profile-photo-preview />
+                  <div class="profile-photo-actions">
+                    <input class="visually-hidden" id="profile-photo-input" type="file" accept="image/*" data-profile-photo-input />
+                    <label class="profile-upload-button" for="profile-photo-input">Ubah Foto</label>
+                    <span class="verification-badge"><img src="assets/Icon (1).svg" alt="" /> Perintis Usaha Terverifikasi</span>
+                  </div>
+                </div>
+
+                <label class="profile-field">
+                  <span>Nama Lengkap</span>
+                  <input name="full-name" type="text" value="Kawira Anindya Putri" autocomplete="name" required />
+                </label>
+
+                <label class="profile-field">
+                  <span>Status Pengguna</span>
+                  <select name="user-status" required>
+                    <option selected>Mahasiswa</option>
+                    <option>Alumni</option>
+                    <option>Wirausahawan</option>
+                  </select>
+                </label>
+
+                <label class="profile-field">
+                  <span>Asal Institusi / Sekolah / Kampus <small>Opsional</small></span>
+                  <input name="institution" type="text" value="Universitas Brawijaya" autocomplete="organization" />
+                </label>
+
+                <label class="profile-field">
+                  <span>Nomor WhatsApp Aktif</span>
+                  <input name="whatsapp" type="tel" value="+62 812-3456-7890" autocomplete="tel" />
+                </label>
+
+                <label class="profile-field">
+                  <span>Tautan LinkedIn / Media Sosial</span>
+                  <input name="social-link" type="url" value="https://instagram.com/kawira.anindya" />
+                </label>
+              </div>
+            </section>
+
+            <section class="profile-card business-profile-card" aria-labelledby="business-profile-title">
+              <header class="profile-card-header business-card-heading">
+                <div>
+                  <h2 id="business-profile-title">Profil Usaha / Bisnis Rintisan</h2>
+                  <p>Detail bisnis dan program kewirausahaan</p>
+                </div>
+                <div class="business-statuses">
+                  <span class="business-running"><i></i> Bisnis Berjalan</span>
+                  <span class="business-verified">Usaha Terverifikasi</span>
+                </div>
+              </header>
+
+              <div class="profile-card-body">
+                <div class="business-stage">
+                  <span class="business-stage-icon" aria-hidden="true">↗</span>
+                  <span><small>Tahap Usaha</small><strong>Berjalan (Early Stage)</strong></span>
+                </div>
+
+                <label class="profile-field">
+                  <span>Nama Usaha / Brand</span>
+                  <input name="business-name" type="text" value="KriyaNusantara" required />
+                </label>
+
+                <label class="profile-field">
+                  <span>Bidang Usaha</span>
+                  <select name="business-sector" required>
+                    <option selected>Fashion</option>
+                    <option>Kuliner</option>
+                    <option>Teknologi</option>
+                    <option>Jasa</option>
+                    <option>Kerajinan</option>
+                    <option>Lainnya</option>
+                  </select>
+                </label>
+
+                <label class="profile-field">
+                  <span>Jalur Usaha</span>
+                  <select name="business-program" required>
+                    <option selected>Peserta P2MW / PMW Kampus</option>
+                    <option>Usaha Mandiri</option>
+                    <option>Program Inkubasi</option>
+                  </select>
+                </label>
+
+                <label class="profile-field">
+                  <span>Deskripsi Singkat Usaha</span>
+                  <textarea name="business-description" rows="3">Usaha fashion lokal berbasis kain tenun tradisional Nusantara dengan sentuhan desain kontemporer untuk pasar anak muda urban.</textarea>
+                </label>
+
+                <label class="profile-field">
+                  <span>Akun Media Sosial / Katalog Produk</span>
+                  <input name="business-social" type="url" value="https://instagram.com/kriyanusantara" />
+                </label>
+
+                <button class="profile-save-button" type="submit">Simpan Perubahan Profil</button>
+                <p class="profile-save-notice" data-profile-notice role="status" aria-live="polite" hidden></p>
+              </div>
+            </section>
+          </form>
+        </div>
+      </main>
+    </div>
+    <div class="dashboard-toast" data-dashboard-toast role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

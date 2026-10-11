@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Catat arus kas, hitung HPP, dan rencanakan titik impas usaha bersama KAWIRA." />
+    <title>Pembukuan &amp; Arus Kas Usaha | KAWIRA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261001-bookkeeping" />
+    <script src="dashboard-nav.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="dashboard-body bookkeeping-page">
+    <header class="dashboard-mobile-header">
+      <button class="dashboard-menu-button" type="button" aria-label="Buka menu navigasi" aria-controls="dashboard-navigation" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <a class="dashboard-mobile-profile" href="profile.html" aria-label="Profil &amp; Pengaturan"><img src="assets/fotoProfil.jpg" alt="" /></a>
+    </header>
+    <button class="dashboard-backdrop" type="button" aria-label="Tutup menu" tabindex="-1" hidden></button>
+    <div class="dashboard-layout bookkeeping-layout">
+      <aside class="dashboard-sidebar" aria-label="Navigasi dashboard">
+        <a class="dashboard-brand" href="dashboard.html">
+          <img src="assets/logoLandingPage.svg" alt="" />
+          <span class="dashboard-brand-copy">
+            <strong>Kawira</strong>
+            <small>Platform Kawan Wirausaha</small>
+          </span>
+        </a>
+        <button class="dashboard-drawer-close" type="button" aria-label="Tutup menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        <nav class="dashboard-nav" id="dashboard-navigation" aria-label="Menu utama dashboard">
+          <a class="dashboard-nav-link" href="dashboard.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="dashboard-nav-link" href="mentoring.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.8 19c.4-3.1 2.7-5 6.2-5s5.8 1.9 6.2 5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 6.6M17.2 14c2.4.5 3.7 2.2 4 4.5"/></svg>
+            <span>Mentoring</span>
+          </a>
+          <a class="dashboard-nav-link is-active" href="pembukuan.html" aria-current="page">
+            <img class="sidebar-nav-icon" src="assets/BookIcon.svg" alt="" />
+            <span>Pembukuan</span>
+          </a>
+          <a class="dashboard-nav-link" href="modul.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg>
+            <span>Modul &amp; Template</span>
+          </a>
+          <a class="dashboard-nav-link" href="komunitas.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z"/><path d="M8 9h8M8 12.5h5"/></svg>
+            <span>Komunitas</span>
+          </a>
+          <a class="dashboard-nav-link" href="profile.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.1.9-1.2 2.1-1.4-.5a7.8 7.8 0 0 1-1.5.9l-.2 1.5h-2.4l-.3-1.5a7.8 7.8 0 0 1-1.5-.9l-1.4.5-1.2-2.1 1.1-.9a7 7 0 0 1 0-1.8l-1.1-.9 1.2-2.1 1.4.5a7.8 7.8 0 0 1 1.5-.9l.3-1.5h2.4l.2 1.5a7.8 7.8 0 0 1 1.5.9l1.4-.5 1.2 2.1-1.1.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1) scale(1.08)"/></svg>
+            <span>Profil &amp; Pengaturan</span>
+          </a>
+          <a class="dashboard-signout" href="login.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"/></svg>
+            <span>Keluar dari Akun</span>
+          </a>
+        </nav>
+        <a class="dashboard-user sidebar-user-card" id="account-profile" href="profile.html">
+          <img class="dashboard-user-avatar" src="assets/fotoProfil.jpg" alt="Foto profil Kawira Anindya" />
+          <span class="dashboard-user-copy"><strong>Kawira Anindya</strong><small>Dapur Nusantara</small></span>
+          <img class="dashboard-user-settings" src="assets/SettingsIcon.svg" alt="" />
+        </a>
+      </aside>
+
+      <main class="dashboard-main bookkeeping-main">
+        <header class="bookkeeping-topbar">
+          <div class="bookkeeping-page-heading">
+            <h1>Pembukuan &amp; Arus Kas Usaha</h1>
+            <p>Catat keuangan praktis langsung di web atau sinkron otomatis dengan Google Sheets</p>
+          </div>
+          <div class="bookkeeping-notification-wrap" data-bookkeeping-notification-wrap>
+            <button class="notification-button bookkeeping-notification-button" type="button" aria-label="Notifikasi, 1 baru" aria-expanded="false" aria-controls="bookkeeping-notification-panel" data-bookkeeping-notification-toggle>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+              <span data-bookkeeping-notification-dot></span>
+            </button>
+            <section class="bookkeeping-notification-panel" id="bookkeeping-notification-panel" aria-label="Notifikasi" data-bookkeeping-notification-panel hidden>
+              <div class="bookkeeping-notification-item is-unread"><span aria-hidden="true">✓</span><p>Ringkasan keuangan siap diperbarui melalui Spreadsheet.</p><time>Baru saja</time></div>
+              <div class="bookkeeping-notification-item"><span aria-hidden="true">↗</span><p>Catat transaksi untuk menjaga arus kas tetap akurat.</p><time>Hari ini</time></div>
+            </section>
+          </div>
+        </header>
+
+        <div class="bookkeeping-content">
+          <div class="bookkeeping-tabs" role="tablist" aria-label="Fitur pembukuan">
+            <button class="bookkeeping-tab is-active" id="cash-tab" type="button" role="tab" aria-selected="true" aria-controls="cash-panel" data-bookkeeping-tab="cash">Arus Kas &amp; Buku Harian</button>
+            <button class="bookkeeping-tab" id="calculator-tab" type="button" role="tab" aria-selected="false" aria-controls="calculator-panel" data-bookkeeping-tab="calculator">Kalkulator HPP &amp; BEP <span>Smart Tools</span></button>
+          </div>
+
+          <section class="bookkeeping-tab-panel" id="cash-panel" role="tabpanel" aria-labelledby="cash-tab" data-bookkeeping-panel="cash">
+            <section class="sheets-sync-banner is-connected" aria-label="Status sinkronisasi Google Sheets" data-sheets-banner>
+              <span class="sheets-sync-icon"><img src="assets/SheetsIcon.svg" alt="" /></span>
+              <div class="sheets-sync-copy">
+                <div class="sheets-sync-title"><h2>Google Sheets Sync</h2><span class="sync-status" data-sheets-status><i></i>Tersinkronisasi</span></div>
+                <p data-sheets-description>Terhubung: Lap_Keuangan_DapurNusantara.xlsx</p>
+              </div>
+              <div class="sheets-sync-actions" data-sheets-actions>
+                <a class="sheets-open-button" href="https://docs.google.com/spreadsheets/d/1KAWIRA_DEMO_DAPUR_NUSANTARA/edit" target="_blank" rel="noopener noreferrer" data-open-spreadsheet>Buka Spreadsheet</a>
+                <button class="sheets-manage-button" type="button" data-manage-sheets aria-label="Kelola koneksi Google Sheets" title="Kelola koneksi">⚙️ <span>Kelola Koneksi</span></button>
+              </div>
+              <button class="sheets-connect-button" type="button" data-connect-sheets hidden>+ Sambungkan Spreadsheet</button>
+            </section>
+
+            <section class="cash-summary-grid" aria-label="Ringkasan arus kas hari ini">
+              <article class="cash-summary-card income-summary">
+                <div><p>Total Pemasukan Hari Ini</p><span class="summary-icon"><img src="assets/TrendUpIcon.svg" alt="" /></span></div>
+                <strong data-income-total>Rp 1.030.000</strong><span class="summary-pill">+Pemasukan</span>
+              </article>
+              <article class="cash-summary-card expense-summary">
+                <div><p>Total Pengeluaran Hari Ini</p><span class="summary-icon"><img src="assets/TrendDownIcon.svg" alt="" /></span></div>
+                <strong data-expense-total>Rp 380.000</strong><span class="summary-pill">-Pengeluaran</span>
+              </article>
+              <article class="cash-summary-card balance-summary">
+                <div><p>Saldo Kas Bersih</p><span class="summary-icon"><img src="assets/WalletIcon.svg" alt="" /></span></div>
+                <strong data-net-total>Rp 650.000</strong><span class="summary-pill">Sehat</span>
+              </article>
+            </section>
+
+            <div class="cash-book-grid">
+              <section class="cash-panel transaction-entry-panel" aria-labelledby="transaction-entry-title">
+                <h2 id="transaction-entry-title">Catat Transaksi Harian</h2>
+                <form data-transaction-form>
+                  <div class="transaction-type-toggle" role="group" aria-label="Jenis transaksi">
+                    <button class="is-active" type="button" data-transaction-type="income" aria-pressed="true">Pemasukan (+)</button>
+                    <button type="button" data-transaction-type="expense" aria-pressed="false">Pengeluaran (-)</button>
+                  </div>
+                  <label class="bookkeeping-field"><span>Tanggal Transaksi</span><input type="date" name="date" required data-transaction-date /></label>
+                  <label class="bookkeeping-field"><span>Jumlah Nominal (Rp)</span><input type="number" name="amount" min="1" step="1" placeholder="0" required data-transaction-amount /></label>
+                  <label class="bookkeeping-field"><span>Kategori</span><select name="category" required data-transaction-category></select></label>
+                  <label class="bookkeeping-field"><span>Catatan Transaksi</span><input type="text" name="note" placeholder="Contoh: Penjualan Keripik Tempe 5 pcs" required data-transaction-note /></label>
+                  <button class="transaction-submit-button" type="submit">Catat Transaksi Manual</button>
+                </form>
+                <aside class="spreadsheet-tip"><span aria-hidden="true">💡</span><p>Kamu juga bisa catat via Spreadsheet — cukup catat pesan seperti “Keluar 80rb bahan baku” dan otomatis tercatat di sini.</p></aside>
+              </section>
+
+              <section class="cash-panel transaction-history-panel" aria-labelledby="cash-history-title">
+                <div class="transaction-history-header">
+                  <h2 id="cash-history-title">Buku Kas &amp; Riwayat</h2>
+                  <label class="transaction-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input type="search" placeholder="Cari transaksi..." aria-label="Cari transaksi" data-transaction-search /></label>
+                  <div class="transaction-export-wrap">
+                    <button class="transaction-export-button" type="button" aria-expanded="false" data-export-toggle><span aria-hidden="true">↓</span> Ekspor</button>
+                    <div class="transaction-export-menu" data-export-menu hidden><button type="button" data-export-format="pdf">PDF</button><button type="button" data-export-format="excel">Excel</button></div>
+                  </div>
+                </div>
+                <div class="cash-table-wrap">
+                  <table class="cash-table">
+                    <thead><tr><th>Tanggal &amp; Waktu</th><th>Sumber</th><th>Keterangan</th><th>Nominal</th></tr></thead>
+                    <tbody data-transaction-rows></tbody>
+                  </table>
+                  <p class="transaction-empty-state" data-transaction-empty hidden>Tidak ada transaksi yang cocok dengan pencarian.</p>
+                  <p class="transaction-zero-state" data-transaction-zero-state hidden>Belum ada transaksi tercatat. Mulai catat transaksi manual atau sambungkan Google Sheets kamu.</p>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section class="bookkeeping-tab-panel" id="calculator-panel" role="tabpanel" aria-labelledby="calculator-tab" data-bookkeeping-panel="calculator" hidden>
+            <div class="calculator-intro"><span>SMART TOOLS</span><h2>Rencanakan biaya &amp; titik impas</h2><p>Gunakan estimasi sederhana untuk menentukan harga jual dan target minimum penjualan.</p></div>
+            <div class="business-calculator-grid">
+              <section class="cash-panel calculator-card" aria-labelledby="hpp-title">
+                <div class="calculator-card-heading"><span class="calculator-icon">HPP</span><div><h2 id="hpp-title">Hitung HPP per Unit</h2><p>Harga pokok produksi dan margin</p></div></div>
+                <div class="calculator-input-grid">
+                  <label class="bookkeeping-field"><span>Biaya Bahan Baku (Rp)</span><input type="number" min="0" step="1000" value="600000" data-hpp-material /></label>
+                  <label class="bookkeeping-field"><span>Biaya Tenaga Kerja (Rp)</span><input type="number" min="0" step="1000" value="200000" data-hpp-labor /></label>
+                  <label class="bookkeeping-field"><span>Biaya Kemasan (Rp)</span><input type="number" min="0" step="1000" value="100000" data-hpp-packaging /></label>
+                  <label class="bookkeeping-field"><span>Jumlah Target Produksi (Unit)</span><input type="number" min="1" step="1" value="100" data-hpp-units /></label>
+                </div>
+                <label class="margin-slider-label" for="profit-margin"><span>Margin Keuntungan</span><strong data-margin-value>30%</strong></label>
+                <input class="profit-margin-slider" id="profit-margin" type="range" min="20" max="50" step="5" value="30" data-profit-margin />
+                <div class="margin-slider-scale"><span>20%</span><span>50%</span></div>
+                <div class="calculator-result-box"><div><span>HPP per Unit</span><strong data-hpp-result>Rp 9.000</strong></div><div><span>Harga Jual Ideal</span><strong data-sale-price-result>Rp 11.700</strong></div></div>
+              </section>
+
+              <section class="cash-panel calculator-card" aria-labelledby="bep-title">
+                <div class="calculator-card-heading"><span class="calculator-icon calculator-icon-bep">BEP</span><div><h2 id="bep-title">Hitung BEP Titik Impas</h2><p>Target minimum agar bisnis tidak rugi</p></div></div>
+                <div class="calculator-input-grid bep-input-grid">
+                  <label class="bookkeeping-field"><span>Biaya Tetap Operasional / Sewa per Bulan (Rp)</span><input type="number" min="0" step="1000" value="3000000" data-bep-fixed /></label>
+                  <label class="bookkeeping-field"><span>Harga Jual per Unit (Rp)</span><input type="number" min="0" step="1000" value="25000" data-bep-price /></label>
+                  <label class="bookkeeping-field"><span>Biaya Variabel per Unit (Rp)</span><input type="number" min="0" step="1000" value="10000" data-bep-variable /></label>
+                </div>
+                <div class="calculator-result-box bep-result-box"><div><span>Target Penjualan Minimal / Bulan</span><strong data-bep-result>200 unit</strong></div><small data-bep-explanation>Biaya tetap tertutup setelah 200 unit terjual.</small></div>
+              </section>
+            </div>
+          </section>
+        </div>
+        <div class="bookkeeping-toast" data-bookkeeping-toast role="status" aria-live="polite" hidden></div>
+      </main>
+    </div>
+
+    <dialog class="sheets-manage-dialog" data-sheets-dialog aria-labelledby="sheets-dialog-title">
+      <form class="sheets-manage-panel" data-sheets-form>
+        <button class="meet-dialog-close" type="button" aria-label="Tutup pengaturan integrasi" data-close-sheets>×</button>
+        <span class="sheets-dialog-kicker">KONEKSI &amp; OTOMATISASI</span>
+        <h2 id="sheets-dialog-title">Integrasi Google Spreadsheet</h2>
+        <aside class="sheets-guide-callout">
+          <span aria-hidden="true">i</span>
+          <p>Gunakan template resmi KAWIRA agar format kolom (Tanggal, Keterangan, Kategori, Nominal, Tipe) otomatis terbaca sempurna oleh sistem.</p>
+        </aside>
+        <a class="sheets-template-button" href="https://docs.google.com/spreadsheets/d/1KAWIRA_TEMPLATE_ARUS_KAS/edit" target="_blank" rel="noopener noreferrer" data-template-link><span aria-hidden="true">📄</span> Salin Template Spreadsheet KAWIRA</a>
+        <label class="bookkeeping-field sheets-url-field">
+          <span>Tautan / Link Google Sheets Usaha Kamu</span>
+          <input type="url" name="spreadsheetUrl" placeholder="https://docs.google.com/spreadsheets/d/..." required data-spreadsheet-url />
+        </label>
+        <p class="sheets-privacy-note">*Pastikan pengaturan akses link telah diatur ke 'Siapa saja yang memiliki link dapat melihat/mengedit'.</p>
+        <div class="sheets-demo-actions">
+          <button type="button" data-simulate-zero>[ Simulasi: Akun Baru (Data Kas Rp 0) ]</button>
+          <button type="button" data-load-sample>[ Simulasi: Muat Data Contoh ]</button>
+        </div>
+        <footer class="sheets-dialog-footer">
+          <button class="sheets-disconnect-button" type="button" data-disconnect-sheets hidden>Putuskan / Reset Koneksi</button>
+          <button class="sheets-save-button" type="submit">Simpan &amp; Sinkronkan</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <script>
+      const bookkeepingTabs = [...document.querySelectorAll('[data-bookkeeping-tab]')];
+      const bookkeepingPanels = [...document.querySelectorAll('[data-bookkeeping-panel]')];
+      const activateBookkeepingTab = (name) => {
+        bookkeepingTabs.forEach((tab) => {
+          const selected = tab.dataset.bookkeepingTab === name;
+          tab.classList.toggle('is-active', selected);
+          tab.setAttribute('aria-selected', String(selected));
+          tab.tabIndex = selected ? 0 : -1;
+        });
+        bookkeepingPanels.forEach((panel) => { panel.hidden = panel.dataset.bookkeepingPanel !== name; });
+      };
+      bookkeepingTabs.forEach((tab) => tab.addEventListener('click', () => activateBookkeepingTab(tab.dataset.bookkeepingTab)));
+      bookkeepingTabs.forEach((tab, index) => tab.addEventListener('keydown', (event) => {
+        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? bookkeepingTabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + bookkeepingTabs.length) % bookkeepingTabs.length;
+        bookkeepingTabs[next].click();
+        bookkeepingTabs[next].focus();
+      }));
+
+      const transactionsStorageKey = 'kawira-bookkeeping-transactions';
+      const sheetsConnectionStorageKey = 'kawira-sheets-connection';
+      const zeroStateStorageKey = 'kawira-bookkeeping-zero-state';
+      const defaultSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1KAWIRA_DEMO_DAPUR_NUSANTARA/edit';
+      const defaultSpreadsheetFile = 'Lap_Keuangan_DapurNusantara.xlsx';
+      const localDateKey = (date = new Date()) => [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('-');
+      const todayKey = localDateKey();
+      const makeTransaction = (type, amount, category, note, time, daysAgo = 0, source = 'sheets') => {
+        const date = new Date();
+        date.setDate(date.getDate() - daysAgo);
+        return { id: `${date.getTime()}-${time}-${note}`, type, amount, category, note, time, date: localDateKey(date), source };
+      };
+      const defaultTransactions = [
+        makeTransaction('income', 420000, 'Penjualan Produk', 'Penjualan Keripik Tempe 5 pcs', '08:32', 0, 'web'),
+        makeTransaction('expense', 150000, 'Bahan Baku', 'Beli bahan baku tepung dan singkong', '09:15', 0, 'sheets'),
+        makeTransaction('income', 350000, 'Penjualan Produk', 'Penjualan online Tokopedia', '10:44', 0, 'sheets'),
+        makeTransaction('expense', 130000, 'Operasional', 'Ongkos kirim ekspedisi', '11:20', 0, 'web'),
+        makeTransaction('income', 260000, 'Penjualan Produk', 'Penjualan langsung pasar pagi', '13:05', 0, 'sheets'),
+        makeTransaction('expense', 100000, 'Kemasan', 'Biaya desain kemasan baru', '14:30', 0, 'sheets'),
+        makeTransaction('income', 175000, 'Penjualan Produk', 'Penjualan Keripik Singkong', '15:10', 1, 'web'),
+        makeTransaction('expense', 80000, 'Operasional', 'Bayar listrik warung', '16:00', 1, 'sheets')
+      ];
+      let spreadsheetConnection = { connected: true, url: defaultSpreadsheetUrl, fileName: defaultSpreadsheetFile };
+      const readStorage = (key, fallback = null) => {
+        try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; }
+      };
+      let zeroStateMode = readStorage(zeroStateStorageKey, 'false') === 'true';
+      let transactions = zeroStateMode ? [] : defaultTransactions;
+      let shouldSeedTransactions = false;
+      try {
+        const rawTransactions = readStorage(transactionsStorageKey);
+        const savedTransactions = JSON.parse(rawTransactions || '[]');
+        if (Array.isArray(savedTransactions)) {
+          const validTransactions = savedTransactions.filter((transaction) => transaction
+            && ['income', 'expense'].includes(transaction.type)
+            && Number.isFinite(Number(transaction.amount))
+            && Number(transaction.amount) > 0
+            && typeof transaction.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(transaction.date)
+            && typeof transaction.time === 'string'
+            && typeof transaction.category === 'string'
+            && typeof transaction.note === 'string'
+            && typeof transaction.source === 'string');
+          shouldSeedTransactions = !zeroStateMode && (rawTransactions === null || validTransactions.length === 0);
+          if (rawTransactions !== null && !shouldSeedTransactions) transactions = validTransactions;
+        }
+      } catch {}
+      try {
+        const savedConnection = JSON.parse(readStorage(sheetsConnectionStorageKey, 'null'));
+        if (savedConnection && typeof savedConnection === 'object') spreadsheetConnection = { ...spreadsheetConnection, ...savedConnection };
+      } catch {}
+      if (zeroStateMode) transactions = [];
+
+      const transactionForm = document.querySelector('[data-transaction-form]');
+      const transactionDate = document.querySelector('[data-transaction-date]');
+      const transactionAmount = document.querySelector('[data-transaction-amount]');
+      const transactionCategory = document.querySelector('[data-transaction-category]');
+      const transactionNote = document.querySelector('[data-transaction-note]');
+      const transactionRows = document.querySelector('[data-transaction-rows]');
+      const transactionSearch = document.querySelector('[data-transaction-search]');
+      const transactionEmpty = document.querySelector('[data-transaction-empty]');
+      const transactionZeroState = document.querySelector('[data-transaction-zero-state]');
+      const bookkeepingToast = document.querySelector('[data-bookkeeping-toast]');
+      const sheetsBanner = document.querySelector('[data-sheets-banner]');
+      const sheetsStatus = document.querySelector('[data-sheets-status]');
+      const sheetsDescription = document.querySelector('[data-sheets-description]');
+      const sheetsActions = document.querySelector('[data-sheets-actions]');
+      const connectSheetsButton = document.querySelector('[data-connect-sheets]');
+      const openSpreadsheetLink = document.querySelector('[data-open-spreadsheet]');
+      const sheetsDialog = document.querySelector('[data-sheets-dialog]');
+      const sheetsForm = document.querySelector('[data-sheets-form]');
+      const spreadsheetUrlInput = document.querySelector('[data-spreadsheet-url]');
+      const disconnectSheetsButton = document.querySelector('[data-disconnect-sheets]');
+      const defaultSheetTransactions = defaultTransactions.filter((transaction) => transaction.source === 'sheets');
+      const categoryOptions = {
+        income: ['Penjualan Produk', 'Pendapatan Lainnya'],
+        expense: ['Bahan Baku', 'Operasional', 'Kemasan', 'Transportasi', 'Pemasaran', 'Lainnya']
+      };
+      let selectedTransactionType = 'income';
+      let toastTimer;
+
+      const formatRupiah = (value) => `Rp ${Math.round(value || 0).toLocaleString('id-ID')}`;
+      const formatTransactionDate = (dateKey) => {
+        const [year, month, day] = dateKey.split('-').map(Number);
+        return new Intl.DateTimeFormat('id-ID', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(year, month - 1, day));
+      };
+      const showBookkeepingToast = (message) => {
+        bookkeepingToast.textContent = message;
+        bookkeepingToast.hidden = false;
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(() => { bookkeepingToast.hidden = true; }, 2800);
+      };
+      const saveTransactions = () => {
+        try { localStorage.setItem(transactionsStorageKey, JSON.stringify(transactions)); } catch { showBookkeepingToast('Penyimpanan browser tidak tersedia.'); }
+      };
+      const saveSheetsConnection = () => {
+        try { localStorage.setItem(sheetsConnectionStorageKey, JSON.stringify(spreadsheetConnection)); } catch { showBookkeepingToast('Status koneksi tidak dapat disimpan di browser ini.'); }
+      };
+      const setZeroState = (active) => {
+        zeroStateMode = active;
+        try { localStorage.setItem(zeroStateStorageKey, String(active)); } catch {}
+      };
+      if (shouldSeedTransactions) saveTransactions();
+      const updateSheetsBanner = () => {
+        const connected = Boolean(spreadsheetConnection.connected);
+        sheetsBanner.classList.toggle('is-connected', connected);
+        sheetsBanner.classList.toggle('is-disconnected', !connected);
+        sheetsStatus.innerHTML = `<i></i>${connected ? 'Tersinkronisasi' : 'Belum Terhubung'}`;
+        sheetsDescription.textContent = connected
+          ? `Terhubung: ${spreadsheetConnection.fileName || defaultSpreadsheetFile}`
+          : 'Otomatisasi pencatatan kas dari Google Sheets di ponselmu';
+        sheetsActions.hidden = !connected;
+        connectSheetsButton.hidden = connected;
+        openSpreadsheetLink.href = spreadsheetConnection.url || defaultSpreadsheetUrl;
+        disconnectSheetsButton.hidden = !connected;
+      };
+      const openSheetsManager = () => {
+        spreadsheetUrlInput.value = spreadsheetConnection.connected ? spreadsheetConnection.url : '';
+        disconnectSheetsButton.hidden = !spreadsheetConnection.connected;
+        sheetsDialog.showModal();
+      };
+      const updateTransactionCategories = () => {
+        transactionCategory.replaceChildren(...categoryOptions[selectedTransactionType].map((category) => {
+          const option = document.createElement('option');
+          option.value = category;
+          option.textContent = category;
+          return option;
+        }));
+      };
+      const updateCashSummary = () => {
+        const todayTransactions = transactions.filter((transaction) => transaction.date === todayKey);
+        const income = todayTransactions.filter((transaction) => transaction.type === 'income').reduce((total, transaction) => total + Number(transaction.amount), 0);
+        const expense = todayTransactions.filter((transaction) => transaction.type === 'expense').reduce((total, transaction) => total + Number(transaction.amount), 0);
+        document.querySelector('[data-income-total]').textContent = formatRupiah(income);
+        document.querySelector('[data-expense-total]').textContent = formatRupiah(expense);
+        const net = income - expense;
+        document.querySelector('[data-net-total]').textContent = formatRupiah(net);
+        const health = document.querySelector('.balance-summary .summary-pill');
+        health.textContent = !transactions.length ? 'Belum Ada Aktivitas' : net >= 0 ? 'Sehat' : 'Perlu Dicek';
+        health.classList.toggle('is-negative', net < 0);
+        health.classList.toggle('is-no-activity', !transactions.length);
+      };
+      const renderTransactions = () => {
+        const searchTerm = transactionSearch.value.trim().toLocaleLowerCase('id');
+        const filtered = [...transactions].sort((first, second) => `${second.date}T${second.time}`.localeCompare(`${first.date}T${first.time}`)).filter((transaction) => `${transaction.note} ${transaction.category} ${transaction.source}`.toLocaleLowerCase('id').includes(searchTerm));
+        transactionRows.replaceChildren();
+        filtered.forEach((transaction) => {
+          const row = document.createElement('tr');
+          const date = document.createElement('td');
+          date.innerHTML = `<strong>${formatTransactionDate(transaction.date)}</strong><small>${transaction.time} WIB</small>`;
+          const source = document.createElement('td');
+          const sourceBadge = document.createElement('span');
+          sourceBadge.className = `transaction-source-badge${transaction.source === 'sheets' ? ' is-sheets' : ''}`;
+          sourceBadge.textContent = transaction.source === 'sheets' ? 'via Google Sheets' : 'via Web';
+          source.append(sourceBadge);
+          const description = document.createElement('td');
+          description.textContent = transaction.note || transaction.category;
+          description.title = description.textContent;
+          const amount = document.createElement('td');
+          const amountBadge = document.createElement('span');
+          amountBadge.className = `transaction-amount-badge ${transaction.type === 'income' ? 'is-income' : 'is-expense'}`;
+          amountBadge.textContent = `${transaction.type === 'income' ? '↑ Masuk' : '↓ Keluar'} · ${formatRupiah(transaction.amount)}`;
+          amount.append(amountBadge);
+          row.append(date, source, description, amount);
+          transactionRows.append(row);
+        });
+        const showZeroState = transactions.length === 0 && !searchTerm;
+        transactionZeroState.hidden = !showZeroState;
+        transactionEmpty.hidden = showZeroState || filtered.length > 0;
+        updateCashSummary();
+      };
+
+      document.querySelectorAll('[data-transaction-type]').forEach((button) => button.addEventListener('click', () => {
+        selectedTransactionType = button.dataset.transactionType;
+        document.querySelectorAll('[data-transaction-type]').forEach((option) => {
+          const active = option === button;
+          option.classList.toggle('is-active', active);
+          option.setAttribute('aria-pressed', String(active));
+        });
+        updateTransactionCategories();
+      }));
+      transactionDate.value = todayKey;
+      updateTransactionCategories();
+      transactionForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const amount = Number(transactionAmount.value);
+        if (!amount || amount < 1) return;
+        const now = new Date();
+        transactions.unshift({
+          id: `${now.getTime()}`,
+          type: selectedTransactionType,
+          date: transactionDate.value,
+          time: [now.getHours(), now.getMinutes()].map((part) => String(part).padStart(2, '0')).join(':'),
+          amount,
+          category: transactionCategory.value,
+          note: transactionNote.value.trim(),
+          source: 'web'
+        });
+        setZeroState(false);
+        saveTransactions();
+        renderTransactions();
+        transactionAmount.value = '';
+        transactionNote.value = '';
+        showBookkeepingToast('Transaksi berhasil dicatat.');
+      });
+      transactionSearch.addEventListener('input', renderTransactions);
+      renderTransactions();
+
+      const exportToggle = document.querySelector('[data-export-toggle]');
+      const exportMenu = document.querySelector('[data-export-menu]');
+      exportToggle.addEventListener('click', () => {
+        exportMenu.hidden = !exportMenu.hidden;
+        exportToggle.setAttribute('aria-expanded', String(!exportMenu.hidden));
+      });
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.transaction-export-wrap')) {
+          exportMenu.hidden = true;
+          exportToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.querySelectorAll('[data-export-format]').forEach((button) => button.addEventListener('click', () => {
+        exportMenu.hidden = true;
+        exportToggle.setAttribute('aria-expanded', 'false');
+        if (button.dataset.exportFormat === 'pdf') {
+          window.print();
+          return;
+        }
+        const csvRows = [['Tanggal', 'Waktu', 'Sumber', 'Kategori', 'Keterangan', 'Jenis', 'Nominal'], ...transactions.map((transaction) => [transaction.date, transaction.time, transaction.source === 'sheets' ? 'Google Sheets' : 'Web', transaction.category, transaction.note, transaction.type, transaction.amount])];
+        const csv = `\uFEFF${csvRows.map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(';')).join('\n')}`;
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+        link.download = 'KAWIRA_Riwayat_Arus_Kas.csv';
+        link.click();
+        URL.revokeObjectURL(link.href);
+        showBookkeepingToast('Ekspor Excel demo berhasil disiapkan.');
+      }));
+      document.querySelector('[data-manage-sheets]').addEventListener('click', openSheetsManager);
+      connectSheetsButton.addEventListener('click', openSheetsManager);
+      document.querySelectorAll('[data-close-sheets]').forEach((button) => button.addEventListener('click', () => sheetsDialog.close()));
+      sheetsDialog.addEventListener('click', (event) => { if (event.target === sheetsDialog) sheetsDialog.close(); });
+      sheetsForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        let parsedUrl;
+        try { parsedUrl = new URL(spreadsheetUrlInput.value.trim()); } catch {}
+        if (!parsedUrl || parsedUrl.protocol !== 'https:' || parsedUrl.hostname !== 'docs.google.com' || !parsedUrl.pathname.includes('/spreadsheets/d/')) {
+          spreadsheetUrlInput.setCustomValidity('Masukkan tautan Google Sheets yang valid.');
+          spreadsheetUrlInput.reportValidity();
+          return;
+        }
+        spreadsheetUrlInput.setCustomValidity('');
+        const spreadsheetId = parsedUrl.pathname.split('/').filter(Boolean)[2] || '';
+        const fileName = spreadsheetUrlInput.value.trim() === defaultSpreadsheetUrl
+          ? defaultSpreadsheetFile
+          : `Spreadsheet_${spreadsheetId.slice(0, 8) || 'Terhubung'}.xlsx`;
+        spreadsheetConnection = { connected: true, url: spreadsheetUrlInput.value.trim(), fileName };
+        saveSheetsConnection();
+        updateSheetsBanner();
+        sheetsDialog.close();
+        showBookkeepingToast('✓ Spreadsheet berhasil disinkronkan!');
+      });
+      spreadsheetUrlInput.addEventListener('input', () => spreadsheetUrlInput.setCustomValidity(''));
+      disconnectSheetsButton.addEventListener('click', () => {
+        spreadsheetConnection = { connected: false, url: '', fileName: '' };
+        transactions = transactions.filter((transaction) => transaction.source !== 'sheets');
+        saveSheetsConnection();
+        saveTransactions();
+        updateSheetsBanner();
+        renderTransactions();
+        sheetsDialog.close();
+        showBookkeepingToast('Koneksi terputus. Transaksi web tetap tersimpan.');
+      });
+      document.querySelector('[data-simulate-zero]').addEventListener('click', () => {
+        transactions = [];
+        spreadsheetConnection = { connected: false, url: '', fileName: '' };
+        setZeroState(true);
+        saveSheetsConnection();
+        saveTransactions();
+        updateSheetsBanner();
+        renderTransactions();
+        transactionSearch.value = '';
+        renderTransactions();
+        showBookkeepingToast('Mode akun baru aktif. Saldo kas dimulai dari Rp 0.');
+      });
+      document.querySelector('[data-load-sample]').addEventListener('click', () => {
+        transactions = [...defaultTransactions];
+        spreadsheetConnection = { connected: true, url: defaultSpreadsheetUrl, fileName: defaultSpreadsheetFile };
+        setZeroState(false);
+        saveSheetsConnection();
+        saveTransactions();
+        updateSheetsBanner();
+        renderTransactions();
+        transactionSearch.value = '';
+        renderTransactions();
+        showBookkeepingToast('Data contoh arus kas berhasil dimuat.');
+      });
+
+      const bookkeepingNotificationToggle = document.querySelector('[data-bookkeeping-notification-toggle]');
+      const bookkeepingNotificationPanel = document.querySelector('[data-bookkeeping-notification-panel]');
+      const bookkeepingNotificationWrap = document.querySelector('[data-bookkeeping-notification-wrap]');
+      bookkeepingNotificationToggle.addEventListener('click', () => {
+        bookkeepingNotificationPanel.hidden = !bookkeepingNotificationPanel.hidden;
+        bookkeepingNotificationToggle.setAttribute('aria-expanded', String(!bookkeepingNotificationPanel.hidden));
+      });
+      document.addEventListener('click', (event) => {
+        if (!bookkeepingNotificationPanel.hidden && !bookkeepingNotificationWrap.contains(event.target)) {
+          bookkeepingNotificationPanel.hidden = true;
+          bookkeepingNotificationToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (readStorage(sheetsConnectionStorageKey) === null) saveSheetsConnection();
+      updateSheetsBanner();
+
+      const rupiahInput = (selector) => Number(document.querySelector(selector).value) || 0;
+      const updateHpp = () => {
+        const totalCosts = rupiahInput('[data-hpp-material]') + rupiahInput('[data-hpp-labor]') + rupiahInput('[data-hpp-packaging]');
+        const units = Math.max(0, rupiahInput('[data-hpp-units]'));
+        const margin = rupiahInput('[data-profit-margin]');
+        const costPerUnit = units ? totalCosts / units : 0;
+        document.querySelector('[data-margin-value]').textContent = `${margin}%`;
+        document.querySelector('[data-hpp-result]').textContent = units ? formatRupiah(costPerUnit) : 'Masukkan jumlah unit';
+        document.querySelector('[data-sale-price-result]').textContent = units ? formatRupiah(costPerUnit * (1 + margin / 100)) : '—';
+      };
+      const updateBep = () => {
+        const fixedCost = rupiahInput('[data-bep-fixed]');
+        const contribution = rupiahInput('[data-bep-price]') - rupiahInput('[data-bep-variable]');
+        const result = document.querySelector('[data-bep-result]');
+        const explanation = document.querySelector('[data-bep-explanation]');
+        if (contribution <= 0) {
+          result.textContent = 'Belum bisa dihitung';
+          explanation.textContent = 'Harga jual harus lebih tinggi daripada biaya variabel per unit.';
+          return;
+        }
+        const units = Math.ceil(fixedCost / contribution);
+        result.textContent = `${units.toLocaleString('id-ID')} unit`;
+        explanation.textContent = `Biaya tetap tertutup setelah ${units.toLocaleString('id-ID')} unit terjual.`;
+      };
+      document.querySelectorAll('[data-hpp-material], [data-hpp-labor], [data-hpp-packaging], [data-hpp-units], [data-profit-margin]').forEach((input) => input.addEventListener('input', updateHpp));
+      document.querySelectorAll('[data-bep-fixed], [data-bep-price], [data-bep-variable]').forEach((input) => input.addEventListener('input', updateBep));
+      updateHpp();
+      updateBep();
+    </script>
+  </body>
+</html>
